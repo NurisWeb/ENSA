@@ -1,0 +1,196 @@
+<section class="bg-white section-desktop">
+  <div class="max-w-screen">
+    <div class="hidden lg:mt-0 lg:col-span-5 lg:flex lg:mr-20 center">
+      <!-- Abstand zum Text durch mr-8 -->
+      <img
+        src="./Hol und Lieferwagen Motorhaube.webp"
+        alt="Firmenauto Motorhaube"
+        class="shw-img bild object-cover w-full h-full"
+      />
+    </div>
+    <div class="m-w mr-auto place-self-center lg:col-span-7">
+      <h6>Über Uns</h6>
+      <h2
+        class="max-w-2xl mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-3xl xl:text-4xl"
+      >
+        <span class="font-extrabold"> Ihre Teppichereinigung</span> in Baden Würrtemberg
+      </h2>
+      <p
+        class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-base ml-1"
+      >
+        Seit 2001 sind wir Ihr zuverlässiger Partner für die professionelle<br
+        />
+        Teppichreinigung & Polsterreinigung in Heilbronn. Außerdem <br />
+        bieten wir weitere Dienstleistungen wie Teppichreparatur,<br />
+        Kettlung von Teppichen, Matratzenreinigung und die Reinigung<br />
+        von Autositzen. Vereinbaren Sie heute noch mit uns ein Termin. <br />Wir
+        holen Ihre Teppiche ab und bringen diese termingetreu <br />und perfekt
+        gereinigt zurück. Sie sind Nicht aus Heilbronn? <br />
+        Kein Problem, unser Einsatzgebiet erstreckt sich <br /> ca 200 km rund um
+        Heilbronn.
+      </p>
+      <a
+        href="#"
+        class="shw-img btn inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+      >
+        Mehr über ENSA erfahren
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white section-mobile">
+  <div class="max-w-screen">
+    <div class="m-w mr-auto place-self-center lg:col-span-7">
+      <h6>Über Uns</h6>
+      <h2
+        class="max-w-2xl mb-4 text-2xl font-extrabold tracking-tight leading-none md:text-3xl xl:text-4xl"
+      >
+        <span class="font-extrabold"> Ihre Teppichereinigung</span> in Baden Würrtemberg
+      </h2>
+
+      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex lg:mr-20 center">
+        <!-- Abstand zum Text durch mr-8 -->
+        <img
+          src="./Hol und Lieferwagen Motorhaube.webp"
+          alt="Firmenauto Motorhaube"
+          class="shw-img bild object-cover w-full h-full"
+        />
+      </div>
+      <p
+        class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-base ml-1"
+      >
+        Seit 2001 sind wir Ihr zuverlässiger Partner für die professionelle
+        Teppichreinigung & Polsterreinigung in Heilbronn. Außerdem bieten wir
+        weitere Dienstleistungen wie Teppichreparatur, Kettlung von Teppichen,
+        Matratzenreinigung und die Reinigung von Autositzen. Vereinbaren Sie
+        heute noch mit uns ein Termin.Wir holen Ihre Teppiche ab und bringen
+        diese termingetreu und perfekt gereinigt zurück. Sie sind Nicht aus
+        Heilbronn? Kein Problem, unser Einsatzgebiet erstreckt sich ca 200 km
+        rund um Heilbronn.
+      </p>
+      <a
+        href="#"
+        class="shw-img btn inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+      >
+        Mehr über ENSA erfahren
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .btn {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 80px 0px;
+    background-color: #f7f7f7;
+  }
+
+  .bild {
+    height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .max-w-screen {
+    max-width: 80%;
+    display: flex;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    word-spacing: 4px;
+  }
+
+  .shw-img {
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+  }
+
+  img {
+    object-fit: cover !important;
+  }
+
+  .section-mobile {
+    display: none;
+  }
+
+  @media (width <= 1320px) {
+    .m-w {
+      min-width: 530px;
+    }
+  }
+
+  @media (width <= 1200px) {
+    .section-desktop {
+      display: none;
+    }
+
+    .section-mobile {
+      display: flex;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-top: 42px;
+    }
+
+    .center {
+      margin-right: 0;
+    }
+
+    .bild {
+      width: 100%;
+    }
+  }
+
+  @media (width <= 800px) {
+    .bild {
+      width: 100%;
+      height: 280px;
+    }
+
+    .cover-color {
+      padding: 100px 0;
+    }
+
+    .text-base {
+      font-size: 0.6rem;
+    }
+
+    .button {
+      padding: 10px 20px;
+    }
+
+    .sm\:justify-center {
+      justify-content: center;
+      margin: 0;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      padding: 70px 0 70px 0px;
+    }
+
+    .m-w {
+      min-width: initial;
+    }
+  }
+</style>

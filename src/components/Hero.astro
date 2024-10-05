@@ -1,0 +1,195 @@
+---
+import "../css/global.css";
+// Supports weights 100-900
+import "@fontsource-variable/montserrat";
+
+// Props aus Astro.props extrahieren
+const { backgroundImage } = Astro.props;
+---
+
+<div class="text-center bg">
+  <div class="cover-color">
+    <div class="overlay">
+      <section>
+        <!--  
+        <div class="py-8 px-4 mx-auto text-center lg:py-16 lg:px-12">
+          <a
+            href="#"
+            class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200"
+            role="alert"
+          >
+              <span
+              class="button text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3"
+              >New</span
+            >
+            <span class="text-sm font-medium color-white"
+              >Flowbite is out! See what's new</span
+            > -->
+      </section>
+      <h1
+        class="mb-4 text-6xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-7xl"
+      >
+        Lassen Sie Ihre Teppiche und<br /> Polster Professionell reinigen
+      </h1>
+      <p
+        class="mb-8 text-lg font-normal text-white semibold lg:text-xl sm:px-16 xl:px-48"
+      >
+        Here at Flowbite we focus on markets where technology, innovation, and
+        capital can unlock<br />
+        long-term value and drive economic growth.
+      </p>
+      <div
+        class="btn-box flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+      >
+        <a
+          href="#"
+          class="shw button font-extrabold inline-flex justify-center items-center py-3 px-5 text-base text-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 rounded-full tracking-wider"
+        >
+          REINIGUNG ANFRAGEN
+          <svg
+            class="ml-2 -mr-1 w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path></svg
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  .bg {
+    background-image: url("./Hero Hintergund Teppichbodenreingung Professionell.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 131%;
+    background-position-y: center;
+  }
+
+  .cover-color {
+    padding: 148px 0;
+    background-color: #00000069;
+    display: flex;
+    justify-content: center;
+  }
+  .button {
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: white;
+    background-color: blue;
+    background: rgb(2, 0, 36);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
+    padding: 15px 25px;
+    border: 2px solid white;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  @media (width <= 1464px) {
+    .bg {
+      background-size: 150%;
+    }
+
+    h1 {
+      font-size: 4.5vw;
+    }
+
+    .bg {
+      background-size: 200%;
+    }
+
+    .lg\:text-xl {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (width <= 1200px) {
+    .lg\:text-xl {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (width <= 1024px) {
+    h1 {
+      font-family: "Montserrat Variable", sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 1.2px;
+      font-size: 3rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 0.4rem;
+    }
+
+    .bg {
+      background-size: cover;
+      background-position: 50% -60px;
+    }
+  }
+
+  @media (width <= 800px) {
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+    }
+
+    .lg\:text-xl {
+      font-size: 0.65rem;
+      line-height: 2;
+    }
+
+    .cover-color {
+      padding: 80px 0;
+    }
+
+    p {
+      display: none;
+    }
+
+    .btn-box {
+      align-items: center;
+    }
+
+    .btn-box > a {
+      width: 62%;
+      margin-top: 40px;
+    }
+
+    .text-base {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+<!-- 
+ -->
