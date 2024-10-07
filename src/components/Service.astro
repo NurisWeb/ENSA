@@ -317,7 +317,7 @@ import Banner from "./Banner.astro";
           </div>
         </div>
       </div>
-      <div class="flexus">
+      <!--      <div class="flexus">
         <div
           class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12"
         >
@@ -347,8 +347,8 @@ import Banner from "./Banner.astro";
             >
           </div>
         </div>
-      </div>
-      <div class="flexus">
+      </div> -->
+      <!--   <div class="flexus">
         <div
           class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12"
         >
@@ -406,7 +406,7 @@ import Banner from "./Banner.astro";
             >
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -433,7 +433,7 @@ import Banner from "./Banner.astro";
     background-attachment: fixed;
 
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     color: var(--color);
     row-gap: 4rem;
 
@@ -443,7 +443,8 @@ import Banner from "./Banner.astro";
   .section2 {
     background-image: url("Baby-auf-blauen-Teppich-4.jpg");
     display: flex;
-    min-height: 65vh;
+    padding: 0;
+    min-height: 40vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -452,7 +453,7 @@ import Banner from "./Banner.astro";
     background-attachment: fixed;
 
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     color: var(--color);
     row-gap: 4rem;
 
@@ -472,7 +473,6 @@ import Banner from "./Banner.astro";
   p {
     text-align: left;
     margin-bottom: 1.5rem;
-    height: 108px;
   }
 
   .pt {
@@ -483,7 +483,9 @@ import Banner from "./Banner.astro";
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 68%;
+    justify-content: space-between;
+    width: 96%;
+    max-width: 2200px;
   }
 
   button {
@@ -495,5 +497,26 @@ import Banner from "./Banner.astro";
 
   .korrektur {
     margin-bottom: 0.5rem;
+  }
+
+  @media (width <= 800px) {
+    .flexus,
+    p {
+      align-items: center;
+      text-align: center;
+    }
+
+    .flexus {
+      max-width: 96%;
+    }
+
+    .section1,
+    .section2 {
+      padding: 60px 0;
+    }
+
+    h3 {
+      text-align: center;
+    }
   }
 </style>

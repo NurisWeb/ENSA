@@ -5,7 +5,7 @@
     >
       FAQ - Fragen & Antworten zu unseren Dienstleistungen
     </h2>
-    <div class="mx-auto max-w-screen-md bg">
+    <div class="borderz mx-auto max-w-screen-md bg">
       <div
         id="accordion-flush"
         data-accordion="false"
@@ -360,15 +360,21 @@
     background-attachment: fixed;
 
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     color: var(--color);
     row-gap: 4rem;
 
     text-align: center;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
   }
 
   h2 {
     color: black;
+  }
+
+  .borderz {
+    border: 1.3px solid black;
   }
 
   button {
@@ -415,5 +421,11 @@
 
   .bg {
     background-color: white;
+  }
+
+  @media (width <= 550px) {
+    section {
+      padding: 60px 10px;
+    }
   }
 </style>

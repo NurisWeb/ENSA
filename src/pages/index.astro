@@ -6,6 +6,10 @@ import About from "../components/About.astro";
 import Service from "../components/Service.astro";
 import Banner from "../components/Banner.astro";
 import FAQ from "../components/FAQ.astro";
+import Regionen from "../components/Regionen.astro";
+import Footer from "../components/Footer.astro";
+import Mail from "../components/Mail.astro";
+import RugBanner from "../components/RugBanner.astro";
 ---
 
 <html lang="en">
@@ -25,10 +29,15 @@ import FAQ from "../components/FAQ.astro";
     <title>Astro</title>
   </head>
   <body>
+    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
+    <PriceCalculator client:load />
     <Hero />
     <About />
     <Service />
     <FAQ />
+    <Regionen />
+    <RugBanner />
+    <Footer />
   </body>
 </html>

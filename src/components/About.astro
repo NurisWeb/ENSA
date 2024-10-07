@@ -71,7 +71,7 @@
       </p>
       <a
         href="#"
-        class="shw-img btn inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+        class="a shw-img btn inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
       >
         Mehr über ENSA erfahren
       </a>
@@ -195,6 +195,28 @@
 
     .m-w {
       min-width: initial;
+    }
+
+    .a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (width <= 720px) {
+    .m-w {
+      min-width: auto;
+    }
+
+    p {
+      width: auto;
+    }
+  }
+
+  @media (width <= 300px) {
+    .max-w-screen {
+      max-width: inherit;
+      padding: 0px 20px;
+      display: flex;
     }
   }
 </style>
