@@ -14,11 +14,6 @@ import CtaSection from "../components/leistungen/Abholservice/CtaSection.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      is:inline
-      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
-    ></script>
 
     <ViewTransitions />
 
@@ -27,7 +22,7 @@ import CtaSection from "../components/leistungen/Abholservice/CtaSection.astro";
   <body>
     <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
-    <Hero />
+    <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection />
     <RugBanner />
     <Footer />

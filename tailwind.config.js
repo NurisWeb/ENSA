@@ -4,7 +4,8 @@ module.exports = {
         require('flowbite/plugin')
     ],
      content: [
-        "./node_modules/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js",
+        './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
     ],
      darkMode: 'class',
   theme: {
