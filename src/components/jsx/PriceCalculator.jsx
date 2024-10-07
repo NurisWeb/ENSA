@@ -1,13 +1,12 @@
-// src/components/PriceCalculator.jsx
 import React, { useState } from 'react';
-import '../css/calculator.css'
+import '../../css/calculator.css';
 
 const PriceCalculator = () => {
-  const [width, setWidth] = useState(5);
-  const [length, setLength] = useState(5);
+  const [width, setWidth] = useState(2);
+  const [length, setLength] = useState(2);
   const [selectedPrice, setSelectedPrice] = useState(9.9);
   const [impraegnierung, setImpraegnierung] = useState(false);
-  const [antiAllergie, setAntiAllergie] = useState(false);
+  const [geruchsbehandlung, setGeruchsbehandlung] = useState(false);
 
   const handleWidthChange = (e) => {
     setWidth(parseFloat(e.target.value));
@@ -25,20 +24,20 @@ const PriceCalculator = () => {
     setImpraegnierung(!impraegnierung);
   };
 
-  const handleAntiAllergieChange = () => {
-    setAntiAllergie(!antiAllergie);
+  const handleGeruchsbehandlungChange = () => {
+    setGeruchsbehandlung(!geruchsbehandlung);
   };
 
   const calculateTotal = () => {
     let area = width * length;
     let total = area * selectedPrice;
 
-    if (impraegnierung) {
-      total += area * 3;
+    if (geruchsbehandlung) {
+      total += area * 5;
     }
 
-    if (antiAllergie) {
-      total += area * 2;
+    if (impraegnierung) {
+      total += area * 3;
     }
 
     return total.toFixed(2);
@@ -46,10 +45,13 @@ const PriceCalculator = () => {
 
   return (
     <div className="calculator">
-      <h2 className="title">Teppichreinigung Kostenrechner</h2>
+          
+      <h2 className="title">
+        Teppichreinigung Kostenrechner
+      </h2>
 
       <div className="slider-container">
-        <label>Breite: {width} m</label>
+        <label>Breite: {width.toFixed(1)} m</label>
         <input
           type="range"
           min="0"
@@ -61,7 +63,7 @@ const PriceCalculator = () => {
       </div>
 
       <div className="slider-container">
-        <label>Länge: {length} m</label>
+        <label>Länge: {length.toFixed(1)} m</label>
         <input
           type="range"
           min="0"
@@ -100,27 +102,45 @@ const PriceCalculator = () => {
       </div>
 
       <div className="additional-options">
-        <label>
-          <input
-            type="checkbox"
-            checked={impraegnierung}
-            onChange={handleImpraegnierungChange}
-          />
-          Imprägnierung (+3,00€ /m²)
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={antiAllergie}
-            onChange={handleAntiAllergieChange}
-          />
-          Anti-Allergie-Behandlung (+2,00€ /m²)
-        </label>
+        <div className="option">
+          <label className="tooltip">
+            <input
+              type="checkbox"
+              checked={geruchsbehandlung}
+              onChange={handleGeruchsbehandlungChange}
+            />
+            Geruchsbehandlung/Desinfizierung (+5,00€ /m²)
+            <span className="tooltiptext">
+              Optional buchbar, pro m² 5€. Sehr empfehlenswert bei
+              Milbenentfernung und Geruchsbeseitigung wie zum Beispiel Urin oder
+              sonstige bakterielle Verunreinigungen.
+            </span>
+          </label>
+        </div>
+        <div className="option">
+          <label className="tooltip">
+            <input
+              type="checkbox"
+              checked={impraegnierung}
+              onChange={handleImpraegnierungChange}
+            />
+            Imprägnierung/Rückfetten (+3,00€ /m²)
+            <span className="tooltiptext">
+              Allgemein schutzabweisende Wirkung. Rückfetten für Wollteppiche,
+              sehr empfehlenswert, da Wollteppiche generell Wollfett enthalten.
+              Diese geht durch Abnutzung und auch durch die Wäsche verloren. Dies
+              führt dazu, dass die Wolle brüchig wird und anfängt zu stauben. Wir
+              behandeln den Teppich nach der Wäsche mit natürlichem Wollwachs und
+              arbeiten das in den Teppich ein. Der Teppich bekommt neuen Glanz und
+              die Wolle wird dadurch gepflegt.
+            </span>
+          </label>
+        </div>
       </div>
 
       <div id="total">Gesamtpreis: {calculateTotal()} €</div>
 
-      <button className="send-request" id="sendRequest">
+      <button className="button send-request" id="sendRequest">
         Anfrage senden
       </button>
     </div>

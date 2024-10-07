@@ -71,4 +71,28 @@
   .right {
     margin-left: 20px;
   }
+
+  @media (width <= 800px) {
+    .left,
+    .right {
+      font-size: 0.54rem;
+    }
+
+    .overlay {
+      padding: 0;
+      justify-content: center;
+    }
+
+    .info {
+      justify-content: center;
+      width: 100%;
+      padding-left: 3%;
+    }
+  }
+
+  @media (width <= 550px) {
+    .overlay {
+      display: none;
+    }
+  }
 </style>

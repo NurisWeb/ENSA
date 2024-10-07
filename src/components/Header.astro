@@ -1,5 +1,5 @@
 ---
-
+import "@fontsource-variable/montserrat";
 ---
 
 <nav class="bg-white border-gray-200">
@@ -73,14 +73,14 @@
       >
         <li>
           <a
-            href="#"
+            href="/"
             class="font-bold uppercase block py-2 px-3 text-black bg-blue-700 text-lg rounded md:bg-transparent md:text-blue-700 md:p-0"
-            aria-current="page">Über uns</a
+            aria-current="page">Start</a
           >
         </li>
         <li>
           <a
-            href="#"
+            href="/leistungen/"
             class="font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
             >Leistungen</a
           >
@@ -219,13 +219,23 @@
 </nav>
 
 <style>
-  .max-w-screen {
+
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+    .max-w-screen {
     max-width: 80%;
   }
 
   @media (width <= 1550px) {
     .text-lg {
       font-size: 1.05rem !important;
+    }
+  }
+
+  @media (width <= 1300px) {
+    .max-w-screen[data-astro-cid-3ef6ksr2] {
+      max-width: 96%;
     }
   }
 
@@ -244,6 +254,4 @@
       max-width: 97%;
     }
   }
-
-
 </style>

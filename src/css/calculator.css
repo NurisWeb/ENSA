@@ -1,58 +1,156 @@
-    /* Dein bestehender CSS-Code für die Stile */
+.calculator {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: none;
+    position: relative;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.slider-container label {
+    margin-bottom: 5px;
+}
+
+.slider-container input[type='range'] {
+    width: 100%;
+}
+
+.price-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 32px 0;
+}
+
+.tooltip > input {
+    margin-right: 0.5rem;
+}
+
+.price-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: black;
+    
+}
+
+.price-button.active {
+    background-color: #3041df;
+    color: white;
+}
+
+#total {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 28px;
+    color: black;
+}
+
+.additional-options .option {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.additional-options label {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 280px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -140px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: normal;
+}
+
+.tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;    
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    color: white;
+    padding: 15px 25px;
+    margin: 1rem 1rem;
+}
+
+.send-request {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
     .calculator {
-        background-color: white;
-        border-radius: 10px;
-        padding: 30px;
-        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
-        width: 90%;
-        position: relative;
-        letter-spacing: 0.8px;
-        font-weight: 700;
-    }
-
-    .slider-container {
-        margin: 4px 0;
-        position: relative;
-    }
-
-    .price-buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 32px 0;
+        padding: 20px;
     }
 
     .price-button {
-        padding: 10px 20px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background-color: #f0f0f0;
-        transition: all 0.3s ease;
-        font-size: 16px;
-    }
-
-    .price-button.active {
-        background-color: var(--secondary-color);
-        color: white;
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     #total {
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 28px;
-        color: black;
+        font-size: 20px;
     }
 
-    .additional-options label {
-        display: block;
-        margin-bottom: 10px;
-    }
+        .tooltip {
+            font-size: smaller;
+        }
 
-    .additional-options input {
-        margin-right: 10px;
-        transform: scale(1.2);
-    }
+        .title {
+                font-size: x-large;
+            }
+}
