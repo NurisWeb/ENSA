@@ -1,14 +1,14 @@
 ---
 import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Service from "../components/Service.astro";
-import FAQ from "../components/FAQ.astro";
-import Regionen from "../components/Regionen.astro";
+import Hero from "../components/leistungen/Kettlung/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
+import CtaSection from "../components/leistungen/Kettlung/CtaSection.astro";
+import CtaSection2 from "../components/leistungen/Kettlung/CtaSection2.astro";
+import Banner from "../components/leistungen/Banner.astro";
+import FooterBanner from "../components/leistungen/Kettlung/FooterBanner.astro";
 ---
 
 <html lang="en">
@@ -17,28 +17,18 @@ import RugBanner from "../components/RugBanner.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <script
-      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
-    ></script>
 
     <ViewTransitions />
 
-    <title>Astro</title>
-
-    <style>
-      /*       body {
-        font-family: "Montserrat Variable", sans-serif;
-      } */
-    </style>
+    <title>Abhol- und Bringservice</title>
   </head>
   <body>
     <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
-    <Hero transition:animate={slide({ duration: "0.8s" })} />
-    <About transition:animate={slide({ duration: "0.8s" })} />
-    <Service />
-    <FAQ />
-    <Regionen />
+    <Hero transition:animate={fade({ duration: "0.4s" })} />
+    <CtaSection transition:animate={slide({ duration: "0.8s" })} />
+    <Banner />
+    <FooterBanner />
     <RugBanner />
     <Footer />
   </body>

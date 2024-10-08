@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/calculator.css';
 
 const PriceCalculator = () => {
@@ -7,6 +7,37 @@ const PriceCalculator = () => {
   const [selectedPrice, setSelectedPrice] = useState(9.9);
   const [impraegnierung, setImpraegnierung] = useState(false);
   const [geruchsbehandlung, setGeruchsbehandlung] = useState(false);
+
+  // Zustand beim Laden der Komponente aus localStorage abrufen
+  useEffect(() => {
+    const savedState = localStorage.getItem('priceCalculatorState');
+    if (savedState) {
+      const {
+        width: savedWidth,
+        length: savedLength,
+        selectedPrice: savedSelectedPrice,
+        impraegnierung: savedImpraegnierung,
+        geruchsbehandlung: savedGeruchsbehandlung,
+      } = JSON.parse(savedState);
+      setWidth(savedWidth);
+      setLength(savedLength);
+      setSelectedPrice(savedSelectedPrice);
+      setImpraegnierung(savedImpraegnierung);
+      setGeruchsbehandlung(savedGeruchsbehandlung);
+    }
+  }, []);
+
+  // Zustand in localStorage speichern, wenn sich einer der Zustände ändert
+  useEffect(() => {
+    const state = {
+      width,
+      length,
+      selectedPrice,
+      impraegnierung,
+      geruchsbehandlung,
+    };
+    localStorage.setItem('priceCalculatorState', JSON.stringify(state));
+  }, [width, length, selectedPrice, impraegnierung, geruchsbehandlung]);
 
   const handleWidthChange = (e) => {
     setWidth(parseFloat(e.target.value));
@@ -45,10 +76,7 @@ const PriceCalculator = () => {
 
   return (
     <div className="calculator">
-          
-      <h2 className="title">
-        Teppichreinigung Kostenrechner
-      </h2>
+      <h2 className="title">Teppichreinigung Kostenrechner</h2>
 
       <div className="slider-container">
         <label>Breite: {width.toFixed(1)} m</label>

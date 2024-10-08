@@ -1,0 +1,52 @@
+---
+const image = "/Kettung-von-den-Teppichen.webp";
+---
+
+<section class="bg-cover bg-center bg-white">
+  <div class="overlay">
+    <div
+      class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+    >
+      <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
+      <img
+        class="shw w-full hidden dark:block"
+        src={image}
+        alt="dashboard image"
+      />
+      <div class="mt-4 md:mt-0">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Im Prinzip kann jeder Teppich und jeder Stofffußbodenbelag gekettelt
+          werden
+        </h2>
+        <p
+          class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
+        >
+          <span class="font-bold"
+            >Dies verleiht dem Objekt eine individuelle Note. Unsere
+            Spezialisten helfen Ihnen bei der Entscheidung, so dass Sie die
+            richtige Garnfarbe und -stärke für Ihren Teppich auswählen können.
+          </span>Natürlich sind auch Kombinationen möglich. Wir erfüllen Ihnen
+          jeden Wunsch, sprechen Sie mit unseren Experten. Beim Ketteln wird der
+          Rand des Teppichs elegant mit Garn umfasst und verstärkt. Der Teppich
+          wirkt eleganter und deutlich ansprechender. Bei höheren Teppichten
+          kann auch die Sicherheit erhöht werden, da das Ketteln den Rand des
+          Teppichs absenkt und die Stolpergefahr dadurch minimiert. Wir
+          garantieren professionelles Ketteln, so dass die Teppichränder und
+          -kanten sehr sauber sind und ein Ausfransen verhindert wird.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    border-radius: 8px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+</style>

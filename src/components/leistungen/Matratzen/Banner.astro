@@ -1,0 +1,91 @@
+---
+import "@fontsource-variable/montserrat";
+---
+
+<section>
+  <div class="overlay">
+    <div class="cover">
+      <div class="top">
+        <h3 class="text-4xl font-bold mb-1 text-white">
+          MATRATZE JETZT REINIGEN LASSEN
+        </h3>
+      </div>
+      <div class="bottom">
+        <div class="btnbox">
+          <p class="text-center mb-3 font-light text-white md:text-base">
+            Neben der Matratzenreinigung gehört auch die professionelle
+            Teppichreinigung zu den Arbeiten, die man im eigenen Haushalt<br />
+            regelmäßig ausführen lassen sollt, um ein wirklich gesundes Wohnambiente
+            zu garantieren. Eine unverbindliche Beratung gibt schnell Aufschluss
+            über die modernen <br /> Reinigungsarten, die heute zur Verfügung stehen.
+          </p>
+        </div>
+        <div class="btnbox">
+          <button
+            class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >Matratzen reinigung besprechen</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  .btnbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    margin-top: 1.5rem;
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+
+  .overlay {
+    background-image: url("/Matrzen-schwarzweiss-Bild.webp");
+    background-size: 96% 183%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    background-color: #00000091;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+  }
+
+  @media (width <= 500px) {
+    .top {
+      background-color: #ffffff91;
+    }
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import "@fontsource-variable/montserrat";
+---
+
+<section>
+  <div class="cover">
+    <div class="overlay">
+      <div class="top">
+        <h3 class="text-4xl font-bold mb-1 text-white">
+          PERFEKTE RANDBEARBEITUNG FÜR IHREN TEPPICH
+        </h3>
+      </div>
+      <div class="bottom">
+        <div class="btnbox">
+          <p class="text-center mb-3 font-light text-white md:text-base">
+            Wir machen es Ihnen leicht: Mit unserer professionellen Kettelung
+            veredeln wir Ihren Teppich und schützen ihn vor dem Ausfransen.<br
+            /> So bleibt er länger schön und gepflegt. Sparen Sie sich den Aufwand
+            von Reparaturen und profitieren Sie<br /> von unserer hochwertigen Verarbeitung
+            –<span class="font-bold"
+              >Ihre Teppiche sind bei uns in den besten Händen!</span
+            >
+          </p>
+        </div>
+        <div class="btnbox">
+          <button
+            class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >Ketllen besprechen</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  .btnbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    margin-top: 1.5rem;
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+
+  .overlay {
+    background-image: url("/reparatur-banner.jpg");
+    background-size: 104%;
+    background-position: center;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+  }
+
+  @media (width <= 500px) {
+    .top {
+      background-color: #ffffff91;
+    }
+  }
+</style>

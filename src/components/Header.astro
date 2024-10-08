@@ -48,7 +48,7 @@ import "@fontsource-variable/montserrat";
       data-collapse-toggle="navbar-multi-level"
       type="button"
       class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      aria-controls="navbar-multi-level"
+      aria-controls="navbar-multi-levelLeistungen"
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
@@ -74,36 +74,152 @@ import "@fontsource-variable/montserrat";
         <li>
           <a
             href="/"
-            class="font-bold uppercase block py-2 px-3 text-black bg-blue-700 text-lg rounded md:bg-transparent md:text-blue-700 md:p-0"
-            aria-current="page">Start</a
+            class="nav-linkk font-bold uppercase block py-2 px-3 text-black bg-blue-700 text-lg rounded md:bg-transparent md:text-blue-700 md:p-0"
+            data-active-page="start">Start</a
           >
         </li>
         <li>
+          <button
+            id="dropdownNavbarLinkLeistungen"
+            data-dropdown-toggle="dropdownNavbarLeistungen"
+            class="nav-linkk font-bold uppercase text-lg flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-autot"
+            data-active-page="informationenLeistungen"
+            >Leistungen<svg
+              class="w-2.5 h-2.5 ms-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg></button
+          >
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownNavbarLeistungen"
+            class="text-lg z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-64"
+          >
+            <ul
+              class="py-2 text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownLargeButton"
+            >
+              <li>
+                <a
+                  href="/abhol-und-lieferservice"
+                  class="nav-linkk font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100"
+                  >Abhol- und Lieferservice</a
+                >
+              </li>
+           <!--    <li aria-labelledby="dropdownNavbarLinkLeistungen">
+                <button
+                  id="doubleDropdownButtonLeistungen"
+                  data-dropdown-toggle="doubleDropdownLeistungen"
+                  data-dropdown-placement="right-start"
+                  type="button"
+                  class="font-bold uppercase flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
+                  >Dropdown<svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"></path>
+                  </svg></button
+                >
+                <div
+                  id="doubleDropdownLeistungen"
+                  class="text-lg z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    class="py-2 text-gray-700"
+                    aria-labelledby="doubleDropdownButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100"
+                        >Overview</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100"
+                        >My downloads</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100"
+                        >Billing</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100"
+                        >Rewards</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li> -->
+              <li>
+                <a
+                  href="/ketteln"
+                  class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
+                  >Kettlen</a
+                >
+              </li>
+                 <li>
+                <a
+                  href="/matratzen"
+                  class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
+                  >Matratzen</a
+                >
+              </li> 
+            </ul>
+            <div class="py-1">
+              <a
+                href="/ketteln"
+                class="font-bold uppercase text-lg block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >Sign out</a
+              >
+            </div>
+          </div>
+        </li>
+        <li>
           <a
-            href="/leistungen/"
-            class="font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            >Leistungen</a
+            href="#"
+            class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+            data-active-page="regionen">Regionen</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            >Regionen</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            class="font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            >Preise</a
+            class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+            data-active-page="preise">Preise</a
           >
         </li>
         <li>
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"
-            class="font-bold uppercase text-lg flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-autot"
+            class="nav-linkk font-bold uppercase text-lg flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-autot"
+            data-active-page="informationen"
             >Informationen <svg
               class="w-2.5 h-2.5 ms-2.5"
               aria-hidden="true"
@@ -219,12 +335,21 @@ import "@fontsource-variable/montserrat";
 </nav>
 
 <style>
-
   body {
     font-family: "Montserrat Variable", sans-serif;
   }
-    .max-w-screen {
+  .max-w-screen {
     max-width: 80%;
+  }
+
+  li {
+    padding: 2px 11px;
+    transition: 0.371s ease-in-out;
+  }
+
+  li:hover {
+    background-color: aliceblue;
+    border-radius: 8px;
   }
 
   @media (width <= 1550px) {
@@ -234,7 +359,7 @@ import "@fontsource-variable/montserrat";
   }
 
   @media (width <= 1300px) {
-    .max-w-screen[data-astro-cid-3ef6ksr2] {
+    .max-w-screen {
       max-width: 96%;
     }
   }
@@ -254,4 +379,76 @@ import "@fontsource-variable/montserrat";
       max-width: 97%;
     }
   }
+
+  /* Standard-Link-Stil */
+  .nav-linkk {
+    color: #000; /* Schwarzer Text */
+  }
+
+  /* Aktiver Link-Stil */
+  .nav-linkk.active {
+    color: #1d4ed8; /* Tailwind's blue-700 Farbe */
+  }
 </style>
+
+<script>
+  // Funktion, um den aktiven Menüpunkt basierend auf dem aktuellen Pfad festzulegen
+  import { initFlowbite } from "flowbite";
+
+  function setActiveNavLink() {
+    const navLinks = document.querySelectorAll(".nav-linkk");
+    const currentPath = window.location.pathname;
+
+    navLinks.forEach((link) => {
+      const page = link.getAttribute("data-active-page");
+
+      if (
+        (page === "start" && currentPath === "/") ||
+        currentPath.includes("/" + page + "/")
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+      if (
+        (page === "matratzen" && currentPath === "/matratzen") ||
+        currentPath.includes("/matratzen" + page + "/matratzen")
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  // Funktion zur Initialisierung der Dropdown-Menüs
+  function initDropdownMenus() {
+    // Wähle alle Dropdown-Toggles aus
+    const dropdownToggles = document.querySelectorAll("[data-dropdown-toggle]");
+
+    dropdownToggles.forEach((toggle) => {
+      const dropdownId = toggle.getAttribute("data-dropdown-toggle");
+      const dropdownMenu = document.getElementById(dropdownId!);
+
+      // Entferne vorherige Event Listener, um Duplikate zu vermeiden
+      toggle.removeEventListener("click", toggleDropdown);
+      toggle.addEventListener("click", toggleDropdown);
+
+      function toggleDropdown(event) {
+        event.preventDefault();
+        dropdownMenu!.classList.toggle("hidden");
+      }
+    });
+  }
+
+  // Funktionen beim initialen Laden der Seite aufrufen
+  setActiveNavLink();
+  initDropdownMenus();
+
+  // Event Listener für Routenwechsel hinzufügen
+  document.addEventListener("astro:after-swap", () => {
+    setActiveNavLink();
+    initDropdownMenus();
+    initFlowbite();
+  });
+</script>

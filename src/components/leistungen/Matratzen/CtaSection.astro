@@ -1,0 +1,55 @@
+---
+const image = "/Matratzenreinigung.webp";
+---
+
+<section class="bg-cover bg-center bg-white">
+  <div class="overlay">
+    <div
+      class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+    >
+      <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
+      <img
+        class="shw w-full hidden dark:block"
+        src={image}
+        alt="dashboard image"
+      />
+      <div class="mt-4 md:mt-0">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Gründe für eine PROFESSIONELLE MATRATZENREINIGUNG
+        </h2>
+        <p
+          class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
+        >
+          <span class="font-bold"
+            >Bei einer professionellen Reinigung der Matratze können fast 100
+            Prozent dieser Allergieauslöser beseitigt werden.
+          </span>Gleichzeitig werden die Matratzen bei der Reinigung auch von
+          Bakterien, Keimen und Sporen befreit. So kann man die Matratzen
+          desinfizieren und für ein keimfreies Ambiente beim Schlafen sorgen.
+          Natürlich kann man auch selbst viel dazu beitragen, eine gute
+          Betthygiene zu bewahren. Dazu gehört zum Beispiel das regelmäßige
+          Waschen der Bettbezüge. Gleichfalls sollte man in regelmäßigen
+          Abständen die Matratzenbezüge waschen. Mit diesen Maßnahmen trägt man
+          auch dazu bei, dass die Matratze weniger schnell verschmutzt.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    border-radius: 8px;
+    min-width: 350px;
+    min-height: 350px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+</style>

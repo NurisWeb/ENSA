@@ -23,13 +23,15 @@ import "@fontsource-variable/montserrat";
     font-family: "Montserrat Variable", sans-serif;
   }
   .overlay {
-    background-image: url("/information.webp");
-    background-size: cover;
+    background-image: url(/information.webp);
+    background-size: 29%;
     padding: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-position: 2% 30%;
+    background-repeat: no-repeat;
   }
 
   h3 {
@@ -42,6 +44,14 @@ import "@fontsource-variable/montserrat";
     border-radius: 50px;
     border: 2px solid white;
     box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    transition: 1s ease-in-out;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
   }
 
   @media (width <= 500px) {
