@@ -3,6 +3,7 @@
 
 import { cityDataMap } from "../../data/cities.js";
 import "@fontsource-variable/montserrat";
+import PopupWrapper from "./PopupWrapper.jsx";
 
 // Empfangene Props
 interface Props {
@@ -66,42 +67,37 @@ const cityData = cityDataMap[city.toLowerCase()];
         </p>
       </div>
     </div>
-    <div class="btnbox">
-      <button
-        class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >Teppich Abholung vereinbaren</button
-      >
-    </div>
+    <PopupWrapper client:load />
   </div>
+
+  <style>
+    img {
+      border-radius: 8px;
+    }
+
+    .shw {
+      box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+    }
+
+    .btnbox {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-top: 32px;
+    }
+
+    button {
+      background-color: #2d6aff;
+      border-radius: 50px;
+      border: 2px solid white;
+      box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+
+      transition: 1s ease-in-out;
+    }
+
+    button:hover {
+      border: 2px solid turquoise;
+      transform: scale(1.008);
+    }
+  </style>
 </section>
-
-<style>
-  img {
-    border-radius: 8px;
-  }
-
-  .shw {
-    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
-  }
-
-  .btnbox {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding-top: 32px;
-  }
-
-  button {
-    background-color: #2d6aff;
-    border-radius: 50px;
-    border: 2px solid white;
-    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
-
-    transition: 1s ease-in-out;
-  }
-
-  button:hover {
-    border: 2px solid turquoise;
-    transform: scale(1.008);
-  }
-</style>

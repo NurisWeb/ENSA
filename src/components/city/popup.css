@@ -1,0 +1,98 @@
+ .pos {
+     left: 25%;
+     right: 25%;
+ }
+
+ /* Keyframe-Animation für das Hochscrollen */
+ @keyframes slideUp {
+     from {
+         transform: translateY(100%);
+         opacity: 0;
+     }
+
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ /* Anwenden der Animation auf das Popup */
+ .newsletter-pop-up {
+     animation: slideUp 0.731s ease-out forwards;
+ }
+
+ @keyframes slideDown {
+     from {
+         transform: translateY(0);
+         opacity: 1;
+     }
+
+     to {
+         transform: translateY(100%);
+         opacity: 0;
+     }
+ }
+
+ /* Anwenden der Animation auf das Popup */
+ .newsletter-pop-down {
+     animation: slideDown 0.731s ease-out forwards;
+ }
+
+ .btnbox {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     padding-top: 32px;
+ }
+
+ .buttons {
+     background-color: #2d6aff;
+     border-radius: 50px;
+     border: 2px solid white;
+     box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+
+     transition: 1s ease-in-out;
+ }
+
+ .buttons:hover {
+     border: 2px solid turquoise;
+     transform: scale(1.008);
+ }
+
+                 .popup-overlay {
+                     position: fixed;
+                     top: 0;
+                     left: 0;
+                     right: 0;
+                     bottom: 0;
+                     background: rgba(0, 0, 0, 0.5);
+                     z-index: 50;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                 }
+        
+                 .popup-content {
+                     background: white;
+                     border-radius: 8px;
+                     padding: 20px;
+                     max-width: 500px;
+                     width: 100%;
+                     position: relative;
+                 }
+        
+                 @keyframes slideUp {
+                     from {
+                         transform: translateY(100%);
+                         opacity: 0;
+                     }
+        
+                     to {
+                         transform: translateY(0);
+                         opacity: 1;
+                     }
+                 }
+        
+                 .animate-slideUp {
+                     animation: slideUp 0.5s ease-out forwards;
+                 }
