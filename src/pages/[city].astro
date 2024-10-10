@@ -1,0 +1,44 @@
+---
+import Footer from "../components/Footer.astro";
+import FooterBanner from "../components/FooterBanner.astro";
+import Header from "../components/Header.astro";
+import CityCta from "../components/city/CityCta.astro";
+import CityCta2 from "../components/city/CityCta2.astro";
+import CityPage from "../components/city/CityPage.astro";
+import Vorteile from "../components/city/Vorteile.astro";
+import RugBanner from "../components/RugBanner.astro";
+import { cityList } from "../data/cities.js";
+
+// Exportiere die Funktion getStaticPaths
+export async function getStaticPaths() {
+  return cityList.map((city) => ({
+    params: { city },
+  }));
+}
+
+// Hole den Städtenamen aus der URL
+const { city } = Astro.params;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stadtseite</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <Header />
+    <CityPage city={city} />
+    <CityCta city={city} />
+    <Vorteile />
+    <CityCta2 city={city} />
+    <FooterBanner />
+    <RugBanner />
+    <Footer />
+  </body>
+</html>

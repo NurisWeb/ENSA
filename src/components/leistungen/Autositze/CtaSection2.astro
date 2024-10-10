@@ -1,0 +1,55 @@
+---
+const imageSrc = "/gestank-im-auto.webp";
+---
+
+<section class="bg-white dark:bg-gray-900">
+  <div
+    class="gap-8 items-center py-16 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+  >
+    <div>
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        REINIGEN MIT RASIERSCHAUM
+      </h2>
+      <p class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400">
+        Rasierschaum ist optimal dazu geeignet, Sitze zu reinigen. Er kommt auch
+        sehr gut bei der Reinigung von Teppichen zum Einsatz und kann hier gut
+        verwendet werden. So werden auch Autositze zu
+      </p>
+      <p class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400">
+        hochglanz Sitzen, wenn Sie den Rasierschaum hier anwenden. Es ist völlig
+        egal, um welche Flecken es sich bei den Polstern handelt. Rasierschaum
+        entfernt eigentlich jede Art von Fleck problemlos.
+      </p>
+      <p class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400">
+        Selbst Fettrückstände werden mit diesem Schaum sehr gut gelöst. Es ist
+        auch sehr vorteilhaft, dass dieser Schaum keine Rückstände hinterlässt
+        und auch keine Gerüche. Damit ist er sehr gut für das
+      </p><p
+        class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400"
+      >
+        Auto geeignet. Der Schaum muss ca. 1/2 Stunde auf dem Fleck einwirken
+        und anschließend mit Wasser und einem Tuch entfernt werden.
+      </p>
+    </div>
+    <img
+      class="ds hidden mx-auto w-124 rounded md:flex"
+      src={imageSrc}
+      alt="mobile app"
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    border-bottom: 3px solid black;
+  }
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  .ds {
+    filter: drop-shadow(16px 16px 16px gray);
+  }
+</style>

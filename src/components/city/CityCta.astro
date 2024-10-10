@@ -1,0 +1,107 @@
+---
+// src/components/CityPage.astro
+
+import { cityDataMap } from "../../data/cities.js";
+import "@fontsource-variable/montserrat";
+
+// Empfangene Props
+interface Props {
+  city: string;
+}
+
+const { city } = Astro.props as Props;
+
+// Daten für die angegebene Stadt abrufen
+const cityData = cityDataMap[city.toLowerCase()];
+---
+
+<section class="bg-cover bg-center bg-white sm:pb-24">
+  <div class="top-overlay flex justify-center max-w-screen-xl m-auto">
+    <div class="top pt-20 pb-10 text-center">
+      <h2
+        class="mb-1 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        Teppichreinigung, Pflege und Reparatur
+      </h2>
+      <h4
+        class="ml-2 text-xl tracking-tight font-normal text-gray-900 dark:text-white"
+      >
+        Aller Art und Größe im Raum <strong>{cityData.name}</strong> mit Hol- und
+        Bringservice
+      </h4>
+    </div>
+  </div>
+  <div class="overlay">
+    <div
+      class="gap-8 items-center px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 lg:px-6"
+    >
+      <img
+        class="shw w-full dark:hidden rounded"
+        src={cityData.image}
+        alt="dashboard image"
+      />
+
+      <div class="mt-4 md:mt-0">
+        <h6 class="text-lg dark:text-white">Gründe für eine</h6>
+        <h3
+          class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Kennen Sie das auch?
+        </h3>
+        <p
+          class="mb-6 font-light text-black-500 md:text-base dark:text-gray-400"
+        >
+          <span class="font-bold"
+            >Manchmal ist es nötig Teppiche professionell reinigen zu lassen.
+          </span>Die Gründe dafür können unterschiedlich sein. Um schnell zu
+          einer professionellen Teppichreinigung zu kommen, sollten Sie
+          telefonisch, per Email oder mittels des Kontaktformulars mit uns
+          Kontakt aufnehmen. Wir vereinbaren dann einen möglichst umgehenden
+          Termin mit ihnen und holen den Teppich auf Wunsch bei ihnen ab. Als
+          Beleg für die Abholung erhalten Sie von uns einen Abholschein. Auf
+          diesem ist das Besprochene bezüglich Umfang der Leistungen. Wenn ihr
+          Teppich repariert werden muss, wird auch dies erledigt. Über die
+          Möglichkeiten einer Reparatur erhalten Sie zuvor eine ausführliche
+          Beratung. Der Abholservice ist für Sie völlig kostenlos.
+        </p>
+      </div>
+    </div>
+    <div class="btnbox">
+      <button
+        class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Teppich Abholung vereinbaren</button
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    border-radius: 8px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  .btnbox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 32px;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+</style>

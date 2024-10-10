@@ -1,0 +1,53 @@
+---
+const image = "/reinigung-auto-sitze.webp";
+---
+
+<section class="bg-cover bg-center bg-white">
+  <div class="overlay">
+    <div
+      class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+    >
+      <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
+      <img
+        class="shw w-full hidden dark:block rounded"
+        src={image}
+        alt="dashboard image"
+      />
+      <div class="mt-4 md:mt-0">
+        <h6 class="text-lg dark:text-white">Warum Autositze reinigen?</h6>
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Haben Sie auch das Gefühl, dass Ihre Autositze mal<br /> wieder eine neue
+          Reinigung benötigen?
+        </h2>
+        <p
+          class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
+        >
+          <span class="font-bold"
+            >Haben Ihre Kinder mal wieder auf den Rückbänken mit Essen gekleund
+            finden sich nun unschöne Flecken auf dem Polster? Alles kein
+            Problem, wir helfen Ihnen gerne weiter. Denn es gibt viele
+            verschiedene Mittel, die hier optimal zum Einsatz kommen können und
+            sehr gut wirken, um den Schmutz zu entfernen. Das Auto wird so fast
+            wieder wie neu und auch die Autositze werden wieder sehr schön rein
+            und frisch sein. Hier gibt es einige Hausmittel, die der
+            professionellen Reinigung vom Fachmann optimal einsetzen können. Und
+            wenn Sie nicht mehr weiter wissen und die Flecken nicht weg gehen
+            wollen, dann kommen Sie einfach zu uns!
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    img {
+      border-radius: 8px;
+    }
+
+    .shw {
+      box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+    }
+  </style>
+</section>

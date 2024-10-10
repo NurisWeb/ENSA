@@ -7,15 +7,21 @@ import Banner from "./Banner.astro";
     <div
       class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 lg:py-24 flexus"
     >
-      <div class="max-w-screen-md mb-8">
+      <div class="mb-8 flex-col align-middle">
         <h2
           class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white flexus"
         >
           Profitieren Sie von unserem Teppich Vollservice
         </h2>
-        <p class="text-white sm:text-xl ml-1">
-          Here at Flowbite we focus on markets where technology, innovation, and
-          capital can unlock long-term value and drive economic growth.
+        <p class="text-white font-light sm:text-l ml-1 p-correct">
+          Entdecken Sie unseren umweltschonenden Teppichreinigungsprozess mit
+          biologisch abbaubaren Feinwaschmitteln, hochwertige Polsterreinigung
+          mit modernster Kärcher-Technik, professionelle Teppichbodenpflege,
+        </p>
+        <p class="text-white font-light sm:text-l ml-1">
+          Autopolster sowie Teppichreparaturen und Kettlung. Nutzen Sie unseren
+          <strong>kostenfreien Abhol- und Bringservice ab 99 Euro</strong> und profitieren
+          Sie von individueller Beratung für jedes Material.
         </p>
       </div>
       <div
@@ -485,7 +491,6 @@ import Banner from "./Banner.astro";
     align-items: flex-start;
     justify-content: space-between;
     width: 96%;
-    max-width: 2200px;
   }
 
   button {
@@ -501,6 +506,9 @@ import Banner from "./Banner.astro";
     transform: scale(1.008);
   }
 
+  .p-correct {
+    margin-bottom: 0.75rem;
+  }
   .korrektur {
     margin-bottom: 0.5rem;
   }

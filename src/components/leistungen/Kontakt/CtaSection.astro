@@ -1,0 +1,49 @@
+---
+import ContactForm from "./ContactForm.jsx";
+---
+
+<section class="py-24">
+  <h2
+    class="mb-6 lg:mb-8 text-4xl lg:text-5xl tracking-tight font-extrabold
+  text-center text-gray-900"
+  >
+    Lassen Sie uns über Teppiche Sprechen
+  </h2>
+  <div class="overlay flex justify-center gap-8">
+    <div class="right">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Kontaktdaten</h2>
+        <ul class="list-none space-y-1 text-gray-800">
+          <li>Telefon: <strong>07131 2795256</strong></li>
+          <li>
+            E-Mail: <a
+              href="mailto:info@ensa-teppichreinigung.de"
+              class="text-blue-600 hover:underline"
+              ><strong>info@ensa-teppichreinigung.de</strong></a
+            >
+          </li>
+          <li class="mt-4 font-semibold">Montag - Freitag</li>
+          <li>09:00 Uhr - 13:00 Uhr</li>
+          <li>14:00 Uhr - 18:00 Uhr</li>
+          <li class="mt-4 font-semibold">Samstag</li>
+          <li>10:00 Uhr - 15:00 Uhr</li>
+          <li class="mt-4">Sonntags geschlossen</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="left">
+      <ContactForm client:idle />
+    </div>
+  </div>
+  <div class="">
+    <p class="pt-10 text-center text-base text-gray-70 leading-relaxed">
+      Wir freuen uns, von Ihnen zu hören – sei es für <strong
+        >Reinigungen</strong
+      >, <strong>Reparaturen</strong> oder <strong>individuelle Wünsche</strong
+      >.<br />
+      Kontaktieren Sie uns gerne, und wir werden uns zeitnah bei Ihnen melden, um
+      Ihre Anliegen bestmöglich zu erfüllen.
+    </p>
+  </div>
+</section>

@@ -115,7 +115,7 @@ import "@fontsource-variable/montserrat";
                   >Abhol- und Lieferservice</a
                 >
               </li>
-           <!--    <li aria-labelledby="dropdownNavbarLinkLeistungen">
+              <!--    <li aria-labelledby="dropdownNavbarLinkLeistungen">
                 <button
                   id="doubleDropdownButtonLeistungen"
                   data-dropdown-toggle="doubleDropdownLeistungen"
@@ -183,29 +183,84 @@ import "@fontsource-variable/montserrat";
                   >Kettlen</a
                 >
               </li>
-                 <li>
+              <li>
                 <a
                   href="/matratzen"
                   class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
                   >Matratzen</a
                 >
-              </li> 
+              </li>
+              <li>
+                <a
+                  href="/kontakt"
+                  class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
+                  >kontakt</a
+                >
+              </li>
             </ul>
-            <div class="py-1">
-              <a
-                href="/ketteln"
-                class="font-bold uppercase text-lg block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >Sign out</a
-              >
-            </div>
           </div>
         </li>
         <li>
-          <a
-            href="#"
-            class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            data-active-page="regionen">Regionen</a
+          <button
+            id="dropdownNavbarLinkRegion"
+            data-dropdown-toggle="dropdownNavbarRegion"
+            class="nav-linkk font-bold uppercase text-lg flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-autot"
+            data-active-page="informationenRegion"
+            >Regionen<svg
+              class="w-2.5 h-2.5 ms-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"></path>
+            </svg></button
           >
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownNavbarRegion"
+            class="text-lg z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-64"
+          >
+            <ul
+              class="py-2 text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownLargeButton"
+            >
+              <li>
+                <a
+                  href="/heilbronn"
+                  class="nav-linkk font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100"
+                  >Heilbronn</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="/stuttgart"
+                  class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
+                  >Stuttgart</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/Karlsruhe"
+                  class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
+                  >Karlsruhe</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/kontakt"
+                  class="font-bold uppercase text-lg block px-4 py-2 hover:bg-gray-100 e"
+                  >kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
         <li>
           <a
@@ -388,6 +443,10 @@ import "@fontsource-variable/montserrat";
   /* Aktiver Link-Stil */
   .nav-linkk.active {
     color: #1d4ed8; /* Tailwind's blue-700 Farbe */
+  }
+
+  #dropdownNavbarLeistungen {
+    z-index: 200;
   }
 </style>
 
