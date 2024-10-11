@@ -11,7 +11,12 @@ const Popup = ({ onClose }) => {
       const popupElement = document.getElementById('pop');
       if (popupElement && !popupElement.contains(event.target)) {
         // Popup schließen, wenn außerhalb geklickt wird
-        onClose();
+        const pop = document.getElementById('pop');
+        const over = document.getElementById('over');
+        pop.classList.toggle('newsletter-pop-up');
+        pop.classList.toggle('newsletter-pop-down');
+        over.classList.toggle('popup-overlay');
+        over.classList.toggle('popup-content')
       }
     };
 
