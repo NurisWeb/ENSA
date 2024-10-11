@@ -6,25 +6,28 @@ import './popup.css'
 
 const Popup = ({ onClose }) => {
   // Schließen bei Klick außerhalb des Popups
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const popupElement = document.getElementById('pop');
-      if (popupElement && !popupElement.contains(event.target)) {
-        // Popup schließen, wenn außerhalb geklickt wird
-        const pop = document.getElementById('pop');
-        const over = document.getElementById('over');
-        pop.classList.toggle('newsletter-pop-up');
-        pop.classList.toggle('newsletter-pop-down');
-        over.classList.toggle('popup-overlay');
-        over.classList.toggle('popup-content')
-      }
-    };
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    const popupElement = document.getElementById('pop');
+    if (popupElement && !popupElement.contains(event.target)) {
+      // Popup schließen, wenn außerhalb geklickt wird
+      const pop = document.getElementById('pop');
+      const over = document.getElementById('over');
+      pop.classList.toggle('newsletter-pop-up');
+      pop.classList.toggle('newsletter-pop-down');
+      over.classList.toggle('popup-overlay');
+      //over.classList.toggle('popup-content');
+      setTimeout(() => {
+        onClose()
+      }, 291);
+    }
+  };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [onClose]);
+  document.addEventListener('mousedown', handleClickOutside);
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, [onClose]);
 
   // Verhindert das Schließen bei Klick innerhalb des Popups
   const handlePopupClick = (event) => {

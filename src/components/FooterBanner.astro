@@ -1,3 +1,7 @@
+---
+import PopupWrapper from "./city/PopupWrapper";
+---
+
 <section class="py-12 pb-20 mx-auto max-w-screen-2xl">
   <div class="bg-white p-8">
     <!-- Titel -->
@@ -40,12 +44,7 @@
         </p>
       </div>
     </div>
-  </div>
-  <div class="btnbox">
-    <button
-      class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >Individuelle Beratung vereinbaren</button
-    >
+    <PopupWrapper client:load />
   </div>
 </section>
 

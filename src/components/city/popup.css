@@ -18,7 +18,7 @@
 
  /* Anwenden der Animation auf das Popup */
  .newsletter-pop-up {
-     animation: slideUp 0.731s ease-out forwards;
+     animation: slideUp 0.291s ease-out forwards;
  }
 
  @keyframes slideDown {
@@ -35,7 +35,7 @@
 
  /* Anwenden der Animation auf das Popup */
  .newsletter-pop-down {
-     animation: slideDown 0.731s ease-out forwards;
+     animation: slideDown 0.291s ease-out forwards;
  }
 
  .btnbox {
@@ -73,7 +73,6 @@
                  }
         
                  .popup-content {
-                     background: white;
                      border-radius: 8px;
                      padding: 20px;
                      max-width: 500px;
@@ -94,5 +93,5 @@
                  }
         
                  .animate-slideUp {
-                     animation: slideUp 0.5s ease-out forwards;
+                     animation: slideUp 0.371s ease-out forwards;
                  }
