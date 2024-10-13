@@ -1,0 +1,70 @@
+---
+const imageSrc = "/teppich-lieferung.png";
+---
+
+<section class="bg-white dark:bg-gray-900">
+  <div
+    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+  >
+    <div>
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        Teppich Abhol- und Bringservice
+      </h2>
+      <p class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400">
+        Ihre Zufriedenheit ist unser Auftrag. Deshalb bieten wir den bequemen
+        Abhol- und Bringservice an. Gerne können Sie einen Termin vereinbaren
+      </p>
+      <p class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400">
+        und unser Team holt den schweren Teppich bei Ihnen Zuhause ab und
+        liefert diesen nach der Reinigung wieder zu Ihnen nach Hause. Natürlich
+      </p>
+      <p class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400">
+        können Sie den Teppich auch selbst bei uns vorbeibringen. Sprechen Sie
+        uns an und wir geben Ihnen einen Rabatt von 15%, wenn Sie keinen Abhol-
+        und Bringservice wünschen. Wir berechnen eine
+      </p><p
+        class="mb-3 font-light text-gray-500 md:text-base dark:text-gray-400"
+      >
+        Auftragspauschalte von 20,00€ für den Hol- und Bringservice. Ab einem
+        Auftragswert von 100,00€ ist der Hol- und Bringservice für Sie
+        kostenfrei.
+      </p>
+    </div>
+    <img
+      class="ds hidden mx-auto w-64 md:flex"
+      src={imageSrc}
+      alt="mobile app"
+    />
+  </div>
+</section>
+
+<style>
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  .ds {
+    filter: drop-shadow(16px 16px 16px gray);
+  }
+
+  .btnbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    margin-top: 1.5rem;
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+</style>

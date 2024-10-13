@@ -1,7 +1,7 @@
 ---
 const features = [
   {
-    title: "Teppichreinigung/Teppichwäsche",
+    title: "Teppichreinigung Teppichwäsche",
     icon: "/teppichreinigung-service.webp",
     text: "Der Waschvorgang ist umweltschonend und die Feinwaschmittel biologisch voll abbaubar. Wir verwenden keine phosphathaltigen Mittel Die Reinigung wird von unserem fachkompetenten Team einfach und unkompliziert durchgeführt. Im Gegensatz zu herkömmlichen Reinigungsverfahren werden Teppiche bei uns auch in den Teppichwaschanlagen umweltfreundlich gereinigt",
   },
@@ -23,7 +23,7 @@ const features = [
   {
     title: "Teppichreparatur",
     icon: "/die-rerparatur-der-teppiche.webp",
-    text: "/Ein Teppich verliert durch jeden Schaden massiv an Wert. Schäden können beseitigt werden. Gerne reparieren wir Ihre Teppiche. Ein wertvoller Teppich verliert durch jeden Schaden massiv an Wert. Das muss nicht sein, denn eine fachkundig durchgeführte Reparatur erhält seinen Wert. Wir, als Spezialist für Teppichreparatur in Baden-Württemberg reparieren angenagte, abgenagte oder zerrissene Ränder. Bei Bedarf übernehmen wir auch die gesamte Verkettelung Ihres Teppichs.",
+    text: "Ein Teppich verliert durch jeden Schaden massiv an Wert. Schäden können beseitigt werden. Gerne reparieren wir Ihre Teppiche. Ein wertvoller Teppich verliert durch jeden Schaden massiv an Wert. Das muss nicht sein, denn eine fachkundig durchgeführte Reparatur erhält seinen Wert. Wir, als Spezialist für Teppichreparatur in Baden-Württemberg reparieren angenagte, abgenagte oder zerrissene Ränder. Bei Bedarf übernehmen wir auch die gesamte Verkettelung Ihres Teppichs.",
   },
   {
     title: "Individuelle Kundenberatung",
@@ -33,17 +33,17 @@ const features = [
 ];
 ---
 
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-    <div class="max-w-screen-md mb-8 lg:mb-16">
+<section class="bg-white dark:bg-gray-900 text-center">
+  <div class="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
+    <div class="mb-8 lg:mb-16">
       <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
       >
-        Designed for business teams like yours
+        Wir bieten einen rundrum <br />Service für Ihren Teppich an.
       </h2>
       <p class="text-gray-500 sm:text-xl dark:text-gray-400">
-        Here at Flowbite we focus on markets where technology, innovation, and
-        capital can unlock long-term value and drive economic growth.
+        Ab einen Auftragswert von 99,-€ erhalen Sie eine <br />
+        <strong>KOSTENLOSE ABHOL- UND BRINGSERVICE</strong>
       </p>
     </div>
 
@@ -52,8 +52,8 @@ const features = [
     >
       {
         features.map((feature) => (
-          <div>
-            <div class="relative bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 rounded-lg overflow-hidden">
+          <div class="text-left relative same-h">
+            <div class="relative bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 rounded-lg overflow-hidden text-left">
               <img
                 src={feature.icon}
                 alt={feature.title}
@@ -62,20 +62,55 @@ const features = [
               />
               <div class="h-40 w-full" />
             </div>
-            <h3 class="mt-4 text-xl font-bold dark:text-white">
+            <h3 class="mt-4 text-2xl font-bold dark:text-white mb-2">
               {feature.title}
             </h3>
             {feature.text && (
               <p class="text-gray-500 dark:text-gray-400">{feature.text}</p>
+                <div class="btnbox">
+          <button
+            class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >Mehr erfahren</button>
+        </div>
+
             )}
+            
           </div>
+          
         ))
       }
+      
     </div>
   </div>
 </section>
 
 <style>
+
+
+.same-h {
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  .btnbox {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    margin-top: 1.5rem;
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+
   @media (width <= 639px) {
     .eine {
       grid-template-columns: repeat(1, minmax(0, 1fr));
