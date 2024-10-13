@@ -37,7 +37,7 @@ useEffect(() => {
 
   return (
     <div id="over" className="popup-overlay">
-  <div id="pop" className="fixed bottom-0 z-50 p-4 mx-4 bg-white rounded-lg border border-gray-200 shadow sm:bottom-6 md:p-6 pos newsletter-pop-up">
+  <div id="pop" className="fixed bottom-0 z-50 p-4 mx-4 bg-white rounded-lg border border-gray-200 shadow  md:p-6 pos newsletter-pop-up">
     <div className="flex items-start pos">
       <div>
         <h3 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">

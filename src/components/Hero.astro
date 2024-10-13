@@ -63,7 +63,7 @@ const { backgroundImage } = Astro.props;
     <div id="calculatorPopup" class="popup-overlay">
       <div class="popup-content">
         <button id="closeCalculator" class="close-button">&times;</button>
-        <PriceCalculator client:load />
+        <PriceCalculator server:defer />
       </div>
     </div>
 
@@ -76,11 +76,23 @@ const { backgroundImage } = Astro.props;
         font-family: "Montserrat Variable", sans-serif;
       }
 
-      .bg {
-        background-image: url(/ersatz.webp);
-        background-position: 46% 54%;
+      .bg[data-astro-cid-bbe6dxrz] {
+        background-image: url(/ersatz.webp),
+          linear-gradient(
+            30deg,
+            rgba(73, 127, 237, 1) 0%,
+            rgba(180, 184, 227, 1) 49%,
+            rgba(62, 115, 222, 1) 100%
+          ),
+          linear-gradient(
+            30deg,
+            rgba(73, 127, 237, 1) 0%,
+            rgba(37, 41, 85, 1) 49%,
+            rgba(62, 115, 222, 1) 100%
+          );
+        background-position: 43% 0%;
         background-repeat: no-repeat;
-        background-size: 120%;
+        background-size: 104%;
         background-attachment: fixed;
       }
 
@@ -90,6 +102,11 @@ const { backgroundImage } = Astro.props;
         display: flex;
         justify-content: center;
       }
+
+      /* 
+background: rgb(73,127,237);
+background: 
+*/
 
       .button {
         letter-spacing: 1.5px;
@@ -208,16 +225,22 @@ const { backgroundImage } = Astro.props;
       }
 
       @media (width <= 1800px) {
-        .bg {
+        .bg[data-astro-cid-bbe6dxrz] {
           background-position: 38% 49%;
           background-size: 180%;
         }
       }
+      @media (width <= 1400px) {
+        .bg[data-astro-cid-bbe6dxrz] {
+          background-position: 38% 49%;
+          background-size: 200%;
+        }
+      }
 
       @media (width <= 1200px) {
-        .bg {
-          background-position: 40% 16%;
-          background-size: 180%;
+        .bg[data-astro-cid-bbe6dxrz] {
+          background-position: 46% 0%;
+          background-size: 200%;
         }
       }
 
@@ -228,6 +251,10 @@ const { backgroundImage } = Astro.props;
 
         .text-lg {
           font-size: 0.925rem;
+        }
+
+        .cover-color {
+          padding: 108px 0;
         }
       }
 
@@ -245,9 +272,9 @@ const { backgroundImage } = Astro.props;
           font-size: 0.8rem;
         }
 
-        .bg {
-          background-position: 44% 13%;
-          background-size: 180%;
+        .bg[data-astro-cid-bbe6dxrz] {
+          background-position: 46% 0%;
+          background-size: 212%;
         }
 
         p {
@@ -290,9 +317,9 @@ const { backgroundImage } = Astro.props;
       }
 
       @media (width <= 560px) {
-        .bg {
+        .bg[data-astro-cid-bbe6dxrz] {
           background-image: url("/mobile-hero.webp");
-          background-position: 44% 10%;
+          background-position: 44% 0%;
           background-size: 100%;
         }
       }
@@ -307,6 +334,14 @@ const { backgroundImage } = Astro.props;
           font-size: 0.8rem;
           margin: 0;
           margin-top: 20px;
+        }
+
+        @media (width <= 310px) {
+          .bg[data-astro-cid-bbe6dxrz] {
+            background-image: url("/mobile-hero.webp");
+            background-position: 44% 0%;
+            background-size: 180%;
+          }
         }
       }
     </style>

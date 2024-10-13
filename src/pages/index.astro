@@ -36,10 +36,10 @@ import RugBanner from "../components/RugBanner.astro";
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={slide({ duration: "0.8s" })} />
     <About transition:animate={slide({ duration: "0.8s" })} />
-    <Service />
-    <FAQ />
-    <Regionen />
-    <RugBanner />
-    <Footer />
+    <Service client:visible />
+    <FAQ client:visible />
+    <Regionen clien:visible />
+    <RugBanner clien:visible />
+    <Footer clien:visible />
   </body>
 </html>

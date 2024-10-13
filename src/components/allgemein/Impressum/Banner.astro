@@ -1,0 +1,96 @@
+---
+import "@fontsource-variable/montserrat";
+---
+
+<section>
+  <div class="cover">
+    <div class="overlay">
+      <div class="top">
+        <h3 class="text-4xl font-bold mb-1 text-white">
+          MIT HAUSMITTEL FLECKEN ENTFERNEN ODER PROFESSIONELL REINIGEN LASSEN?
+        </h3>
+      </div>
+      <div class="bottom">
+        <div class="btnbox">
+          <p
+            class="text-shadow text-center mb-3 text-white md:text-base font-bold"
+          >
+            Bei leichten Flecken greifen viele Personen zu Hausmitteln. Hier ein
+            paar Möglichkeiten, wie Sie selbst versuchen können, die Flecken<br
+            />
+            loszuwerden. Dennoch empfehlen wir, regelmäßig eine professionelle Reinigung
+            vom Fachmann.
+          </p>
+        </div>
+        <div class="btnbox">
+          <button
+            class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >Reinigung besprechen</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  .btnbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 20%) 0px 7px 29px 0px;
+    margin-top: 1.5rem;
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px black;
+    letter-spacing: 1.3px;
+    line-height: 1.5;
+  }
+
+  .overlay {
+    background-image: url("/sauberes-auto.webp");
+    background-size: 104%;
+    background-position: center;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+  }
+
+  @media (width <= 500px) {
+    .top {
+      background-color: #ffffff91;
+    }
+  }
+</style>
