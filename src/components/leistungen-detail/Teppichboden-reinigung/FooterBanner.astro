@@ -1,0 +1,95 @@
+---
+import PopupWrapper from "../../city/PopupWrapper";
+---
+
+<section class="py-20 mx-auto max-w-screen-2xl">
+  <div class="bg-white p-8">
+    <!-- Titel -->
+    <h2
+      class="text-3xl font-extrabold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 mb-6 uppercase"
+    >
+      Warum eine Teppichbodenreinigung für Unternehmen wichtig ist:
+    </h2>
+
+    <!-- Erster Textblock -->
+    <p class="text-lg font-bold text-gray-700 mb-6">
+      Die Notwendigkeit, Teppichböden zu reinigen, ist für die meisten
+      gewerblichen Kunden ein Muss. Denn der Teppichboden ist oft das 1. was ein
+      Kunde beim Eintritt in das Gebäude sieht. Ein sauberer Teppichboden sorgt
+      gleich für einen positiven Eindruck auch bei Ihrem Industrie Teppichboden.
+      Egal ob normaler oder Industrieteppichboden. Jeder Teppichboden hat
+      individuelle Eigenschaften Teppichböden können in Wohnungen, Büros,
+      Schulen, Krankenhäusern, Hotels und anderen Orten verlegt werden, um den
+      Bewohnern oder Gästen Komfort und ästhetischen Wert zu bieten. Manche
+      Teppiche brauchen besondere Pflege, andere nicht. Egal wie die
+      Beschaffenheit ist, wir sorgen auf jeden Fall für einen perfekten
+      Industrieteppichboden.
+    </p>
+
+    <!-- Zwei Blöcke nebeneinander bei größeren Bildschirmen -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 border-info">
+      <div>
+        <p class="text-lg font-bold text-gray-700">
+          <strong class="text-xl underline uppercase text-green-600"
+            >1. Fleckenbehandlung</strong
+          ><br />Anschließend wird Ihr Teppichboden mit umweltfreundlichen
+          Spezialreinigern einer intensiven Fleckenbehandlung unterzogen.
+        </p>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-gray-700">
+          <strong class="text-xl underline uppercase text-green-600"
+            >2.Absaugen des Teppichs</strong
+          ><br />
+          Mit einem leistungsstarken Industriestaubsauger wird dem Teppichboden die
+          Feuchtigkeit und der Restschmutz entzogen.
+        </p>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-gray-700">
+          <strong class="text-xl underline uppercase text-green-600"
+            >3.Shampoonieren mit einer Bürstenmaschine für beste Ergebnisse</strong
+          ><br />
+          Mit einer Spezialbürste oder Bürstenmaschine wird Ihr Teppichboden vorgereinigt.
+        </p>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-gray-700">
+          <strong class="text-xl underline uppercase text-green-600"
+            >4. Teppichboden trockenen lassen</strong
+          ><br />
+          Der Teppichboden wird nun bis zum vollständigen trocknen "ruhen"
+        </p>
+      </div>
+    </div>
+
+    <PopupWrapper client:load />
+  </div>
+
+  <style>
+    .border-info {
+      padding: 20px;
+      border: 1px solid green;
+    }
+    .btnbox {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-top: 32px;
+    }
+
+    button {
+      background-color: #2d6aff;
+      border-radius: 50px;
+      border: 2px solid white;
+      box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+
+      transition: 1s ease-in-out;
+    }
+
+    button:hover {
+      border: 2px solid turquoise;
+      transform: scale(1.008);
+    }
+  </style>
+</section>

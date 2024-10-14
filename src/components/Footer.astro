@@ -2,15 +2,28 @@
   <div class="mx-auto max-w-screen-xl">
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
-        <a href="#" class="flex items-center">
+        <a href="/" class="flex items-center justify-center">
           <img
             src="/ensa-teppichreinigung-logo-weiss.png"
             class="mr-4 h-16"
             alt="ENSA-Teppichreinigungs-Logo"
           />
         </a>
+        <p
+          class="text-base text-white tracking-wide font-bold leading-5 mt-2 text-center"
+        >
+          Ihr Partner für <span class="text-yellow-200"
+            >professionell<br /> gereinigte Teppiche <br />und Polster</span
+          > aller Art
+        </p>
+        <p
+          class="text-sm text-white tracking-wide font-medium leading-4 mt-4 text-center"
+        >
+          Dammstraße 29/a<br />
+          74072 Heilbronn
+        </p>
       </div>
-      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+      <div class="px-4-mobile grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
         <div>
           <h2 class="mb-2 text-sm font-semibold text-white uppercase">Links</h2>
           <ul class="text-white">
@@ -20,14 +33,10 @@
               >
             </li>
             <li>
-              <a href="https://tailwindcss.com/" class="hover:underline"
-                >Region</a
-              >
+              <a href="/regionen" class="hover:underline">Region</a>
             </li>
             <li>
-              <a href="https://tailwindcss.com/" class="hover:underline"
-                >Kontakt</a
-              >
+              <a href="/kontakt" class="hover:underline">Kontakt</a>
             </li>
             <li>
               <a href="https://tailwindcss.com/" class="hover:underline"
@@ -45,7 +54,7 @@
           </ul>
         </div>
 
-        <div>
+        <div class="sozial-icons">
           <h2 class="mb-2 text-sm font-semibold text-white">Flogt uns auf</h2>
           <ul class="text-white">
             <li>
@@ -115,5 +124,17 @@
     display: flex;
     flex-direction: column;
     height: 74%;
+  }
+
+  @media (width <= 767px) {
+    .sozial-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+    .px-4-mobile {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 </style>

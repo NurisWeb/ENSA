@@ -1,0 +1,111 @@
+---
+import "@fontsource-variable/montserrat";
+---
+
+<section>
+  <div class="overlay">
+    <div class="cover py-24">
+      <div class="top">
+        <h3 class="text-4xl font-bold mb-1 text-white">
+          DIESE ARBEIT DER TEPPICHREPARATUR ERFORDERT EIN HOHES MAß AM KÖNNEN
+        </h3>
+      </div>
+      <div class="bottom max-w-screen-xl">
+        <div class="btnbox">
+          <p class="text-center mb-3 font-medium text-white leading-relaxed">
+            viel Erfahrung und einiges an Zeit. Das Ergebnis spricht aber für
+            sich und wir erhalten unserem Kunden ein Anlageobjekt und eventuell
+            sogar ein Erbstück. Selbstverständlich reparieren wir auch Fransen
+            und Brandschäden. Die Preise richten sich immer nach Größe und
+            Umfang der durchzuführenden Reparaturen. Gerne geben wir Ihnen auf
+            Anfrage einen Überblick über die Kosten, die anfallen könnten.
+          </p>
+        </div>
+        <div class="btnbox">
+          <a
+            href="tel:071312795256"
+            class="bg-blue-500 hover:bg-blue-700 text-white text-xl font-bold py-2 px-4 rounded button"
+          >
+            Jetzt anrufen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  .btnbox {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgba(43, 47, 172, 0.4) 0px 7px 29px 0px;
+    transition: 1s ease-in-out;
+    margin-top: 1.6rem;
+  }
+
+  .button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+
+  .overlay {
+    background-image: url("/teppichreparatur-gekonnt.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+
+  .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    background-color: #05003ea2;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+  }
+
+  @media (width <= 500px) {
+    .cover {
+      padding: 60px 20px;
+    }
+
+    .btnbox {
+      padding-top: 0;
+    }
+    .top {
+      text-align: center;
+    }
+
+    .bottom {
+      padding: 0 20px;
+    }
+
+    p {
+      letter-spacing: 1.24px;
+      line-height: 1.65;
+    }
+  }
+</style>

@@ -1,0 +1,95 @@
+---
+import PopupWrapper from "../../city/PopupWrapper";
+
+const image = "/Teppichreinigung-trommel.jpg";
+---
+
+<section class="bg-cover bg-center bg-white">
+  <div class="overlay">
+    <div
+      class="gap-8 items-center py-12 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+    >
+      <img
+        class="img shw w-full dark:hidden"
+        src={image}
+        alt="dashboard image"
+      />
+      <img
+        class="img shw w-full hidden dark:block"
+        src={image}
+        alt="dashboard image"
+      />
+      <h2
+        class="mb-4 text-3xl lg:text-4xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white mobile-h2"
+      >
+        Die <strong>ENSA TEPPICHREINIGUNG</strong>
+        <br />
+      </h2>
+      <img class="mobile" src={image} alt="dashboard image" />
+      <div class="mt-4 md:mt-0">
+        <h2
+          class="mb-4 text-3xl lg:text-4xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white desktop-h2"
+        >
+          Die <strong>ENSA TEPPICHREINIGUNG</strong>
+          <br />
+        </h2>
+        <p class="font-bold text-gray-500 md:text-base dark:text-gray-400">
+          wird von unserem fachkompetenten Team einfach und unkompliziert
+          durchgeführt. Im Gegensatz zu herkömmlichen Reinigungsverfahren werden
+          Teppiche bei uns auch in den Teppichwaschanlagen umweltfreundlich
+          gereinigt. Dies garantiert nicht nur eine gründliche, sondern auch
+          eine sehr schonende Reinigung.
+        </p>
+        <div class="btnbox2">
+          <PopupWrapper client:load />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .btnbox2 {
+    width: max-content;
+  }
+
+  .img {
+    border-radius: 8px;
+    min-width: 350px;
+    min-height: 350px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  @media (width >= 900px) {
+    .mobile {
+      display: none;
+    }
+
+    .mobile-h2 {
+      display: none;
+    }
+  }
+
+  @media (width <= 900px) {
+    .img {
+      display: none;
+    }
+
+    .desktop-h2 {
+      display: none;
+    }
+
+    .mobile {
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 80%;
+      height: 300px;
+    }
+  }
+</style>

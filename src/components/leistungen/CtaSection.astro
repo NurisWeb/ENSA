@@ -4,38 +4,62 @@ const features = [
     title: "Teppichreinigung Teppichwäsche",
     icon: "/teppichreinigung-service.webp",
     text: "Der Waschvorgang ist umweltschonend und die Feinwaschmittel biologisch voll abbaubar. Wir verwenden keine phosphathaltigen Mittel Die Reinigung wird von unserem fachkompetenten Team einfach und unkompliziert durchgeführt. Im Gegensatz zu herkömmlichen Reinigungsverfahren werden Teppiche bei uns auch in den Teppichwaschanlagen umweltfreundlich gereinigt",
+    link:"/teppichreinigung"
   },
   {
     title: "Polsterreinigung",
     icon: "/polsterreinigung-vor-ort.webp",
     text: "Wir bieten Ihnen eine qualitativ hochwertige Polsterbehandlung. Polster reinigen wir mit den neusten, auf Polster spezialisierten Reinigungsmaschinen von Kärcher. Ein verschmutzes Sofa, Flecken auf der neuen Couch oder Ihre Polstermöbel müssen nicht länger sein und sollten schnellstmöglichst wieder auf Vordermann gebracht werden.",
+    link:""
   },
   {
     title: "Professionelle Teppichbodenreinigung",
     icon: "/teppichboden-reinigung.jpg",
     text: "Genauso wie jeder Teppich bedarf auch ein Teppichboden regelmäßiger Pflege und Reinigung. Mit den Jahren und je nach Beanspruchung, bekommt jeder Teppichboden Flecken und wird schmutzig. In seinem Inneren sammeln sich Bakterien und Milben.",
+    link:""
   },
   {
     title: "Kettlung von Teppiche",
     icon: "/kettung-von-den-teppichen.webp",
     text: "Ketteln ist eine seltene Handwerkskunst und kommt ursprünglich aus dem fernen Orient. Im Prinzip kann jeder Teppich und jeder Stofffußbodenbelag gekettelt werden. Dies verleiht dem Objekt eine individuelle Note. Unsere Spezialisten helfen Ihnen bei der Entscheidung, so dass Sie die richtige Garnfarbe und -stärke für Ihren Teppich auswählen können. Natürlich sind auch Kombinationen möglich. Wir erfüllen Ihnen jeden Wunsch, sprechen Sie mit unseren Experten.",
+    link:""
   },
   {
     title: "Teppichreparatur",
     icon: "/die-rerparatur-der-teppiche.webp",
     text: "Ein Teppich verliert durch jeden Schaden massiv an Wert. Schäden können beseitigt werden. Gerne reparieren wir Ihre Teppiche. Ein wertvoller Teppich verliert durch jeden Schaden massiv an Wert. Das muss nicht sein, denn eine fachkundig durchgeführte Reparatur erhält seinen Wert. Wir, als Spezialist für Teppichreparatur in Baden-Württemberg reparieren angenagte, abgenagte oder zerrissene Ränder. Bei Bedarf übernehmen wir auch die gesamte Verkettelung Ihres Teppichs.",
-  },
+    link:""
+},
   {
     title: "Individuelle Kundenberatung",
     icon: "/information.webp",
     text: "Ihr Teppich ist ein Unikat und wir behandeln jeden Teppich individuell. Denn jedes Material, jede Farbe und jede Struktur ist verschieden. Unser erfahrenes Team wird für Sie die beste Lösung suchen und berät sehr gerne über Alternativen.Selbstverständlich informieren wir Sie über unser Angebot vor Ort oder am Telefon.",
+    link:""
+  },
+  {
+    title: "Kettlung von Teppiche",
+    icon: "/kettung-von-den-teppichen.webp",
+    text: "Ketteln ist eine seltene Handwerkskunst und kommt ursprünglich aus dem fernen Orient. Im Prinzip kann jeder Teppich und jeder Stofffußbodenbelag gekettelt werden. Dies verleiht dem Objekt eine individuelle Note. Unsere Spezialisten helfen Ihnen bei der Entscheidung, so dass Sie die richtige Garnfarbe und -stärke für Ihren Teppich auswählen können. Natürlich sind auch Kombinationen möglich. Wir erfüllen Ihnen jeden Wunsch, sprechen Sie mit unseren Experten.",
+    link:""
+  },
+  {
+    title: "Teppichreparatur",
+    icon: "/die-rerparatur-der-teppiche.webp",
+    text: "Ein Teppich verliert durch jeden Schaden massiv an Wert. Schäden können beseitigt werden. Gerne reparieren wir Ihre Teppiche. Ein wertvoller Teppich verliert durch jeden Schaden massiv an Wert. Das muss nicht sein, denn eine fachkundig durchgeführte Reparatur erhält seinen Wert. Wir, als Spezialist für Teppichreparatur in Baden-Württemberg reparieren angenagte, abgenagte oder zerrissene Ränder. Bei Bedarf übernehmen wir auch die gesamte Verkettelung Ihres Teppichs.",
+    link:""
+},
+  {
+    title: "Individuelle Kundenberatung",
+    icon: "/information.webp",
+    text: "Ihr Teppich ist ein Unikat und wir behandeln jeden Teppich individuell. Denn jedes Material, jede Farbe und jede Struktur ist verschieden. Unser erfahrenes Team wird für Sie die beste Lösung suchen und berät sehr gerne über Alternativen.Selbstverständlich informieren wir Sie über unser Angebot vor Ort oder am Telefon.",
+    link:""
   },
 ];
 ---
 
 <section class="bg-white dark:bg-gray-900 text-center">
   <div class="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6">
-    <div class="mb-8 lg:mb-16">
+    <div class="mb-12 lg:mb-16">
       <h2
         class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
       >
@@ -68,9 +92,10 @@ const features = [
             {feature.text && (
               <p class="text-gray-500 dark:text-gray-400">{feature.text}</p>
                 <div class="btnbox">
+                  <a href={feature.link}>
           <button
             class="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >Mehr erfahren</button>
+            >Mehr erfahren</button></a>
         </div>
 
             )}

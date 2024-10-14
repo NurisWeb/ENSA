@@ -1,0 +1,87 @@
+---
+import PopupWrapper from "../../city/PopupWrapper";
+---
+
+<section class="py-12 pb-20 mx-auto max-w-screen-2xl">
+  <div class="bg-white p-8">
+    <!-- Titel -->
+    <h2
+      class="text-3xl font-extrabold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 mb-6 uppercase"
+    >
+      Der Teppich hält sicher lange durch, aber leider nicht ewig.
+    </h2>
+
+    <!-- Erster Textblock -->
+    <p class="text-lg font-bold text-gray-700 mb-6">
+      Irgendwann zieht ihm die Katze die ersten Fäden und dann sind dem Verfall
+      Tür und Tor geöffnet. Auch Brandlöcher stören, sofern sie sich nicht
+      nahezu unsichtbar ins Muster einfügen. Zu häufiges Shampoonieren oder auch
+      die falschen Reinigungsmittel machen das Gewebe brüchig.
+    </p>
+
+    <!-- Zwei Blöcke nebeneinander bei größeren Bildschirmen -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <p class="text-lg font-bold text-gray-700">
+          <strong class="text-xl underline"
+            >1. LOHNT SICH DIE TEPPICHREPARATUR EINES WENIGER TEUREN TEPPICHS?</strong
+          ><br />Wenn es sich um ein Lieblingsstück handelt, lohnt sich eine
+          Reparatur in jedem Fall. Teppichmuster, -farben und -designs folgen
+          ebenso dem Trend wie Einrichtungsstile. Wenn der Teppich perfekt auf
+          den Rest des Zimmers abgestimmt ist, besteht selten die Möglichkeit,
+          ein identisches oder zumindest sehr ähnliches Modell zu finden. Wenn
+          Sie also nicht gleich das gesamte Zimmer umgestalten möchten, sollten
+          Sie die Möglichkeit einer Reparatur in Betracht ziehen.
+        </p>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-gray-700">
+          <strong class="text-xl underline"
+            >2.KOSTENPUNKT EINER REPARATUREM</strong
+          ><br />
+          Da jeder schaden individuell ist, benötigt es auch eine individuelle Beratung.
+          Wir informieren Sie gerne über die genauen Preise und Konditionen für die
+          Teppichreparatur. Ein detaillierter Kostenvoranschlag wird erst nach einer
+          sorgfältigen Begutachtung der Schäden erstellt. Somit können Sie die Kostenabschätzung
+          im Voraus erhalten und haben transparente Informationen über die anfallenden
+          Kosten für die Reparatur Ihres Teppichs.
+        </p>
+      </div>
+    </div>
+    <div>
+      <p class="text-lg font-bold text-gray-700 mt-10">
+        Zusammenfassend lässt sich sagen: Auch wenn ein Teppich nicht ewig hält,
+        lohnt sich eine Reparatur oft mehr, als ihn zu ersetzen – besonders,
+        wenn er perfekt ins Zimmer passt oder Ihnen ans Herz gewachsen ist. Eine
+        fachgerechte Teppichreparatur kann das Leben Ihres Teppichs verlängern,
+        ohne dass Sie Ihr gesamtes Interieur umgestalten müssen. Lassen Sie uns
+        Ihre Teppichschäden individuell begutachten, um Ihnen eine transparente
+        Kostenabschätzung zu bieten und den Wert Ihres Teppichs zu bewahren.
+      </p>
+    </div>
+    <PopupWrapper client:load />
+  </div>
+</section>
+
+<style>
+  .btnbox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 32px;
+  }
+
+  button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+
+    transition: 1s ease-in-out;
+  }
+
+  button:hover {
+    border: 2px solid turquoise;
+    transform: scale(1.008);
+  }
+</style>

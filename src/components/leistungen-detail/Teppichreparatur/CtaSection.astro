@@ -1,0 +1,100 @@
+---
+import PopupWrapper from "../../city/PopupWrapper";
+
+const image = "/die-rerparatur-der-teppiche.webp";
+---
+
+<section class="bg-cover bg-center bg-white">
+  <div class="overlay">
+    <div
+      class="gap-8 items-center py-12 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+    >
+      <img
+        class="img shw w-full dark:hidden"
+        src={image}
+        alt="dashboard image"
+      />
+      <img
+        class="img shw w-full hidden dark:block"
+        src={image}
+        alt="dashboard image"
+      />
+      <h2
+        class="mb-4 text-3xl lg:text-4xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white mobile-h2"
+      >
+        Die <strong>EINE TEPPICHREPARATUR ERHÄLT DEN WERT IHRES TEPPICHS</strong
+        >
+        <br />
+      </h2>
+      <img class="mobile" src={image} alt="dashboard image" />
+      <div class="mt-4 md:mt-0">
+        <h2
+          class="mb-4 text-3xl lg:text-4xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white desktop-h2"
+        >
+          Die <strong
+            >EINE TEPPICHREPARATUR ERHÄLT DEN WERT IHRES TEPPICHS</strong
+          >
+        </h2>
+        <p class="font-bold text-gray-500 md:text-base dark:text-gray-400">
+          Ein wertvoller Teppich verliert durch jeden Schaden massiv an Wert.
+          Das muss nicht sein, denn eine fachkundig durchgeführte Reparatur
+          erhält seinen Wert. Wir, als Spezialist für Teppichreparatur in
+          Baden-Württemberg reparieren angenagte, abgenagte oder zerrissene
+          Ränder. Bei Bedarf übernehmen wir auch die gesamte Verkettelung Ihres
+          Teppichs. Wir entfernen das beschädigte Material und ersetzen es durch
+          ein Garn gleicher Farbe und Qualität. Das neue Garn wird sehr dicht
+          mit dem Teppich verknüpft.
+        </p>
+        <div class="btnbox2">
+          <PopupWrapper client:load />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .btnbox2 {
+    width: max-content;
+  }
+
+  .img {
+    border-radius: 8px;
+    min-width: 350px;
+    min-height: 350px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  @media (width >= 900px) {
+    .mobile {
+      display: none;
+    }
+
+    .mobile-h2 {
+      display: none;
+    }
+  }
+
+  @media (width <= 900px) {
+    .img {
+      display: none;
+    }
+
+    .desktop-h2 {
+      display: none;
+    }
+
+    .mobile {
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 80%;
+      height: 300px;
+    }
+  }
+</style>
