@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teppichreinigung Preisrechner</title>
+  <link rel="stylesheet" href="../../css/calculator.css" />
+
+  <style>
+    .calculator {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: none;
+    position: relative;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.slider-container label {
+    margin-bottom: 5px;
+}
+
+.slider-container input[type='range'] {
+    width: 100%;
+}
+
+.price-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 32px 0;
+}
+
+.tooltip > input {
+    margin-right: 0.5rem;
+}
+
+.price-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: black;
+    
+}
+
+.price-button.active {
+    background-color: #3041df;
+    color: white;
+}
+
+#total {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 28px;
+    color: black;
+}
+
+.additional-options .option {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.additional-options label {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 280px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -140px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: normal;
+}
+
+.tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;    
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    color: white;
+    padding: 15px 25px;
+    margin: 1rem 1rem;
+}
+
+.send-request {
+    margin-top: 20px;
+}
+
+.price-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    
+    .calculator {
+        padding: 20px;
+    }
+
+    .price-button {
+        font-size: 14px;
+        padding: 8px 16px;
+            margin: 0px 0px 16px;
+    }
+
+    #total {
+        font-size: 20px;
+    }
+
+    .tooltip {
+        font-size: smaller;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .tooltiptext {
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+
+
+}
+  </style>
+</head>
+
+<body>
+  <div class="calculator">
+    <h2 class="title">Teppichreinigung Kostenrechner</h2>
+
+    <div class="slider-container">
+      <label for="widthRange">Breite: <span id="widthValue">2</span> m</label>
+      <input type="range" id="widthRange" min="0" max="10" step="0.1" value="2" />
+    </div>
+
+    <div class="slider-container">
+      <label for="lengthRange">Länge: <span id="lengthValue">2</span> m</label>
+      <input type="range" id="lengthRange" min="0" max="10" step="0.1" value="2" />
+    </div>
+
+    <div class="price-buttons">
+      <button class="price-button active" data-price="9.9">Synthetische Teppiche 9,90€ /m²</button>
+      <button class="price-button" data-price="12.9">Langflorteppiche 12,90€ /m²</button>
+      <button class="price-button" data-price="19.9">Traditionelle Teppiche 19,90€ /m²</button>
+      <button class="price-button" data-price="6.9">Teppichboden 6,90€ /m²</button>
+    </div>
+
+    <div class="additional-options">
+      <div class="option">
+        <label class="tooltip">
+          <input type="checkbox" id="geruchsbehandlungCheckbox" />
+          Geruchsbehandlung/Desinfizierung (+5,00€ /m²)
+          <span class="tooltiptext">
+            Optional buchbar, pro m² 5€. Sehr empfehlenswert bei Milbenentfernung und Geruchsbeseitigung
+            wie zum Beispiel Urin oder sonstige bakterielle Verunreinigungen.
+          </span>
+        </label>
+      </div>
+      <div class="option">
+        <label class="tooltip">
+          <input type="checkbox" id="impraegnierungCheckbox" />
+          Imprägnierung/Rückfetten (+5,00€ /m²)
+          <span class="tooltiptext">
+            Allgemein schutzabweisende Wirkung. Rückfetten für Wollteppiche, sehr empfehlenswert, da
+            Wollteppiche generell Wollfett enthalten. Diese geht durch Abnutzung und auch durch die
+            Wäsche verloren.
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div id="total">Gesamtpreis: 0.00 €</div>
+
+    <button class="button send-request" id="sendRequest">Anfrage senden</button>
+  </div>
+
+  <script>
+    let width = 2;
+    let length = 2;
+    let selectedPrice = 9.9;
+    let impraegnierung = false;
+    let geruchsbehandlung = false;
+
+    const widthRange = document.getElementById('widthRange');
+    const lengthRange = document.getElementById('lengthRange');
+    const priceButtons = document.querySelectorAll('.price-button');
+    const totalDisplay = document.getElementById('total');
+    const widthValueDisplay = document.getElementById('widthValue');
+    const lengthValueDisplay = document.getElementById('lengthValue');
+    const geruchsbehandlungCheckbox = document.getElementById('geruchsbehandlungCheckbox');
+    const impraegnierungCheckbox = document.getElementById('impraegnierungCheckbox');
+
+    function calculateTotal() {
+      const area = width * length;
+      let total = area * selectedPrice;
+
+      if (geruchsbehandlung) {
+        total += area * 5;
+      }
+
+      if (impraegnierung) {
+        total += area * 5;
+      }
+
+      totalDisplay.textContent = `Gesamtpreis: ${total.toFixed(2)} €`;
+    }
+
+    widthRange.addEventListener('input', (e) => {
+      width = parseFloat(e.target.value);
+      widthValueDisplay.textContent = width.toFixed(1);
+      calculateTotal();
+    });
+
+    lengthRange.addEventListener('input', (e) => {
+      length = parseFloat(e.target.value);
+      lengthValueDisplay.textContent = length.toFixed(1);
+      calculateTotal();
+    });
+
+    priceButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        selectedPrice = parseFloat(button.getAttribute('data-price'));
+
+        priceButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        calculateTotal();
+      });
+    });
+
+    geruchsbehandlungCheckbox.addEventListener('change', (e) => {
+      geruchsbehandlung = e.target.checked;
+      calculateTotal();
+    });
+
+    impraegnierungCheckbox.addEventListener('change', (e) => {
+      impraegnierung = e.target.checked;
+      calculateTotal();
+    });
+
+    // Initial calculation
+    calculateTotal();
+  </script>
+</body>
+
+</html>

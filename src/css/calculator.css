@@ -131,8 +131,16 @@
     margin-top: 20px;
 }
 
+.price-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
+    
     .calculator {
         padding: 20px;
     }
@@ -140,17 +148,31 @@
     .price-button {
         font-size: 14px;
         padding: 8px 16px;
+            margin: 0px 0px 16px;
     }
 
     #total {
         font-size: 20px;
     }
 
-        .tooltip {
-            font-size: smaller;
-        }
+    .tooltip {
+        font-size: smaller;
+    }
 
-        .title {
-                font-size: x-large;
-            }
+    .title {
+        font-size: 20px;
+    }
+
+    .tooltiptext {
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+
+
 }

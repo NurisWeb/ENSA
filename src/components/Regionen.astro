@@ -1,3 +1,7 @@
+---
+import PopupWrapper from "./city/PopupWrapper";
+---
+
 <section class="my-section">
   <div class="overlay">
     <h2
@@ -58,10 +62,7 @@
         alt="ortsschild-waiblingen"
       />
     </div>
-    <button
-      class="my-button mb-6 lg:mb-8 text-3xl lg:text-4xl tracking-tight text-center text-white"
-      >Dienstleistungen besprechen</button
-    >
+    <PopupWrapper client:load />
   </div>
 </section>
 

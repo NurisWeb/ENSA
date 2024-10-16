@@ -1,10 +1,12 @@
 ---
+import PopupWrapper from "../../city/PopupWrapper";
+
 const imageSrc = "/teppich-lieferung.png";
 ---
 
 <section class="bg-white dark:bg-gray-900">
   <div
-    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:pb-20 sm:pt-16 lg:px-6"
   >
     <div>
       <h2
@@ -31,6 +33,9 @@ const imageSrc = "/teppich-lieferung.png";
         Auftragswert von 100,00€ ist der Hol- und Bringservice für Sie
         kostenfrei.
       </p>
+      <div class="wrapper">
+        <PopupWrapper client:load />
+      </div>
     </div>
     <img
       class="ds hidden mx-auto w-64 md:flex"
@@ -41,6 +46,10 @@ const imageSrc = "/teppich-lieferung.png";
 </section>
 
 <style>
+  .wrapper {
+    width: 310px;
+  }
+
   .shw {
     box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
   }

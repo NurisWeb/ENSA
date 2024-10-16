@@ -1,0 +1,50 @@
+---
+import "@fontsource-variable/montserrat";
+---
+
+<section class="flex bg bg-no-repeat bg-cover bg-center">
+  <div class="overlay">
+    <div
+      class="place-content-center relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-28 xl:px-0 z-1"
+    >
+      <div class="mb-6 max-w-screen-md lg:mb-0 text-center">
+        <h1
+          class="mb-4 text-5xl font-extrabold tracking-tight leading-2 text-white md:text-5xl lg:text-6xl"
+          transition:animate="slide"
+        >
+          POLSTER <span class="text-bold">REINIGEN</span>
+          <br />
+        </h1>
+        <p class="mb-6 font-bold text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+          Polstermöbel sollten regelmäßig gereinigt werden, um Staub, Schmutz
+          und Allergene effektiv zu entfernen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bg {
+    background-image: url("/reinigung-von-polster.webp");
+    /*   background-position: center;
+    background-size: 100%; */
+  }
+
+  .overlay {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+  }
+</style>

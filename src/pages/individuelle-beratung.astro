@@ -1,15 +1,13 @@
 ---
 import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
-import Hero from "../components/leistungen-detail/Matratzen/Hero.astro";
+import Hero from "../components/leistungen-detail/Beratung/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
-import CtaSection from "../components/leistungen-detail/Matratzen/CtaSection.astro";
-
-import Banner from "../components/leistungen-detail/Matratzen/Banner.astro";
+import CtaSection from "../components/leistungen-detail/Beratung/CtaSection.astro";
+import CtaSection2 from "../components/allgemein/Kontakt/CtaSection.astro";
 import FooterBanner from "../components/FooterBanner.astro";
-import CtaSection2 from "../components/leistungen-detail/Matratzen/CtaSection2.astro";
 ---
 
 <html lang="en">
@@ -21,15 +19,15 @@ import CtaSection2 from "../components/leistungen-detail/Matratzen/CtaSection2.a
 
     <ViewTransitions />
 
-    <title>Matratzen</title>
+    <title>Ketteln</title>
   </head>
   <body>
     <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
+    <CtaSection2 />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />
-    <CtaSection2 transition:animate={slide({ duration: "0.8s" })} />
-    <Banner />
+
     <FooterBanner />
     <RugBanner />
     <Footer />

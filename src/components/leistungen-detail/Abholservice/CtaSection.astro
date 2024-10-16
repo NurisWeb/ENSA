@@ -1,11 +1,13 @@
 ---
+import PopupWrapper from "../../city/PopupWrapper";
+
 const image = "/Lieferwagen-Seite.webp";
 ---
 
 <section class="bg-cover bg-center bg-white">
   <div class="overlay">
     <div
-      class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
+      class="tablet gap-8 items-center pt-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:pt-20 lg:px-6"
     >
       <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
       <img
@@ -36,17 +38,36 @@ const image = "/Lieferwagen-Seite.webp";
           Möglichkeiten einer Reparatur erhalten Sie zuvor eine ausführliche
           Beratung. Der Abholservice ist für Sie völlig kostenlos.
         </p>
+        <div class="wrap">
+          <PopupWrapper client:load />
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  .wrap {
+    width: 310px;
+  }
   img {
     border-radius: 8px;
   }
 
   .shw {
     box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  @media (width <= 1300px) {
+    .tablet {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 30px 20px;
+    }
+
+    img {
+      height: 350px;
+      object-fit: cover;
+    }
   }
 </style>

@@ -95,3 +95,11 @@
                  .animate-slideUp {
                      animation: slideUp 0.371s ease-out forwards;
                  }
+
+
+@media (width <= 990px) {
+    .pos {
+            left: 0%;
+            right: 0%;
+        }
+}

@@ -1,0 +1,91 @@
+---
+import PopupWrapper from "../../city/PopupWrapper";
+
+const image = "/polster-mit-maschiene-reinigen.webp";
+---
+
+<section class="bg-cover bg-center bg-cr">
+  <div class="overlay">
+    <div
+      class="gap-8 items-center py-8 pb-12 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+    >
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white mobile pb-6"
+      >
+        Polsterreinigung vom Fachmann in Ihrer Umgebung
+      </h2>
+      <img
+        class="shw w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 dark:hidden"
+        src={image}
+        alt="dashboard image"
+      />
+      <img
+        class="shw w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 hidden dark:block"
+        src={image}
+        alt="dashboard image"
+      />
+      <div class="mt-4 md:mt-0">
+        <h2
+          class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white desktop"
+        >
+          Polsterreinigung vom Fachmann in Ihrer Umgebung
+        </h2>
+        <p class="mb-6 font-light text-black md:text-base">
+          <span class="font-bold"
+            >Setzen Sie auf den richtigen Partner wenn es um professionelle
+            Polsterreinigung geht
+          </span>Mit unserer langjährigen Erfahrung von über 15 Jahren bieten
+          wir Ihnen eine qualitativ hochwertige Polstermöbelreinigung. Polster
+          reinigen wir mit den neusten, auf Polster spezialisierten
+          Reinigungsmaschinen von Kärcher. Ein verschmutzes Sofa, Flecken auf
+          der neuen Couch oder Ihre Polstermöbel müssen nicht länger sein und
+          sollten schnellstmöglichst wieder auf Vordermann gebracht werden. Egal
+          ob die Reinigung Ihres Sofas, die Reinigung Ihrer Couch oder des
+          geliebten Sessels, dank unserer umfangreichen Erfahrung reinigen wir
+          jede Art von Polster zuverlässig und professionell.
+        </p>
+        <PopupWrapper client:load />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    border-radius: 8px;
+    /* min-width: 350px;
+    min-height: 350px; */
+    object-fit: cover;
+    width: 100%;
+    max-height: 350px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  .bg-cr {
+    background-color: #d3d3d35e;
+  }
+  .mobile {
+    display: none;
+  }
+
+  @media (width <= 767px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+    img {
+      border-radius: 8px;
+      /* min-width: 350px;
+    min-height: 350px; */
+      object-fit: cover;
+      width: 100%;
+      max-height: 250px;
+      margin-bottom: 2rem;
+    }
+  }
+</style>
