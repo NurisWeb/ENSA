@@ -5,188 +5,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Teppichreinigung Preisrechner</title>
-  <link rel="stylesheet" href="../../css/calculator.css" />
-
+  
   <style>
     .calculator {
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    width: 100%;
-    max-width: none;
-    position: relative;
-    letter-spacing: 0.8px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.slider-container label {
-    margin-bottom: 5px;
-}
-
-.slider-container input[type='range'] {
-    width: 100%;
-}
-
-.price-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 32px 0;
-}
-
-.tooltip > input {
-    margin-right: 0.5rem;
-}
-
-.price-button {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    color: black;
-    
-}
-
-.price-button.active {
-    background-color: #3041df;
-    color: white;
-}
-
-#total {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 28px;
-    color: black;
-}
-
-.additional-options .option {
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.additional-options label {
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.tooltiptext {
-    visibility: hidden;
-    width: 280px;
-    background-color: #555;
-    color: #fff;
-    text-align: left;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -140px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-weight: normal;
-}
-
-.tooltiptext::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.button {
-    background-color: #2d6aff;
-    border-radius: 50px;
-    border: 2px solid white;    
-    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
-    color: white;
-    padding: 15px 25px;
-    margin: 1rem 1rem;
-}
-
-.send-request {
-    margin-top: 20px;
-}
-
-.price-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    
-    .calculator {
-        padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: none;
+      position: relative;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+  
+    .slider-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    .slider-container label {
+      margin-bottom: 5px;
+    }
+  
+    .slider-container input[type='range'] {
+      width: 100%;
+    }
+  
+    .price-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 32px 0;
+    }
+  
+    .tooltip>input {
+      margin-right: 0.5rem;
+    }
+  
     .price-button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      color: black;
+  
+    }
+  
+    .price-button.active {
+      background-color: #3041df;
+      color: white;
+    }
+  
+    #total {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 28px;
+      color: black;
+    }
+  
+    .additional-options .option {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    .additional-options label {
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    .tooltiptext {
+      visibility: hidden;
+      width: 280px;
+      background-color: #555;
+      color: #fff;
+      text-align: left;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -140px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-weight: normal;
+    }
+  
+    .tooltiptext::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    .button {
+      background-color: #2d6aff;
+      border-radius: 50px;
+      border: 2px solid white;
+      box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+      color: white;
+      padding: 15px 25px;
+      margin: 1rem 1rem;
+    }
+  
+    .send-request {
+      margin-top: 20px;
+    }
+  
+    .price-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 600px) {
+  
+      .calculator {
+        padding: 20px;
+      }
+  
+      .price-button {
         font-size: 14px;
         padding: 8px 16px;
-            margin: 0px 0px 16px;
-    }
-
-    #total {
+        margin: 0px 0px 16px;
+      }
+  
+      #total {
         font-size: 20px;
-    }
-
-    .tooltip {
+      }
+  
+      .tooltip {
         font-size: smaller;
-    }
-
-    .title {
+      }
+  
+      .title {
         font-size: 20px;
-    }
-
-    .tooltiptext {
+      }
+  
+      .tooltiptext {
         width: 200px;
         left: 50%;
         margin-left: -100px;
-    }
-
-    label {
+      }
+  
+      label {
         font-size: 14px;
+      }
+  
+  
+  
     }
-
-
-
-}
   </style>
+
+
 </head>
 
 <body>
@@ -224,11 +225,10 @@
       <div class="option">
         <label class="tooltip">
           <input type="checkbox" id="impraegnierungCheckbox" />
-          Imprägnierung/Rückfetten (+5,00€ /m²)
+          Imprägnierung/Rückfetten (+3,00€ /m²)
           <span class="tooltiptext">
             Allgemein schutzabweisende Wirkung. Rückfetten für Wollteppiche, sehr empfehlenswert, da
-            Wollteppiche generell Wollfett enthalten. Diese geht durch Abnutzung und auch durch die
-            Wäsche verloren.
+            Wollteppiche generell Wollfett enthalten.
           </span>
         </label>
       </div>
@@ -236,15 +236,28 @@
 
     <div id="total">Gesamtpreis: 0.00 €</div>
 
+    <button class="button" id="addCarpet">Teppich hinzufügen</button>
+
+    <ul id="carpetList"></ul>
+
     <button class="button send-request" id="sendRequest">Anfrage senden</button>
+
+    <div id="contactForm" style="display: none;">
+      <h3>Kontaktdaten</h3>
+      <input type="text" id="contactName" placeholder="Ihr Name" />
+      <input type="email" id="contactEmail" placeholder="Ihre E-Mail" />
+      <button class="button" id="submitContact">Daten absenden</button>
+    </div>
   </div>
 
   <script>
     let width = 2;
     let length = 2;
-    let selectedPrice = 9.9;
+    let selectedPrice = 9.9; // Standardmäßig Synthetische Teppiche
     let impraegnierung = false;
     let geruchsbehandlung = false;
+    let totalCarpets = [];
+    let totalSum = 0;
 
     const widthRange = document.getElementById('widthRange');
     const lengthRange = document.getElementById('lengthRange');
@@ -254,6 +267,11 @@
     const lengthValueDisplay = document.getElementById('lengthValue');
     const geruchsbehandlungCheckbox = document.getElementById('geruchsbehandlungCheckbox');
     const impraegnierungCheckbox = document.getElementById('impraegnierungCheckbox');
+    const addCarpetBtn = document.getElementById('addCarpet');
+    const carpetList = document.getElementById('carpetList');
+    const sendRequestBtn = document.getElementById('sendRequest');
+    const contactForm = document.getElementById('contactForm');
+    const submitContactBtn = document.getElementById('submitContact');
 
     function calculateTotal() {
       const area = width * length;
@@ -264,10 +282,30 @@
       }
 
       if (impraegnierung) {
-        total += area * 5;
+        total += area * 3;
       }
 
       totalDisplay.textContent = `Gesamtpreis: ${total.toFixed(2)} €`;
+      return total;
+    }
+
+    function resetFields() {
+      width = 2;
+      length = 2;
+      selectedPrice = 9.9;
+      impraegnierung = false;
+      geruchsbehandlung = false;
+
+      widthRange.value = width;
+      lengthRange.value = length;
+      widthValueDisplay.textContent = width.toFixed(1);
+      lengthValueDisplay.textContent = length.toFixed(1);
+      geruchsbehandlungCheckbox.checked = false;
+      impraegnierungCheckbox.checked = false;
+
+      priceButtons.forEach((btn) => btn.classList.remove('active'));
+      priceButtons[0].classList.add('active');
+      calculateTotal();
     }
 
     widthRange.addEventListener('input', (e) => {
@@ -303,7 +341,46 @@
       calculateTotal();
     });
 
-    // Initial calculation
+    addCarpetBtn.addEventListener('click', () => {
+      const total = calculateTotal();
+
+      const carpetData = {
+        width,
+        length,
+        selectedPrice,
+        impraegnierung,
+        geruchsbehandlung,
+        total,
+      };
+
+      totalCarpets.push(carpetData);
+      totalSum += total;
+
+      const listItem = document.createElement('li');
+      listItem.textContent = `Teppich: ${width.toFixed(1)}m x ${length.toFixed(
+        1
+      )}m, Preis: ${total.toFixed(2)} €`;
+      carpetList.appendChild(listItem);
+
+      resetFields();
+    });
+
+    sendRequestBtn.addEventListener('click', () => {
+      contactForm.style.display = 'block';
+    });
+
+    submitContactBtn.addEventListener('click', () => {
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+
+      if (name && email) {
+        // Hier kann später EmailJS integriert werden
+        console.log("Kontaktdaten:", { name, email });
+        console.log("Teppichdaten:", totalCarpets);
+      }
+    });
+
+    // Initial setup
     calculateTotal();
   </script>
 </body>
