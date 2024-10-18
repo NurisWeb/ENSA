@@ -6,22 +6,24 @@ import "@fontsource-variable/montserrat";
   <div class="overlay">
     <div class="cover">
       <div class="top">
-        <h3 class="text-4xl font-bold mb-1 text-white">
-          REICHT REGELMÄSSIGES SAUGEN ZUR PFLEGE DES TEPPICHS ?
+        <h3 class="text-3xl font-bold mb-1 text-white sm:text-center text-left">
+          REICHT REGEL-MÄSSIGES SAUGEN ZUR PFLEGE DES TEPPICHS?
         </h3>
       </div>
       <div class="bottom max-w-screen-xl">
         <div class="btnbox">
-          <p class="text-center mb-3 font-bold text-white leading-relaxed">
+          <p
+            class="text-left sm:text-center mb-3 font-bold text-white leading-relaxed"
+          >
             Um die Antwort vorwegzunehmen – nein, leider nicht.Staubkörnchen
             dringen tief zwischen die einzelnen Teppichfasern ein und lagern
             sich in der Folge direkt an den Fasern ab. Wer schon einmal
             Bodenstaub zwischen den Fingern zerrieben hat, weiß, dass er alles
             andere als weich ist. Unter dem Mikroskop zeigt jedes Körnchen
             messerscharfe Ecken und Kanten und ähnelt einem Glassplitter. Bei
-            jedem Druck und bei jeder Bewegung reiben die Staubkörnchen an der
+            jedem Druck und bei jeder Bewegung reiben die Staub-körnchen an der
             Faser, verletzen dabei die Faserhülle und zerstören sie mit der
-            Zeit.Kein noch so gründlicher Staubsauger kann alle Staubteilchen
+            Zeit. Kein noch so gründlicher Staubsauger kann alle Staubteilchen
             entfernen. Auch Dampfreiniger und Schamponiergeräte stoßen an ihre
             Grenzen.Nicht nur Staubteilchen bleiben in den Teppichfasern,
             sondern auch die
@@ -92,20 +94,30 @@ import "@fontsource-variable/montserrat";
     box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
   }
 
-  @media (width <= 500px) {
+  @media (width <= 767px) {
     .cover {
-      padding: 60px 20px;
+      padding: 4rem 2rem !important;
     }
 
+    .overlay > div {
+      padding: 0;
+    }
+
+    .overlay {
+      background-image: none;
+      background-color: gray;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (width <= 500px) {
     .btnbox {
       padding-top: 0;
     }
     .top {
       text-align: center;
-    }
-
-    .bottom {
-      padding: 0 20px;
     }
 
     p {

@@ -16,12 +16,17 @@ import Banner from "./Banner.astro";
         <p class="text-white font-light sm:text-l ml-1 p-correct">
           Entdecken Sie unseren umwelt-freundlich Teppichreinigungsprozess mit
           biologisch abbaubaren Feinwaschmitteln, hochwertige Polsterreinigung
-          mit modernster Kärcher-Technik für professionelle Teppichbodenpflege,
+          mit modernster Kärcher-Technik für professionelle <strong
+            class="font-bold"
+            >Teppichbodenpflege, Autopolster sowie Teppich-reparaturen und
+            Kettlung.</strong
+          >
         </p>
         <p class="text-white font-light sm:text-l ml-1">
-          Autopolster sowie Teppichreparaturen und Kettlung. Nutzen Sie unseren
-          <strong>kostenfreien Abhol- und Bringservice ab 99 Euro</strong> und profitieren
-          Sie von individueller Beratung für jedes Material.
+          Nutzen Sie unseren
+          <strong class="font-bold"
+            >kostenfreien Abhol- und Bringservice ab 99 Euro</strong
+          > und profitieren Sie von individueller Beratung für jedes Material.
         </p>
       </div>
       <div
@@ -66,9 +71,9 @@ import Banner from "./Banner.astro";
             Polsterreinigung
           </h3>
           <p class="text-white">
-            Wir bieten Ihnen eine qualitativ hochwertige Polsterbehandlung.
+            Wir bieten Ihnen eine qualitativ hochwwertige Polsterbehandlung.
             Polster reinigen wir mit den neusten, auf Polster spezialisierten
-            Reinigungsmaschinen von Kärcher.
+            Reinigungs-maschinen von Kärcher.
           </p>
           <div class="bottom">
             <div class="btnbox">
@@ -391,9 +396,19 @@ import Banner from "./Banner.astro";
       max-width: 96%;
     }
 
+    h2 {
+      margin-bottom: 3rem;
+      line-height: 1.3 !important;
+    }
+
     .section1,
     .section2 {
       padding: 60px 0;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
     }
 
     h3 {
@@ -402,6 +417,10 @@ import Banner from "./Banner.astro";
 
     .pb-g {
       margin-bottom: 60px !important;
+    }
+
+    .btnbox {
+      padding-top: 20px;
     }
   }
 </style>

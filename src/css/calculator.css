@@ -139,7 +139,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     
     .calculator {
         padding: 20px;
@@ -173,6 +173,15 @@
         font-size: 14px;
     }
 
-
+.button {
+    background-color: #2d6aff;
+    border-radius: 50px;
+    border: 2px solid white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+    color: white;
+    padding: 8px 25px;
+    margin: 0rem 0rem;
+    font-size: 0.8rem;
+}
 
 }

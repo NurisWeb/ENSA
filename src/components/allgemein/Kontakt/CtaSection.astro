@@ -2,9 +2,9 @@
 import ContactForm from "./ContactForm.jsx";
 ---
 
-<section class="py-24">
+<section class="py-16">
   <h2
-    class="mb-6 lg:mb-8 text-4xl lg:text-5xl tracking-tight font-extrabold
+    class="mb-6 lg:mb-8 text-3xl lg:text-5xl tracking-tight font-extrabold
   text-center text-gray-900"
   >
     Lassen Sie uns über Teppiche Sprechen
@@ -48,3 +48,16 @@ import ContactForm from "./ContactForm.jsx";
     </p>
   </div>
 </section>
+
+<style>
+  @media (width <= 767px) {
+    h2 {
+      padding: 0 1.5rem;
+    }
+    .overlay {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0 1.4rem;
+    }
+  }
+</style>

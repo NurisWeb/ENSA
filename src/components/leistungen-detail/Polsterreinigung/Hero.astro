@@ -9,13 +9,13 @@ import "@fontsource-variable/montserrat";
     >
       <div class="mb-6 max-w-screen-md lg:mb-0 text-center">
         <h1
-          class="mb-4 text-5xl font-extrabold tracking-tight leading-2 text-white md:text-5xl lg:text-6xl"
+          class="mb24 text-5xl font-bold tracking-tight leading-2 text-white md:text-5xl lg:text-6xl"
           transition:animate="slide"
         >
           POLSTER <span class="text-bold">REINIGEN</span>
           <br />
         </h1>
-        <p class="mb-6 font-bold text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+        <p class="mb-6 text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
           Polstermöbel sollten regelmäßig gereinigt werden, um Staub, Schmutz
           und Allergene effektiv zu entfernen.
         </p>
@@ -46,5 +46,11 @@ import "@fontsource-variable/montserrat";
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.541);
     width: 100%;
+  }
+
+  @media (width <= 767px) {
+    h1 {
+      line-height: 1.2;
+    }
   }
 </style>

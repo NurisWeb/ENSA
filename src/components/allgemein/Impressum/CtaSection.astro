@@ -9,7 +9,7 @@ const image = "/reinigung-auto-sitze.webp";
     >
       <div class="mt-4 md:mt-0">
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
         >
           Hinweise gem. § 5 TMG:
         </h2>
@@ -23,28 +23,44 @@ const image = "/reinigung-auto-sitze.webp";
       </div>
       <div class="flex flex-col">
         <h2
-          class="text-4xl mt-6 tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="text-3xl mt-6 tracking-tight font-bold text-gray-900 dark:text-white"
         >
           USt-IdNr.: 65062/59199
         </h2>
-        <span class="font-bold mt-4">Telefon: 07131 2795256 </span>
-        <span class="font-bold">E-Mail: info@ensa-teppichreinigung.de</span>
+        <span class="font-bold mt-4 text-gray-500"
+          >Telefon: 07131 2795256
+        </span>
+        <span class="font-bold text-gray-500"
+          >E-Mail: info@ensa-teppichreinigung.de</span
+        >
       </div>
     </div>
   </div>
-
-  <style>
-    img {
-      border-radius: 8px;
-    }
-
-    .shw {
-      box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
-    }
-    .crct {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-around;
-    }
-  </style>
 </section>
+
+<style>
+  img {
+    border-radius: 8px;
+  }
+
+  .shw {
+    box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+  .crct {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  @media (width <= 767px) {
+    section {
+      padding: 3rem 2rem 4rem 2rem;
+    }
+
+    .overlay > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+    }
+  }
+</style>

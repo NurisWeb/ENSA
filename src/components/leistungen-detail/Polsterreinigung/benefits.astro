@@ -1,7 +1,9 @@
 <section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center sm:py-16 lg:px-6">
+  <div
+    class="py-8 px-4 mx-auto max-w-screen-xl sm:text-center text-left sm:py-16 lg:px-6"
+  >
     <h2
-      class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
     >
       Umfassende Polsterreinigung – <br /><strong
         class="text-blue-800 underline underline-offset-2">ENSA</strong
@@ -18,9 +20,9 @@
         <div
           class="inline-flex justify-center items-center mb-6 w-24 h-24 rounded-lg"
         >
-          <object data="/sessel.svg" type="image/svg+xml"></object>
+          <object class="mr-4" data="/sessel.svg" type="image/svg+xml"></object>
         </div>
-        <h3 class="mb-4 text-2xl font-bold dark:text-white">
+        <h3 class="mb-4 text-2xl font-bold dark:text-white text-center mr-6">
           Reinigung von Polstermöbeln
         </h3>
         <div class="ps">
@@ -98,9 +100,10 @@
         <div
           class="inline-flex justify-center items-center mb-6 w-24 h-24 bg-purple-100 rounded-lg dark:bg-purple-900"
         >
-          <object data="/standort.svg" type="image/svg+xml"></object>
+          <object class="mr-4" data="/standort.svg" type="image/svg+xml"
+          ></object>
         </div>
-        <h3 class="mb-4 text-2xl font-bold dark:text-white">
+        <h3 class="mb-4 text-2xl font-bold dark:text-white mr-2">
           Unser Vor-Ort-Service
         </h3>
         <div class="ps">
@@ -187,5 +190,11 @@
 
   .ps {
     width: 260px;
+  }
+
+  @media (width <= 767px) {
+    section > div {
+      padding: 4rem 2rem;
+    }
   }
 </style>

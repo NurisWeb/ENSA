@@ -63,7 +63,7 @@ const features = [
       <h2
         class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
       >
-        Wir bieten einen rundrum <br />Service für Ihren Teppich an.
+        Teppich Rundum-Service
       </h2>
       <p class="text-gray-500 sm:text-xl dark:text-gray-400">
         Ab einen Auftragswert von 99,-€ erhalen Sie eine <br />
@@ -76,7 +76,7 @@ const features = [
     >
       {
         features.map((feature) => (
-          <div class="text-left relative same-h">
+          <div class="mobile-m text-left relative same-h">
             <div class="relative bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 rounded-lg overflow-hidden text-left">
               <img
                 src={feature.icon}
@@ -86,7 +86,7 @@ const features = [
               />
               <div class="h-40 w-full" />
             </div>
-            <h3 class="mt-4 text-2xl font-bold dark:text-white mb-2">
+            <h3 class="h3 mt-4 text-2xl font-bold dark:text-white mb-2">
               {feature.title}
             </h3>
             {feature.text && (
@@ -134,6 +134,27 @@ const features = [
   button:hover {
     border: 2px solid turquoise;
     transform: scale(1.008);
+  }
+
+    @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem 0;
+    }
+
+    section > div {
+      padding: 0;
+    }
+
+    .btnbox {
+      padding-top: 1rem;
+    }
+
+    .h3 {
+      margin: 2rem 1.8px 1rem;
+    }
+    .mobile-m {
+      margin-bottom: 4rem !important;
+    }
   }
 
   @media (width <= 639px) {

@@ -21,11 +21,18 @@ const { backgroundImage } = Astro.props;
           <section>
             <!-- Inhalt der Hero-Sektion -->
           </section>
+
           <h1
             transition:animate={fade({ duration: "2s" })}
-            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+            class="desktop mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
           >
             Lassen Sie Ihre Teppiche und<br /> Polster professionell reinigen
+          </h1>
+          <h1
+            transition:animate={fade({ duration: "2s" })}
+            class="mobile mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+          >
+            Teppiche und Polster professionell reinigen
           </h1>
           <p
             class="mb-8 text-lg font-normal text-white semibold lg:text-xl sm:px-16 xl:px-48"
@@ -308,6 +315,25 @@ background:
         h1 {
           font-size: 2.6rem;
         }
+
+        .mobile {
+          display: block;
+        }
+
+        .desktop {
+          display: none;
+        }
+
+        .popup-content {
+          border-radius: 0px;
+          padding: 0;
+          max-width: initial;
+          width: 100%;
+          max-height: initial;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+        }
       }
 
       @media (width <= 700px) and (width >= 600px) {
@@ -326,7 +352,7 @@ background:
 
       @media (width <= 400px) {
         .md\:text-5xl {
-          font-size: 1.9rem;
+          font-size: 2.4rem;
         }
 
         #openCalculator {
@@ -344,6 +370,10 @@ background:
           }
         }
       }
+
+      .body {
+        overflow: hidden;
+      }
     </style>
 
     <script>
@@ -352,6 +382,7 @@ background:
         const closeButton = document.getElementById("closeCalculator");
         const popup = document.getElementById("calculatorPopup");
         const popupContent = document.querySelector(".popup-content");
+        const body = document.body;
 
         if (openButton) {
           openButton.addEventListener("click", () => {
@@ -359,6 +390,7 @@ background:
             popup!.classList.remove("fade-out");
             popup!.classList.add("fade-in");
             popupContent!.classList.add("fade-in");
+            body.classList.add("body");
           });
         }
 
@@ -369,6 +401,7 @@ background:
             popupContent!.classList.remove("fade-in");
             setTimeout(() => {
               popup!.style.display = "none";
+              body.classList.remove("body");
             }, 500);
           });
         }

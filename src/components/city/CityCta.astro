@@ -18,11 +18,11 @@ const cityData = cityDataMap[city.toLowerCase()];
 
 <section class="bg-cover bg-center bg-white sm:pb-24">
   <div class="top-overlay flex justify-center max-w-screen-xl m-auto">
-    <div class="top pt-20 pb-10 text-center">
+    <div class="mobile-p top pt-20 pb-10 text-center">
       <h2
-        class="mb-1 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        class="mb-1 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
       >
-        Teppichreinigung, Pflege und Reparatur
+        Reinigung, Pflege <br />und Reparatur
       </h2>
       <h4
         class="ml-2 text-xl tracking-tight font-normal text-gray-900 dark:text-white"
@@ -53,17 +53,17 @@ const cityData = cityDataMap[city.toLowerCase()];
           class="mb-6 font-light text-black-500 md:text-base dark:text-gray-400"
         >
           <span class="font-bold"
-            >Manchmal ist es nötig Teppiche professionell reinigen zu lassen.
+            >Manchmal ist es nötig Teppiche pro-fessionell reinigen zu lassen.
           </span>Die Gründe dafür können unterschiedlich sein. Um schnell zu
-          einer professionellen Teppichreinigung zu kommen, sollten Sie
-          telefonisch, per Email oder mittels des Kontaktformulars mit uns
-          Kontakt aufnehmen. Wir vereinbaren dann einen möglichst umgehenden
-          Termin mit ihnen und holen den Teppich auf Wunsch bei ihnen ab. Als
-          Beleg für die Abholung erhalten Sie von uns einen Abholschein. Auf
-          diesem ist das Besprochene bezüglich Umfang der Leistungen. Wenn ihr
-          Teppich repariert werden muss, wird auch dies erledigt. Über die
-          Möglichkeiten einer Reparatur erhalten Sie zuvor eine ausführliche
-          Beratung. Der Abholservice ist für Sie völlig kostenlos.
+          einer angenehmen Teppichreinigung zu kommen, sollten Sie telefonisch,
+          per Email oder mittels des Kontakt-formulars mit uns Kontakt
+          aufnehmen. Wir vereinbaren dann einen möglichst umgehenden Termin mit
+          ihnen und holen den Teppich auf Wunsch bei ihnen ab. Als Beleg für die
+          Abholung erhalten Sie von uns einen Abholschein. Auf diesem ist das
+          Besprochene bezüglich Umfang der Leistungen. Wenn ihr Teppich
+          repariert werden muss, wird auch dies erledigt. Über die Möglichkeiten
+          einer Reparatur erhalten Sie zuvor eine ausführliche Beratung. Der
+          Abholservice ist für Sie völlig kostenlos.
         </p>
       </div>
     </div>
@@ -98,6 +98,20 @@ const cityData = cityDataMap[city.toLowerCase()];
     button:hover {
       border: 2px solid turquoise;
       transform: scale(1.008);
+    }
+
+    @media (width <= 767px) {
+      section {
+        margin-bottom: 3.5rem;
+        padding: 0 1rem;
+      }
+
+      .mobile-p {
+        padding-top: 3rem;
+      }
+      img {
+        margin-bottom: 2rem;
+      }
     }
   </style>
 </section>

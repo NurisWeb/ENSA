@@ -111,7 +111,7 @@ const handleSubmit = (e) => {
                 onChange={handleChange}
               />
             </div>
-            <div class="sm:col-span-2">
+            <div className="sm:col-span-2">
               <label
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

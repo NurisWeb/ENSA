@@ -23,9 +23,15 @@ const { backgroundImage } = Astro.props;
           </section>
           <h1
             transition:animate={fade({ duration: "2s" })}
-            class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+            class="desktop mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
           >
             Lassen Sie Ihre Teppiche und<br /> Polster professionell reinigen
+          </h1>
+          <h1
+            transition:animate={fade({ duration: "2s" })}
+            class="mobile mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+          >
+            Teppiche und<br /> Polster professionell reinigen
           </h1>
           <p
             class="mb-8 text-lg font-normal text-white semibold lg:text-xl sm:px-16 xl:px-48"
@@ -147,6 +153,10 @@ background:
         z-index: 1000;
         justify-content: center;
         align-items: center;
+      }
+
+      .mobile {
+        display: none;
       }
 
       .popup-content {
@@ -307,6 +317,14 @@ background:
 
         h1 {
           font-size: 2.6rem;
+        }
+
+        .mobile {
+          display: block;
+        }
+
+        .desktop {
+          display: none;
         }
       }
 
