@@ -1,0 +1,52 @@
+---
+import Footer from "../components/Footer.astro";
+import FooterBanner from "../components/FooterBanner.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/information/hero.astro"; // Hero-Sektion
+//import CTA from "../components/information/cta.astro"; // CTA-Sektion
+import { infoList, infoDataMap } from "../data/information.js";
+
+// Generiere dynamische Routen basierend auf der infoList
+export async function getStaticPaths() {
+  return infoList.map((info) => ({
+    params: { informationen: info }, // Hier nutzen wir 'informationen' als Parameter
+    props: { info }, // Extra Props
+  }));
+}
+
+// Greife auf den Parameter 'informationen' aus der URL zu
+const { informationen } = Astro.params;
+
+// Hole die Daten basierend auf dem Wert von 'informationen'
+const infoData = infoDataMap[informationen];
+
+if (!infoData) {
+  throw new Error(`Keine Daten für ${informationen}`);
+}
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{infoData.title[0]}</title>
+    <!-- Verwende den ersten Titel als Seitentitel -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <Header />
+
+    <!-- Hero-Sektion: Übergebe die richtigen Props an die Hero-Komponente -->
+    <Hero title={infoData.title[0]} image={infoData.images[1]} />
+
+    <!-- CTA-Sektion: Zeigt die dynamischen Daten für die jeweilige Seite an -->
+    <!-- <CTA titles={infoData.title} descriptions={infoData.description} images={infoData.images} subtext={infoData.subtext} /> -->
+
+    <FooterBanner />
+    <Footer />
+  </body>
+</html>

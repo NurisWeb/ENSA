@@ -7,7 +7,7 @@ const imageSrc = "/gerissener-teppich.webp";
     class="gap-8 items-center py-16 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
   >
     <div>
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
+      <h2 class="mb-4 text-3xl tracking-tight font-bold text-white">
         MANCHES IST AUCH DEM BESTEN TEPPICH ZU VIEL
       </h2>
       <p class="mb-3 font-bold text-gray-500 md:text-base dark:text-gray-400">
@@ -51,5 +51,15 @@ const imageSrc = "/gerissener-teppich.webp";
 
   .ds {
     filter: drop-shadow(16px 16px 16px gray);
+  }
+
+  @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem;
+    }
+
+    section > div {
+      padding: 0;
+    }
   }
 </style>

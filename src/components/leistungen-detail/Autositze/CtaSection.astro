@@ -1,4 +1,6 @@
 ---
+import PopupWrapper from "../../city/PopupWrapper";
+
 const image = "/reinigung-auto-sitze.webp";
 ---
 
@@ -7,6 +9,12 @@ const image = "/reinigung-auto-sitze.webp";
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
     >
+      <h6 class="mobile text-lg dark:text-white">Komfort und Sauberkeit</h6>
+      <h2
+        class="mobile mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
+      >
+        Brauchen Ihre Autositze eine Reinigung?
+      </h2>
       <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
       <img
         class="shw w-full hidden dark:block rounded"
@@ -14,16 +22,16 @@ const image = "/reinigung-auto-sitze.webp";
         alt="dashboard image"
       />
       <div class="mt-4 md:mt-0">
-        <h6 class="text-lg dark:text-white">Warum Autositze reinigen?</h6>
+        <h6 class="text-lg dark:text-white desktop">
+          Warum Autositze reinigen?
+        </h6>
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="desktop mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
         >
           Haben Sie auch das Gefühl, dass Ihre Autositze mal<br /> wieder eine neue
           Reinigung benötigen?
         </h2>
-        <p
-          class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
-        >
+        <p class="font-light text-black md:text-base">
           <span class="font-bold"
             >Haben Ihre Kinder mal wieder auf den Rückbänken mit Essen gekleund
             finden sich nun unschöne Flecken auf dem Polster? Alles kein
@@ -37,6 +45,7 @@ const image = "/reinigung-auto-sitze.webp";
             wollen, dann kommen Sie einfach zu uns!
           </span>
         </p>
+        <PopupWrapper client:load />
       </div>
     </div>
   </div>
@@ -48,6 +57,35 @@ const image = "/reinigung-auto-sitze.webp";
 
     .shw {
       box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    astro-island {
+      padding-top: 5000px !important;
+    }
+
+    @media (width <= 767px) {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
+
+      section {
+        padding: 3rem 2rem;
+      }
+
+      .overlay > div {
+        padding: 0;
+      }
+
+      img {
+        margin: 2rem 0;
+      }
     }
   </style>
 </section>

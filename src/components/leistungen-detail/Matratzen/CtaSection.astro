@@ -1,4 +1,6 @@
 ---
+import PopupWrapper from "../../city/PopupWrapper";
+
 const image = "/Matratzenreinigung.webp";
 ---
 
@@ -7,6 +9,11 @@ const image = "/Matratzenreinigung.webp";
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
     >
+      <h2
+        class="mobile mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
+      >
+        Gründe für eine Professionelle Matratzenreinigung
+      </h2>
       <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
       <img
         class="shw w-full hidden dark:block"
@@ -15,9 +22,9 @@ const image = "/Matratzenreinigung.webp";
       />
       <div class="mt-4 md:mt-0">
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="desktop mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
-          Gründe für eine PROFESSIONELLE MATRATZENREINIGUNG
+          Gründe für eine Professionelle Matratzenreinigung
         </h2>
         <p
           class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
@@ -35,6 +42,7 @@ const image = "/Matratzenreinigung.webp";
           auch dazu bei, dass die Matratze weniger schnell verschmutzt.
         </p>
       </div>
+      <PopupWrapper client:load />
     </div>
   </div>
 </section>
@@ -51,5 +59,36 @@ const image = "/Matratzenreinigung.webp";
 
   .shw {
     box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (width <= 767px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .overlay > div {
+      padding: 0;
+    }
+
+    img {
+      border-radius: 8px;
+      min-width: initial;
+      min-height: initial;
+      object-fit: cover;
+      width: 100%;
+      max-height: 400px;
+      margin: 2rem 0;
+    }
   }
 </style>

@@ -6,11 +6,11 @@ const imageSrc = "/teppich-lieferung.png";
 
 <section class="bg-white dark:bg-gray-900">
   <div
-    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:pb-20 sm:pt-16 lg:px-6"
+    class="gap-8 items-center px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:pb-20 sm:pt-16 lg:px-6"
   >
     <div>
       <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
       >
         Teppich Abhol- und Bringservice
       </h2>
@@ -56,5 +56,12 @@ const imageSrc = "/teppich-lieferung.png";
 
   .ds {
     filter: drop-shadow(16px 16px 16px gray);
+  }
+
+  @media (width <= 767px) {
+    section {
+      background-color: azure;
+      padding: 4rem 2rem;
+    }
   }
 </style>

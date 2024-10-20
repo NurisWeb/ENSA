@@ -5,16 +5,22 @@ import "@fontsource-variable/montserrat";
 <section class="flex bg bg-no-repeat bg-cover bg-center">
   <div class="overlay">
     <div
-      class="place-content-center relative py-24 px-4 mx-auto max-w-screen-xl text-white lg:py-28 xl:px-0 z-1"
+      class="place-content-center relative py-16 px-4 mx-auto max-w-screen-xl text-white lg:py-28 xl:px-0 z-1"
     >
-      <div class="mb-6 max-w-screen-md lg:mb-0 text-center">
+      <div class="max-w-screen-md lg:mb-0 text-center">
         <h1
-          class="mb-4 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl"
+          class="desktop mb-4 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl"
           transition:animate="slide"
         >
           TEPPICHBODENREINIGUNG
         </h1>
-        <p class="mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+        <h1
+          class="mobile mb-4 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl"
+          transition:animate="slide"
+        >
+          TEPPICH-BODENREINIGUNG
+        </h1>
+        <p class="font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
           <strong>Frische Wolfühloase </strong>in jedem Raum
         </p>
       </div>
@@ -44,5 +50,18 @@ import "@fontsource-variable/montserrat";
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.36);
     width: 100%;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (width <= 767px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+    }
   }
 </style>

@@ -7,9 +7,8 @@ const image = "/Lieferwagen-Seite.webp";
 <section class="bg-cover bg-center bg-white">
   <div class="overlay">
     <div
-      class="tablet gap-8 items-center pt-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:pt-20 lg:px-6"
+      class="gap-8 items-center px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:pt-20 lg:px-6"
     >
-      <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
       <img
         class="shw w-full hidden dark:block"
         src={image}
@@ -18,10 +17,15 @@ const image = "/Lieferwagen-Seite.webp";
       <div class="mt-4 md:mt-0">
         <h6 class="text-lg dark:text-white">Gründe für eine</h6>
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
-          Teppichreinigung mit Abhol-<br /> und Bringservice
+          Teppichreinigung mit Abhol- und Bringservice
         </h2>
+        <img
+          class="my-6 shw w-full dark:hidden"
+          src={image}
+          alt="dashboard image"
+        />
         <p
           class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
         >
@@ -68,6 +72,12 @@ const image = "/Lieferwagen-Seite.webp";
     img {
       height: 350px;
       object-fit: cover;
+    }
+  }
+
+  @media (width <= 767px) {
+    section {
+      padding: 3.2rem 2rem 4rem;
     }
   }
 </style>

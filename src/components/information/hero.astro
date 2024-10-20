@@ -1,0 +1,78 @@
+---
+// src/components/information/hero.astro
+interface Props {
+  title: string;
+  image: string;
+}
+
+const { title, image } = Astro.props as Props;
+---
+
+<main class="flex justify-center">
+  <section
+    class="relative flex bg-no-repeat bg-cover bg-center max-w-screen-2xl justify-center size-full"
+    style={`background-image: url(${image});`}
+  >
+    {/* Overlay */}
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    {/* Inhalt */}
+    <div
+      class="mobile relative flex items-center justify-center py-8 px-4 mx-auto text-white lg:py-36 xl:px-0 z-10"
+    >
+      <div class="max-w-screen-md lg:mb-0 text-center">
+        <h1
+          class="text-4xl tracking-normal font-bold leading-12 text-white md:text-5xl lg:text-6xl font-montserrat llh"
+        >
+          {title}
+        </h1>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  strong {
+    text-shadow: 1px 1px 2px black;
+  }
+  body {
+    font-family: "Montserrat Variable", sans-serif;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bg {
+    background-image: url("/Teppich-flicken.webp");
+    background-position: 100% 100%;
+    background-size: cover;
+  }
+
+  .overlay {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 25%);
+    width: 100%;
+  }
+
+  .llh {
+    line-height: 1.2;
+  }
+
+  @media (width <= 767px) {
+    .mobile {
+      padding: 3rem 1rem;
+    }
+
+    .llh {
+      line-height: 1.4;
+    }
+
+    h1 {
+      margin-bottom: 0.4rem;
+    }
+  }
+</style>

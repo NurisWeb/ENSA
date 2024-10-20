@@ -7,9 +7,9 @@ import "@fontsource-variable/montserrat";
     <div
       class="place-content-center relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-28 xl:px-0 z-1"
     >
-      <div class="mb-6 max-w-screen-md lg:mb-0 text-center">
+      <div class="max-w-screen-md lg:mb-0 text-center">
         <h1
-          class="mb-4 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl"
+          class="desktop text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl"
           transition:animate="slide"
         >
           MATRATZEN <span class="text-bold">REINIGEN</span>
@@ -17,9 +17,24 @@ import "@fontsource-variable/montserrat";
           EINE <span class="text-bold">WOHLTAT</span><br />
           FÜR DIE <span class="text-bold">GESUNDHEIT</span>
         </h1>
-        <p class="mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl">
+        <h1
+          class="mobile text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl lg:text-6xl"
+          transition:animate="slide"
+        >
+          Eine <span class="text-bold">Wohltat</span>
+          Für die <span class="text-bold">Gesundheit</span>
+        </h1>
+        <p
+          class="desktop mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl"
+        >
           Wenigstens einmal m Jahr sollte man die Matratze reinigen lassen<br
           />So können Milben und Milbenkot beseitigt werden.
+        </p>
+        <p
+          class="mobile mb-6 font-light text-gray-300 lg:mb-8 md:text-lg lg:text-xl"
+        >
+          Wenigstens einmal m Jahr sollte man die Matratze reinigen lassen So
+          können Milben und Milbenkot beseitigt werden.
         </p>
       </div>
     </div>
@@ -46,7 +61,20 @@ import "@fontsource-variable/montserrat";
     display: flex;
     text-align: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.36);
+    background-color: rgba(0, 0, 0, 0.57);
     width: 100%;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (width <= 767px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
   }
 </style>

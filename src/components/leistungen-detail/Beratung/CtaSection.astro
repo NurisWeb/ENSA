@@ -11,7 +11,7 @@ const image = "/kettung-von-den-teppichen.webp";
     >
       <div class="mt-4 md:mt-0 text-left">
         <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
         >
           Wir Beraten Sie gerne
         </h2>
@@ -57,5 +57,15 @@ const image = "/kettung-von-den-teppichen.webp";
 
   .btnbox {
     justify-content: flex-start !important;
+  }
+
+  @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .overlay > div {
+      padding: 0;
+    }
   }
 </style>

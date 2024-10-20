@@ -20,10 +20,9 @@ const image = "/die-rerparatur-der-teppiche.webp";
         alt="dashboard image"
       />
       <h2
-        class="mb-4 text-3xl lg:text-4xl sm:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white mobile-h2"
+        class="mb-4 text-3xl lg:text-4xl sm:text-4xl tracking-tight font-bold text-gray-900 dark:text-white mobile-h2"
       >
-        Die <strong>EINE TEPPICHREPARATUR ERHÄLT DEN WERT IHRES TEPPICHS</strong
-        >
+        Eine<strong> Teppich-reparatur </strong>erhält den Wert Ihres Teppichs
         <br />
       </h2>
       <img class="mobile" src={image} alt="dashboard image" />
@@ -95,6 +94,15 @@ const image = "/die-rerparatur-der-teppiche.webp";
       object-fit: cover;
       object-position: 50% 80%;
       height: 300px;
+    }
+  }
+  @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .overlay > div {
+      padding: 0;
     }
   }
 </style>

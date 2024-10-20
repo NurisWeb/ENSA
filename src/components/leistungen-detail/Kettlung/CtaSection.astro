@@ -9,22 +9,22 @@ const image = "/kettung-von-den-teppichen.webp";
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6"
     >
-      <img class="shw w-full dark:hidden" src={image} alt="dashboard image" />
       <img
-        class="shw w-full hidden dark:block"
+        class="mr-4 shw w-full dark:hidden"
+        src={image}
+        alt="dashboard image"
+      />
+      <img
+        class="mr-4 shw w-full hidden dark:block"
         src={image}
         alt="dashboard image"
       />
       <div class="mt-4 md:mt-0 text-left">
-        <h2
-          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-        >
+        <h2 class="mb-4 text-3xl tracking-tight font-bold text-black">
           Im Prinzip kann jeder Teppich und jeder Stofffußbodenbelag gekettelt
           werden
         </h2>
-        <p
-          class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
-        >
+        <p class="mb-6 font-light text-black md:text-base">
           <span class="font-bold"
             >Dies verleiht dem Objekt eine individuelle Note. Unsere
             Spezialisten helfen Ihnen bei der Entscheidung, so dass Sie die
@@ -59,5 +59,15 @@ const image = "/kettung-von-den-teppichen.webp";
 
   .btnbox {
     justify-content: flex-start !important;
+  }
+
+  @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .overlay > div {
+      padding: 0;
+    }
   }
 </style>

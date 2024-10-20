@@ -7,14 +7,14 @@ import "@fontsource-variable/montserrat";
     <div class="cover py-28">
       <div class="top">
         <h3
-          class="text-3xl font-extrabold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 mb-6 uppercase"
+          class="text-3xl font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 mb-6 uppercase"
         >
           Teppichreinigung Industrie <br />Teppichboden & Industrieteppiche
         </h3>
       </div>
       <div class="bottom max-w-screen-xl">
         <div>
-          <p class="text-center mb-3 font-bold text-white leading-relaxed">
+          <p class="text-center mb-3 font-bold text-white">
             Industrieteppiche werden in gewerblichen Gebäuden, Fabriken und
             Lagern verwendet. Sie sind robust und langlebig. Die Teppiche
             bestehen oft aus Nylon oder Polyesterflor mit einer Gummiunterseite
@@ -25,10 +25,10 @@ import "@fontsource-variable/montserrat";
             wenn Ihr Teppich nicht weiß ist und Sie Flecken entfernen möchten.
           </p>
         </div>
-        <div class="btnbox">
+        <div class="btnbox pt-4">
           <a
             href="tel:071312795256"
-            class="bg-blue-500 hover:bg-blue-700 text-white text-xl font-bold py-2 px-4 rounded button"
+            class="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold py-2 px-4 rounded button"
           >
             Jetzt Reinigung vereinbaren
           </a>
@@ -92,13 +92,23 @@ import "@fontsource-variable/montserrat";
     box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
   }
 
+  @media (width <= 767px) {
+    .overlay {
+      background-image: url("/boden-mobile.jpg");
+      background-size: 120% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+    }
+  }
+
   @media (width <= 500px) {
     .cover {
       padding: 60px 20px;
     }
 
     .btnbox {
-      padding-top: 0;
+      padding-top: 1rem;
     }
     .top {
       text-align: center;

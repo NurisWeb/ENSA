@@ -8,7 +8,7 @@ const imageSrc = "/Milben-keine-Change.webp";
   >
     <div>
       <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white"
       >
         MILBENKOT KANN AUSLÖSER VON ALLERGIEN SEIN
       </h2>
@@ -41,6 +41,9 @@ const imageSrc = "/Milben-keine-Change.webp";
 </section>
 
 <style>
+  section {
+    background-color: azure;
+  }
   .shw {
     box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
   }
@@ -55,5 +58,15 @@ const imageSrc = "/Milben-keine-Change.webp";
 
   .ds {
     filter: drop-shadow(16px 16px 16px gray);
+  }
+
+  @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem;
+    }
+
+    section > div {
+      padding: 0;
+    }
   }
 </style>

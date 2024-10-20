@@ -20,7 +20,7 @@ const image = "/teppichboden-reinigung.jpg";
         alt="dashboard image"
       />
       <h2
-        class="text-3xl font-extrabold sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-gray-900 mb-6 uppercase mobile-h2"
+        class="text-3xl font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl text-gray-900 mb-6 uppercase mobile-h2"
       >
         Die <strong>Professionelle Teppichboden-<br /> reinigung</strong>
       </h2>
@@ -92,6 +92,16 @@ const image = "/teppichboden-reinigung.jpg";
       object-fit: cover;
       object-position: 50% 80%;
       height: 300px;
+    }
+  }
+
+  @media (width <= 767px) {
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .overlay > div {
+      padding: 0;
     }
   }
 </style>
