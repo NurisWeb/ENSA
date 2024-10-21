@@ -1,7 +1,7 @@
 
 
 export const infoList = [
-    'allergiker', 'professionelle-teppichreinigung', 'polstermöbel', 'teppicharten', 'teppichboden', 'wollteppiche', 
+    'allergiker', 'professionelle-teppichreinigung', 'polstermoebel', 'teppicharten', 'teppichboden', 'wollteppiche', 
     'teppich-milben', 'seidenteppich', 'nepalteppich', 'orientteppiche', 'hochflorteppiche'
 ]
   
@@ -12,7 +12,7 @@ export const infoDataMap = {
         title: ['Teppich Allergie durch Staub und Milben', 'Gründliche Reinigung', 'Hausmilben'],
         description: ['Immer mehr leiden unter einer Allergie, die häufig durch Hausstaub ausgelöst wird. Doch der Staub alleine ist nicht an einer Allergie Schuld. Das was sich in diesem Staub befindet, löst die Allergien in der Regel aus. Professionelle Teppichreinigung Im gewöhnlichen Hausstaub befinden sich viele Partikel, wozu dann auch Milben gehören können. Diese Milben befinden sich häufig auch in Teppichen und werden beim Staubsaugen nur herumgewirbelt. Dies ist bei einer Teppichreinigung anders, denn hier wird mit ca. 150 Liter Wasser gearbeitet. Somit wird der Teppich richtig gewaschen, ohne das auch nur ein Staubkorn durch die Luft wirbelt. Vielmehr werden alle Bestandteile durch das Wasser gebunden und somit richtig ausgewaschen.', 'Diese gründliche Teppichreinigung sollte in regelmäßigen Abständen gemacht werden, denn so werden die Milben und der Hausstaub ordentlich ausgewaschen. Dies Betreffen nicht nur Ausscheidungen von Milben, sondern gerade auch der gewöhnliche Hausstaub. Eine Teppichreinigung, die bei Allergie wichtig ist, gerade was den Hausstaub betrifft. So kann jeder ganz beruhigt mit einem schönen und porentief sauberen Teppich leben.','Leben mit Teppichen, das ist gerade bei einer Allergie sehr schwierig, doch nicht ganz unmöglich. Dabei sind die Ausscheidungen der Hausmilben der Grund für die Allergie. Da die Ausscheidungen der Milben so klein sind, können diese Luftfilter einfach durchdringen. So kann Staubsaugen sogar die Allergie sogar noch verschlimmern, was bis hin zu Asthma führen kann. Daher ist die gründliche Teppichreinigung die einzige Möglichkeit für Allergiker auch mit einem Teppich, ohne Probleme zu leben. Denn selbst Filter die angeblich die so feinporig sind, das keine Ausscheidungen von Hausmilben durchgehen, können eine solche Teppichreinigung nicht ersetzen.'],
         subtext: 'Haustaub und Milben machen vielen Menschen das Leben schwer. Doch wer gerne einen Teppich in seiner Wohnung haben möchte, muss nicht darauf verzichten. Natürlich gibt es immer Hausstaub, doch mit dieser Reinigung wird das Risiko für Allergiker geringer. Eine gründliche Reinigung für alle Teppiche.',
-        images: ['allergiker-milbe.jpeg', 'allergiker-ensa-teppichallergie-kind.jpg', 'allergiker-ensateppichallergie.jpg']
+        images: ['information/allergie-jucken.jpg','information/allergiker-milbe.jpeg', 'information/allergiker-ensa-teppichallergie-kind.jpg', 'information/allergiker-ensateppichallergie.jpg']
 
 
     },
@@ -23,23 +23,26 @@ export const infoDataMap = {
        title: ['Wir bieten eine Professionelle & Umweltfreundliche Teppichreinigung an', 'Die richtige Teppichreinigung wählen', 'Umweltfreundliche Teppichreingung'],
        description: ['Teppiche verleihen Innenräumen wohnlichen Komfort. Mit einer angenehmen Haptik laden Sie zum Barfußlaufen ein und die große Auswahl von Farben und Designs macht es möglich, zu jedem Einrichtungsstil ein passendes Modell zu finden. Wenn es jedoch um die Reinigung geht, sind Teppiche komplizierter, als ein glatter Boden. Nur mit Staubsaugen können oft tiefe Verschmutzungen und Flecken nicht entfernt werden. Darum sollte man seinem Teppich ab und zu eine professionelle Reinigung gönnen, bei der auf sanfte Weise porentief sauber wird.', 'Es gibt heute viele unterschiedliche Teppicharten. Von modernem Teppichboden aus Kunstfasern bis zu edlen Berbern und Persern und chinesischen Teppichen, die aus reiner Wolle oder sogar aus Seide gearbeitet sein können, findet man eine große Modellauswahl vor. Ebenso vielseitig sind auch die Arten der Teppichreinigung. Bei der Ensa Teppichreinigung kann man sich zunächst einmal beraten lassen und so in Erfahrung bringen, auf welche Weise der eigene Teppich am besten gereinigt werden kann. So kann man sicherstellen, dass die Farben des Teppichs leuchtend bleiben und die Fasern nicht verfilzen. Neben der Teppichreinigung wird auch eine Polsterreinigung angeboten, mit denen verschmutze Polster schnell wieder neuwertig aussehen. Dazu werden modernste Maschinen eingesetzt, mit denen Polster schonend und gründlich gereinigt werden können.','Bei der Teppichreinigung ist man darum bemüht, jeden Teppich gemäß seiner Eigenschaften auf professionelle Weise zu reinigen. Trotzdem wird dabei auch darauf Wert gelegt, eine Methode zu wählen, bei der so wenig wie möglich Wasser und Reinigungsmittel verbraucht wird, um die Umwelt zu schonen.'],
        subtext: 'VORTEILE BEI DER PROFESSIONELLEN TEPPICH- UND POLSTERREINIGUNG Teppiche oder Polstermöbel auf professionelle Weise reinigen zu lassen, gestaltet sich bei der Ensa Teppichreinigung besonders einfach. Mit dem praktischen Abhol- und Bringservice kann man auch schwere Stücke problemlos reinigen lassen. Es wird auch ein Teppich Reparaturservice angeboten, so dass kleinere Schäden gleichzeitig mit der Reinigung repariert werden können. Teppichböden können vor Ort gründlich gereinigt werden, so dass sie wie neu aussehen. Eine individuelle Beratung garantiert außerdem, dass die Teppiche so gereinigt werden, wie es ihrer Struktur und ihrem Material am besten entspricht. Die Preise der professionellen Teppichreinigung sind stets fair und mit dem praktischen online Preisrechner kann man sich selbst schon einmal ausrechnen, wie viel die Teppichreinigung gemäß Teppichtyp und Größe kosten wird.',
-        images: ['/information/teppichreinigungsfirma.jpg', 'information/teppichreinigung-teppich-weiss.jpg', 'Teppichreinigungs-maschine.jpg']
+        images: ['information/teppichreinigungs-maschine-gelb.jpg','/information/teppichreinigungsfirma.jpg', 'information/teppichreinigung-teppich-weiss.jpg', 'information/Teppichreinigungs-maschine.jpg']
         
     },
-    'polstermöbel': {
-        titles: ['Polstermöbel reinigen? So gehts', 'Polstermöbel mit Hausmittel reinigen?', 'Tipps & Tricks'],
+   
+    'polstermoebel': {
+        title: ['Polstermöbel reinigen? So gehts', 'Polstermöbel mit Hausmittel reinigen?', 'Tipps & Tricks'],
        description: ['Polstermöbel sind nicht nur Gebrauchsgegenstände, sie bieten die Gemütlichkeit und Entspannung, die man nach einem langen Arbeitstag ersehnt. Ein kleines Nickerchen auf dem alten Sofa ist ebenso erholsam, wie ein spannender Krimi mit einem guten Glas Rotwein auf dem Polstermöbel lliegend. Was aber, wenn der Rotwein den Händen entgleitet und sich im Polster ausbreitet und hässliche Flecken hinterlässt ? Auch unsere lieben Kleinen hinterlassen gerne Spuren auf unserem gelieben Sofa oder Polster. Tropfendes Eis oder Spuren von Kugelschreibern gehören ebenso zu den Klassikern wie verschüttetes Ketchup oder Sossenreste. Hier ist nun eine Polsterreinigung umumgänglich.', 'Meistens möchte man ja gleich Abhilfe schaffen und die unschönen Flecken entfernen. Das Reinigen des Schadens mit verschiedensten Hausmittelchen wie Salz, Natron, Wasser oder einem milden Reinigungsmittel, lassen Flecken ziemlich schnell vordergründig verschwinden. Die Tipps von Oma verwendet man auch gerne für die Reinigung der Polstermöbel', 'Vor dem Reinigen der Polster mit Reinigungsmitteln ist es sinnig, die Echtheit der Farben von Polster und Sofa an einer nicht sichtbaren Stelle zu überprüfen. Auch das Material und der Stoff sind von Bedeutung, denn davon ist abhängig, mit welchen Mitteln man die Flecken entfernen kann. Mit kaltem Wasser, dem etwas Shampoo oder Essig beigefügt ist, kann man wasserlösliche Flecke durch sanftes Tupfen erfolgreich entfernen.'],
        subtext: 'PROFESSIONELLES REINIGEN DER POLSTERMÖBEL, Im Polstermöbel setzen sich mit den Jahren nicht nur Staub und Schmutz ab, auch Fettreste findet man des Öfteren. Dies bildet den besten Nährboden für Milben. Damit die Möbel wieder frisch aussehen und der tief sitzende Schmutz richtig entfernt wird, lässt man das am besten von den Profis erledigen. Die professionellen Polster Reiniger wissen am besten, mit welcher Reinigung das alte Sofa und die Polstermöbel wieder in neuem Glanz erstrahlen. Mit ihrer innovativen Methode wird nicht nur der tief sitzende Schmutz entfernt, auch den ungeliebten Milben wird der Garaus gemacht. Durch regelmäßiges Reinigen und Pflegen durch die Profis, verschwinden nicht nur die alten Flecken, man hat dann auch lange Freude an seinem gesamten Polstermöbel.',
-        images: ['./teppichreinigungsfirma.jpg', './teppichreinigung-teppich-weiss.jpg', './Teppichreinigungs-maschine.jpg']
+        images: ['information/polster-hero.jpg','information/polster-reinigung-ensa.jpg','information/polsterreingung-gelb.jpg', 'information/polster.jpg']
         
     },
+
       'teppicharten': {
         title: ['Welche Teppicharten gibt es?', 'Badeteppiche','Berberteppiche','Bordürenteppiche','Designerteppiche','Flickenteppiche','Fussmatte','Gabbehteppiche','Grillmatten','Kelimteppiche','Nepalteppiche','Orientteppiche', 'Outdoorteppiche','Patchworkteppiche','Rasenteppiche','Shaggyteppiche','Vintageteppiche','Webteppiche','Wollteppiche'],
        description: ['Hier finden Sie eine Auflistung der verschiedenen und gängigsten Teppicharten. Natürlich reinigen wir auch Teppiche, die nicht dieser Aufstellung gelistet sind.','Meistens möchte man ja gleich Abhilfe schaffen und die unschönen Flecken entfernen. Das Reinigen des Schadens mit verschiedensten Hausmittelchen wie Salz, Natron, Wasser oder einem milden Reinigungsmittel, lassen Flecken ziemlich schnell vordergründig verschwinden. Die Tipps von Oma verwendet man auch gerne für die Reinigung der Polstermöbel','Vor dem Reinigen der Polster mit Reinigungsmitteln ist es sinnig, die Echtheit der Farben von Polster und Sofa an einer nicht sichtbaren Stelle zu überprüfen. Auch das Material und der Stoff sind von Bedeutung, denn davon ist abhängig, mit welchen Mitteln man die Flecken entfernen kann. Mit kaltem Wasser, dem etwas Shampoo oder Essig beigefügt ist, kann man wasserlösliche Flecke durch sanftes Tupfen erfolgreich entfernen.'],
        subtext: 'PROFESSIONELLES REINIGEN DER POLSTERMÖBEL, Im Polstermöbel setzen sich mit den Jahren nicht nur Staub und Schmutz ab, auch Fettreste findet man des Öfteren. Dies bildet den besten Nährboden für Milben. Damit die Möbel wieder frisch aussehen und der tief sitzende Schmutz richtig entfernt wird, lässt man das am besten von den Profis erledigen. Die professionellen Polster Reiniger wissen am besten, mit welcher Reinigung das alte Sofa und die Polstermöbel wieder in neuem Glanz erstrahlen. Mit ihrer innovativen Methode wird nicht nur der tief sitzende Schmutz entfernt, auch den ungeliebten Milben wird der Garaus gemacht. Durch regelmäßiges Reinigen und Pflegen durch die Profis, verschwinden nicht nur die alten Flecken, man hat dann auch lange Freude an seinem gesamten Polstermöbel.',
-        images: ['./teppichreinigungsfirma.jpg', './teppichreinigung-teppich-weiss.jpg', './Teppichreinigungs-maschine.jpg']
+        images: ['information/polster-sitzbänke.jpg','information/teppicharten-trocknung.jpg','information/teppicharten-gerollt.jpg','information/teppicharten-gefaltet.jpg','information/Teppicharten-bunt.jpg',]
         
     },
+      
             'teppichboden': {
         title: ['Welche Teppicharten gibt es?', 'Polstermöbel mit Hausmittel reinigen?','Tipps & Tricks'],
                 description: ['Sie schützen nicht nur vor Nässe, sondern verleihen dem Badezimmer auch ein gemütliches Ambiente. Badteppiche werden oft aus weichen Kunstfasern oder aus Baumwolle hergestellt, so sorgen sie für warme Füße und ein wohliges Gefühl nach jedem Duschgang.',
@@ -63,7 +66,7 @@ export const infoDataMap = {
                     'Ähnlich wie Flickenteppiche werden Webteppiche von Hand oder maschinell gewebt, jedoch haben sie einen kurzen, weichen Flor. Sie können in allen Mustern erscheinen und aus verschiedenen Materialien bestehen.',
                 'Wollteppiche können in allen Formen, Farben und Mustern hergestellt werden. Die Florhöhe ist das wichtigste Merkmal verschiedener Wollteppicharten. Je nach Höhe ist auch der Reinigungsaufwand größer oder geringer.'
                 ],
-                images: ['/information/teppichreinigungsfirma.jpg', '/information/teppichreinigung-teppich-weiss.jpg', './Teppichreinigungs-maschine.jpg']
+                images: ['information/teppichboden-saugen.jpg','information/baby-auf-teppich.jpg','information/wohnzimmer-teppich.jpg','flecken-auf-teppichbden.jpg']
         
     },
     
@@ -74,7 +77,7 @@ export const infoDataMap = {
               'Je nach Verschmutzungsgrad reinigen unsere Experten den Teppich entweder selbst von Hand, oder sie verwenden eine unserer einzigartigen Teppichwaschanlagen. Die Geschäftsbereiche erstrecken sich jedoch umfassend. Individuelle Kundenbetreuung (denn Material, Farbe und Struktur sind häufig sehr verschieden und bedürfen verschiedener Behandlung), Teppichreinigung und Teppichwäsche (in einem umweltschonenden Waschvorgang mit biologisch voll abbaubaren Stoffen), Teppichreparaturen (besonders bei angenagten oder zerrissenen Ränder, gegebenenfalls auch die gesamte Verkettelung), Professionelle Teppichbodenreinigung (inklusive regelmäßiger Pflege und Reinigung des Teppichbodens) und eine qualitativ hochwertige Polsterbehandlung (mit den neusten Spezialreinigungsmaschinen).',
               'Wir pflegen und behandeln Ihren Teppich, damit er schön und hochwertig bleibt und Ihnen eine lange Zeit Freude bereiten kann. Auch für Allergiker haben wir spezielle Mittel, welche Allergikerfreundlich und umweltverträglich sind.'
           ],
-        images: ['saubere_teppiche.jpg', 'ensa-teppichreinigen-heilbronn-slider-1024x682.jpg', 'Teppichreinigungs-maschine.jpg', 'wollteppiche-trocknung.jpg']
+        images: ['information/wollteppiche-hero.jpg','information/saubere_teppiche.jpg', 'information/ensa-teppichreinigen-heilbronn-slider-1024x682.jpg', 'information/Teppichreinigungs-maschine.jpg', 'information/wollteppiche-trocknung.jpg']
         
     },
       'teppich-milben': {
@@ -87,7 +90,7 @@ export const infoDataMap = {
               'Um diese Ungeziefer erfolgreich loszuwerden, ist es wichtig, dass man einen professionellen Teppichreinigungsdienstleister in Anspruch nimmt. Ein solcher Experte hat spezielles Ausstattung zur Hand und weiß genau, worauf es ankommt. Er führt die notwendigen Maßnahmen durch, um die Luftqualität zu verbessern, indem er Staubpartikel entfernt und schafft so optimale Bedingungen für Allergiker, um ihnen eine bessere Lebensqualität zu bieten. Mithilfe modernster Techniken und Verfahren kann professioneller Teppichreinigungsservice Ihren Teppichen die alte Frische wiedergeben sowie alle Krankheitserreger und alle anderen schädlichen Partikel absolut effektiv eliminieren. Der professionelle Reiniger arbeitet mit feinstaubabsaugendem Gerät, sodass alle Milben gefangen genommen werden, ohne den Rest des Haushalts zu belasten – eine saubere Methode ohne giftige Chemikalien! Der Fachmann findet auch jedes noch so tief versteckte Partikel und vollendet seine Arbeit mit dem Einsatz versiegelnder Mittel, damit keine neuen Milben mehr ins Haus gelangen können.',
               'Es gibt also viele Gründe, warum Sie einen professionellen Teppichreinigunsdienstleister beauftragen sollten, um Ihrem Haus von lästigen Milben befreien: maximaler Komfort für Allergiker; die Elimination aller schädlichen Partikeln; Abfallmenge reduzieren; keiner Risiken Giftchemikalien aussetzten; maximale Sauberkeit; sowie Versiegeln der Oberflächen gegen teure Neubelegung.  Also machen Sie jetzt den ersten Schritt Richtung Gesundheit und Wohlbefinden, indem Sie einen professionellen Reiniger beauftragen!'
           ],
-        images: ['sauberes-gefühl.jpg', 'milbe-grün.jpg','teppich-schaum.jpg']
+        images: ['information/milben-hero.jpg','information/sauberes-gefühl.jpg', 'information/milbe-grün.jpg','information/teppich-schaum.jpg']
         
     },
       'seidenteppich': {
@@ -98,7 +101,7 @@ export const infoDataMap = {
               'Bei ENSA Teppichreinigung haben wir langjährige Erfahrung in der Reinigung und Pflege von Seidenteppichen. Unsere hochqualifizierten Experten verwenden spezialisierte Reinigungstechniken und sanfte Reinigungsmittel, um die Schönheit und Qualität Ihres Seidenteppichs zu bewahren. Wir berücksichtigen die individuellen Bedürfnisse jedes Teppichs und garantieren gleichzeitig eine gründliche Reinigung.',
               'Seidenteppichreinigung von ENSA Teppichreinigung! Nutzen Sie unsere Expertise und vereinbaren Sie einen Termin für die professionelle Reinigung Ihres Seidenteppichs. Rufen Sie uns jetzt unter [Telefonnummer] an und lassen Sie sich von unseren freundlichen Mitarbeitern beraten. Wir freuen uns darauf, Ihnen einen strahlend sauberen Seidenteppich zu garantieren!'
           ],
-        images: ['ensa_teppichreinigungsrechner_background.jpg','seidenteppich-reinigen.webp','seidenteppich.jpg']
+        images: ['information/teppicharten-gerollt.jpg','information/ensa_teppichreinigungsrechner_background.jpg','information/seidenteppich-reinigen.webp','information/seidenteppich.jpg']
         
     },
       'nepalteppich': {
@@ -109,7 +112,7 @@ export const infoDataMap = {
               'Nepalteppiche sind aufgrund ihrer Handwerkskunst und des Materials, aus dem sie hergestellt werden, sehr langlebig. Trotzdem ist es wichtig, dass Sie Ihre Nepalteppiche reinigen lassen sollten um sie in einem guten Zustand zu halten. Das Reinigen von Nepalteppichen kann jedoch etwas tricky sein und manchmal ist es besser, einen professionellen Teppichreiniger damit zu beauftragen. In diesem Artikel erfahren Sie alles über das Reinigen von Nepalteppichen und wie oft Sie Ihre Teppiche am besten reinigen sollten.',
               'Wir sind schon sehr sehr lange im Business und haben schon etliche Teppiche gereinigt. Natürich auch Nepalteppiche. Sie können uns also die Reinigung Ihrer Nepalteppich anvertrauen. Fordern Sie hierzu ein Angebot von uns an.'
           ],
-        images: ['nepal-ai.webp','saubere_teppiche2.jpg','ensa-teppichreinigung-slider1.png']
+        images: ['nepal-hero.jpg','information/nepal-ai.webp','information/saubere_teppiche2.jpg','information/ensa-teppichreinigung-slider1.png']
         
     },
     'hochflorteppiche': {
@@ -121,7 +124,7 @@ export const infoDataMap = {
             'Nachdem du deinen Hochflor Teppich gereinigt hast, ist es wichtig, dass er vollständig trocknet, um Schimmelbildung zu vermeiden. Sorge für eine gute Luftzirkulation und vermeide direkte Sonneneinstrahlung, um das Material nicht zu beschädigen.',
             'Um deinen Hochflor Teppich länger sauber und gepflegt zu halten, ist eine regelmäßige Pflege wichtig. Stelle sicher, dass du ihn regelmäßig absaugst und behandle Flecken umgehend. Vermeide zudem das Verschütten von Flüssigkeiten und lege Schuhe beim Betreten des Teppichs ab'
         ],
-        images: ['nachher-oriental-teppich-846x564.jpg','Lieferwagen-Seite.webp']
+        images: ['information/hochflow-ausschnit.jpg','information/nachher-oriental-teppich-846x564.jpg','information/Lieferwagen-Seite.webp', 'hochflor-teppiche.jpg']
     },
       
 }

@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import FooterBanner from "../components/FooterBanner.astro";
 import Header from "../components/Header.astro";
+import Cta from "../components/information/Cta.astro";
 import Hero from "../components/information/hero.astro"; // Hero-Sektion
 //import CTA from "../components/information/cta.astro"; // CTA-Sektion
 import { infoList, infoDataMap } from "../data/information.js";
@@ -41,7 +42,8 @@ if (!infoData) {
     <Header />
 
     <!-- Hero-Sektion: Übergebe die richtigen Props an die Hero-Komponente -->
-    <Hero title={infoData.title[0]} image={infoData.images[1]} />
+    <Hero title={infoData.title[0]} image={infoData.images[0]} />
+    <Cta information={informationen} />
 
     <!-- CTA-Sektion: Zeigt die dynamischen Daten für die jeweilige Seite an -->
     <!-- <CTA titles={infoData.title} descriptions={infoData.description} images={infoData.images} subtext={infoData.subtext} /> -->
