@@ -13,7 +13,7 @@ const PopupWrapper = () => {
     <>
       <div className="btnbox">
         <button
-          className="px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg
+          className="btn px-5 py-3 text-base font-bold text-center text-white bg-blue-700 rounded-lg
           hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300
           dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 buttons"
           onClick={openPopup}

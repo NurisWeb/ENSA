@@ -1,0 +1,72 @@
+---
+// Importiere die Daten aus der Datei information.js
+import { infoDataMap } from "../../data/information.js";
+
+// Greife auf die Route-Parameter zu, um die spezifischen Informationen zu laden
+const { informationen } = Astro.params;
+
+// Hole die Daten basierend auf dem Wert von 'informationen'
+const infoData = infoDataMap[informationen];
+
+if (!infoData) {
+  throw new Error(`Keine Daten für ${informationen}`);
+}
+---
+
+<section class="bg-white dark:bg-gray-900">
+  <div
+    class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+  >
+    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+      <!-- Dynamischer Titel ab Index 2 -->
+      <h2
+        class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        {infoData.title[2]}
+      </h2>
+
+      <!-- Dynamische Beschreibung ab Index 2 -->
+      <p class="mb-4">
+        {infoData.description[2]}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-8">
+      <!-- Dynamische Bilder ab Index 2 -->
+      {
+        infoData.images
+          .slice(3)
+          .map((image, index) => (
+            <img
+              class="w-full rounded-lg"
+              src={image}
+              alt={`Bild ${index + 1}`}
+            />
+          ))
+      }
+    </div>
+
+    <!-- Weitere Titel, Beschreibungen und Bilder dynamisch anzeigen, falls vorhanden -->
+    {
+      infoData.title.slice(3).map((additionalTitle, index) => (
+        <div>
+          <h3 class="mt-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {additionalTitle}
+          </h3>
+
+          {infoData.description[index + 3] && (
+            <p class="mb-4">{infoData.description[index + 3]}</p>
+          )}
+
+          {infoData.images[index + 5] && (
+            <img
+              class="mt-4 w-full lg:mt-10 rounded-lg"
+              src={infoData.images[index + 5]}
+              alt={`Bild ${index + 5}`}
+            />
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>

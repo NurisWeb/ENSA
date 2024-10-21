@@ -1,10 +1,6 @@
----
-import "@fontsource-variable/montserrat";
----
-
-<nav class="bg-white border-gray-200">
-  <div
-    class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-2"
+<header class="flex justify-between size-full">
+  <nav
+    class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 flex justify-between size-full"
   >
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <svg
@@ -44,73 +40,76 @@ import "@fontsource-variable/montserrat";
         ></svg
       >
     </a>
+
     <button
-      data-collapse-toggle="navbar-multi-level"
+      data-collapse-toggle="mobile-menu-2"
       type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      aria-controls="navbar-multi-levelLeistungen"
+      class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      aria-controls="mobile-menu-2"
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
       <svg
-        class="w-5 h-5"
-        aria-hidden="true"
+        class="w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
       >
         <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15"></path>
+          fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"></path>
       </svg>
     </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+
+    <div
+      class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+      id="mobile-menu-2"
+    >
       <ul
-        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+        class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
       >
         <li>
           <a
             href="/"
             class="nav-linkk font-bold uppercase block py-2 px-3 text-black bg-blue-700 text-lg rounded md:bg-transparent md:text-blue-700 md:p-0"
-            data-active-page="start">Start</a
+            aria-current="page"
           >
+            Start
+          </a>
         </li>
-
         <li>
           <a
             href="/leistungen"
             class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            data-active-page="RFprei"
           >
-            Leistungen</a
-          >
+            Leistungen
+          </a>
         </li>
         <li>
           <a
             href="/regionen"
             class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            data-active-page="preise">Regionen</a
           >
+            Regionen
+          </a>
         </li>
-
         <li>
           <a
             href="/ueber-uns"
             class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            data-active-page="preise">Über uns</a
           >
+            Über uns
+          </a>
         </li>
         <li>
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"
-            class="nav-linkk font-bold uppercase text-lg flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-            data-active-page="informationen"
+            class="nav-linkk font-bold uppercase text-lg block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
           >
-            Informationen <svg
+            Informationen
+            <svg
               class="w-2.5 h-2.5 ms-2.5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -125,83 +124,78 @@ import "@fontsource-variable/montserrat";
                 d="m1 1 4 4 4-4"></path>
             </svg>
           </button>
-
-          <!-- Dropdown menu -->
           <div
             id="dropdownNavbar"
             class="text-lg z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
           >
-            <ul
-              class="py-2 text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownLargeButton"
-            >
+            <ul class="py-2 text-gray-700 dark:text-gray-200">
               <li>
                 <a
                   href="/allergiker"
-                  class="font-bold uppercase text-lg block pl-4 px-2 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Allergiker</a
                 >
               </li>
               <li>
                 <a
                   href="/professionelle-teppichreinigung"
-                  class="font-bold uppercase text-lg block px-2 pl-4 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Professionelle Teppichreinigung</a
                 >
               </li>
               <li>
                 <a
                   href="/polstermoebel"
-                  class="font-bold uppercase text-lg block px-2 py-2 pl-4 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Polstermöbel</a
                 >
               </li>
               <li>
                 <a
                   href="/teppicharten"
-                  class="font-bold uppercase text-lg block px-2 py-2 pl-4 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Teppicharten</a
                 >
               </li>
               <li>
                 <a
                   href="/teppichboden"
-                  class="font-bold uppercase text-lg pl-4 block px-2 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Teppichboden</a
                 >
               </li>
               <li>
                 <a
                   href="/wolltepiche"
-                  class="font-bold uppercase text-lg block pl-4 px-2 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Wollteppiche</a
                 >
               </li>
               <li>
                 <a
                   href="/teppich-milben"
-                  class="font-bold uppercase text-lg block px-2 pl-4 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Teppich Milben</a
                 >
               </li>
               <li>
                 <a
                   href="/seidenteppich"
-                  class="font-bold uppercase text-lg block px-2 py-2 pl-4 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Seidenteppich</a
                 >
               </li>
               <li>
                 <a
                   href="/nepaltepich"
-                  class="font-bold uppercase text-lg pl-4 block px-2 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Nepaltepich</a
                 >
               </li>
               <li>
                 <a
                   href="/hochflorteppiche"
-                  class="font-bold uppercase text-lg pl-4 block px-2 py-2 hover:bg-gray-100"
+                  class="font-bold uppercase text-lg block px-2 py-2 hover:bg-gray-100"
                   >Hochflorteppiche</a
                 >
               </li>
@@ -210,14 +204,9 @@ import "@fontsource-variable/montserrat";
         </li>
       </ul>
     </div>
-  </div>
-</nav>
-<button
-  id="scrollToTopBtn"
-  class="hidden fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full"
->
-  ⬆
-</button>
+  </nav>
+</header>
+
 
 <style>
   #scrollToTopBtn {
@@ -241,16 +230,16 @@ import "@fontsource-variable/montserrat";
   .max-w-screen {
     max-width: 80%;
   }
-/* 
+
   li {
     padding: 2px 11px;
     transition: 0.371s ease-in-out;
-  } */
+  }
 
-/*   li:hover {
+  li:hover {
     background-color: aliceblue;
     border-radius: 8px;
-  } */
+  }
 
   @media (width <= 1550px) {
     .text-lg {
@@ -293,13 +282,13 @@ import "@fontsource-variable/montserrat";
   #dropdownNavbarLeistungen {
     z-index: 200;
   }
-  
+
   @media (width <= 767px) {
     .p-2 {
       padding: 0.1rem;
     }
   }
-  
+
   #dropdownNavbar {
     width: 230px;
     z-index: 200 !important;
@@ -346,167 +335,86 @@ import "@fontsource-variable/montserrat";
       pointer-events: none;
     }
   }
-
-
-
-
+  @media (max-width: 767px) {
+    nav {
+      transform: translateY(0);
+      opacity: 1;
+      position: static;
+    }
+  }
 
   .scale-out-ver-top {
-	-webkit-animation: scale-out-ver-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-out-ver-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-----------------------------------
- */
-@-webkit-keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
+    -webkit-animation: scale-out-ver-top 0.5s
+      cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   }
-  100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
+  ---------------------------------- */ @-webkit-keyframes scale-out-ver-top {
+    0% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
   }
-}
-@keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
+  @keyframes scale-out-ver-top {
+    0% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
   }
-  100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
 
   .scale-up-ver-top {
-    -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+      both;
+    animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
-  
-@-webkit-keyframes scale-up-ver-top {
-  0% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+
+  @-webkit-keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+      transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
   }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
+  @keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+      transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+    }
   }
-}
-@keyframes scale-up-ver-top {
-  0% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-  }
-}
 
   /* Auf mobilen Ansichten ist der Header immer fixiert */
 </style>
-
-<script>
-  // Funktion, um den aktiven Menüpunkt basierend auf dem aktuellen Pfad festzulegen
-  import { initFlowbite } from "flowbite";
-
-  function setActiveNavLink() {
-    const navLinks = document.querySelectorAll(".nav-linkk");
-    const currentPath = window.location.pathname;
-
-    navLinks.forEach((link) => {
-      const page = link.getAttribute("data-active-page");
-
-      if (
-        (page === "start" && currentPath === "/") ||
-        currentPath.includes("/" + page + "/")
-      ) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-      if (
-        (page === "matratzen" && currentPath === "/matratzen") ||
-        currentPath.includes("/matratzen" + page + "/matratzen")
-      ) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  }
-
-  // Funktion zur Initialisierung der Dropdown-Menüs
-  function initDropdownMenus() {
-    // Wähle alle Dropdown-Toggles aus
-    const dropdownToggles = document.querySelectorAll("[data-dropdown-toggle]");
-
-    dropdownToggles.forEach((toggle) => {
-      const dropdownId = toggle.getAttribute("data-dropdown-toggle");
-      const dropdownMenu = document.getElementById(dropdownId!);
-
-      // Entferne vorherige Event Listener, um Duplikate zu vermeiden
-      toggle.removeEventListener("click", toggleDropdown);
-      toggle.addEventListener("click", toggleDropdown);
-
-      function toggleDropdown(event) {
-        event.preventDefault();
-        dropdownMenu!.classList.toggle("hidden");
-      }
-    });
-  }
-
-  // Funktionen beim initialen Laden der Seite aufrufen
-  setActiveNavLink();
-  initDropdownMenus();
-
-  // Event Listener für Routenwechsel hinzufügen
-  document.addEventListener("astro:after-swap", () => {
-    setActiveNavLink();
-    initDropdownMenus();
-    initFlowbite();
-  });
-
-  /*  */
-  let lastScrollY = window.scrollY;
-  const nav = document.querySelector("nav");
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  
-
-
-  if (window.scrollY > 200) {
-    scrollToTopBtn!.classList.add("visible");
-    scrollToTopBtn!.classList.remove("hidden");
-  } else {
-    scrollToTopBtn!.classList.remove("visible");
-    scrollToTopBtn!.classList.add("hidden");
-  }
-
-  // Event Listener für den Scroll-to-Top Button
-  scrollToTopBtn!.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>

@@ -8,6 +8,7 @@ import CityPage from "../components/city/CityPage.astro";
 import Vorteile from "../components/city/Vorteile.astro";
 import RugBanner from "../components/RugBanner.astro";
 import { cityList } from "../data/cities.js";
+import { ViewTransitions } from "astro:transitions";
 
 // Exportiere die Funktion getStaticPaths
 export async function getStaticPaths() {
@@ -23,6 +24,7 @@ const { city } = Astro.params;
 <!doctype html>
 <html lang="de">
   <head>
+    <ViewTransitions />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stadtseite</title>
