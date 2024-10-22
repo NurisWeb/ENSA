@@ -1,8 +1,15 @@
 ---
-import "../css/global.css";
 import "@fontsource-variable/montserrat";
 import PriceCalculator from "./jsx/PriceCalculator.html";
 import { fade, ViewTransitions } from "astro:transitions";
+import { Image } from "astro:assets";
+import image from "../assets/ersatz.webp";
+import {
+  BackgroundImage,
+  ImageSupportDetection,
+} from "astro-imagetools/components";
+
+const alt = "teppichreinigung";
 
 // Props aus Astro.props extrahieren
 const { backgroundImage } = Astro.props;
@@ -10,419 +17,421 @@ const { backgroundImage } = Astro.props;
 
 <html lang="de">
   <head>
+    <ImageSupportDetection />
+
     <meta charset="utf-8" />
     <title>Deine Seite</title>
     <ViewTransitions />
   </head>
-  <body>
-    <div class="text-center bg">
-      <div class="cover-color">
-        <div class="overlay">
-          <section>
-            <!-- Inhalt der Hero-Sektion -->
-          </section>
+  <div class="text-center">
+    <!--     <BackgroundImage src={image.src} /> -->
 
-          <h1
-            transition:animate={fade({ duration: "2s" })}
-            class="desktop mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+    <div class="cover-color">
+      <div class="overlay">
+        <section>
+          <!-- Inhalt der Hero-Sektion -->
+        </section>
+
+        <h1
+          transition:animate={fade({ duration: "2s" })}
+          class="desktop mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+        >
+          Lassen Sie Ihre Teppiche und<br /> Polster professionell reinigen
+        </h1>
+        <h1
+          transition:animate={fade({ duration: "2s" })}
+          class="mobile mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
+        >
+          Teppiche und Polster professionell reinigen
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-white semibold lg:text-xl sm:px-16 xl:px-48"
+        >
+          Wohlfühlen beginnt mit der Sauberkeit – seit 23 Jahren sind wir Ihr
+          verlässlicher <br /> Partner für professionelle Teppich- und Polsterreinigung
+          in Heilbronn.
+        </p>
+        <div
+          class="btn-box flex flex-col mb-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+        >
+          <button
+            id="openCalculator"
+            class="shw button font-extrabold inline-flex justify-center items-center py-3 px-5 text-base text-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 rounded-full tracking-wider"
           >
-            Lassen Sie Ihre Teppiche und<br /> Polster professionell reinigen
-          </h1>
-          <h1
-            transition:animate={fade({ duration: "2s" })}
-            class="mobile mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
-          >
-            Teppiche und Polster professionell reinigen
-          </h1>
-          <p
-            class="mb-8 text-lg font-normal text-white semibold lg:text-xl sm:px-16 xl:px-48"
-          >
-            Wohlfühlen beginnt mit der Sauberkeit – seit 23 Jahren sind wir Ihr
-            verlässlicher <br /> Partner für professionelle Teppich- und Polsterreinigung
-            in Heilbronn.
-          </p>
-          <div
-            class="btn-box flex flex-col mb-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
-          >
-            <button
-              id="openCalculator"
-              class="shw button font-extrabold inline-flex justify-center items-center py-3 px-5 text-base text-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 rounded-full tracking-wider"
+            REINIGUNG ANFRAGEN
+            <svg
+              class="ml-2 -mr-1 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              REINIGUNG ANFRAGEN
-              <svg
-                class="ml-2 -mr-1 w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Popup Overlay -->
-    <div id="calculatorPopup" class="popup-overlay">
-      <div class="popup-content">
-        <button id="closeCalculator" class="close-button">&times;</button>
-        <PriceCalculator server:defer />
-      </div>
+  <!-- Popup Overlay -->
+  <div id="calculatorPopup" class="popup-overlay">
+    <div class="popup-content">
+      <button id="closeCalculator" class="close-button">&times;</button>
+      <PriceCalculator />
     </div>
+  </div>
 
-    <style>
-      h1 {
-        line-height: 1.2;
-        letter-spacing: 1.6px;
-      }
-      body {
-        font-family: "Montserrat Variable", sans-serif;
-      }
+  <style>
+    h1 {
+      line-height: 1.2;
+      letter-spacing: 1.6px;
+    }
+    body {
+      font-family: "Montserrat Variable", sans-serif;
+    }
 
-      .bg[data-astro-cid-bbe6dxrz] {
-        background-image: url(/ersatz.webp),
-          linear-gradient(
-            30deg,
-            rgba(73, 127, 237, 1) 0%,
-            rgba(180, 184, 227, 1) 49%,
-            rgba(62, 115, 222, 1) 100%
-          ),
-          linear-gradient(
-            30deg,
-            rgba(73, 127, 237, 1) 0%,
-            rgba(37, 41, 85, 1) 49%,
-            rgba(62, 115, 222, 1) 100%
-          );
-        background-position: 43% 0%;
-        background-repeat: no-repeat;
-        background-size: 104%;
-        background-attachment: fixed;
-      }
+    .bg[data-astro-cid-bbe6dxrz] {
+      background-image: url(/ersatz.webp),
+        linear-gradient(
+          30deg,
+          rgba(73, 127, 237, 1) 0%,
+          rgba(180, 184, 227, 1) 49%,
+          rgba(62, 115, 222, 1) 100%
+        ),
+        linear-gradient(
+          30deg,
+          rgba(73, 127, 237, 1) 0%,
+          rgba(37, 41, 85, 1) 49%,
+          rgba(62, 115, 222, 1) 100%
+        );
+      background-position: 43% 0%;
+      background-repeat: no-repeat;
+      background-size: 104%;
+      background-attachment: fixed;
+    }
 
-      .cover-color {
-        padding: 148px 0;
-        background-color: #00000069;
-        display: flex;
-        justify-content: center;
-      }
+    .cover-color {
+      padding: 148px 0;
+      background-color: #00000069;
+      display: flex;
+      justify-content: center;
+    }
 
-      /* 
+    /* 
 background: rgb(73,127,237);
 background: 
 */
 
-      .button {
-        letter-spacing: 1.5px;
-        font-weight: 600;
-        color: white;
-        background-color: blue;
-        background: linear-gradient(
-          90deg,
-          rgba(2, 0, 36, 1) 0%,
-          rgba(9, 9, 121, 1) 35%,
-          rgba(0, 212, 255, 1) 100%
-        );
-        padding: 15px 25px;
-        border: 2px solid white;
-        margin-top: 1.6rem;
-        transition: 1s ease-in-out;
-        letter-spacing: 1.2px;
-      }
+    .button {
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      color: white;
+      background-color: blue;
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+      );
+      padding: 15px 25px;
+      border: 2px solid white;
+      margin-top: 1.6rem;
+      transition: 1s ease-in-out;
+      letter-spacing: 1.2px;
+    }
 
-      button:hover {
-        border: 2px solid turquoise;
-        transform: scale(1.008);
-      }
+    button:hover {
+      border: 2px solid turquoise;
+      transform: scale(1.008);
+    }
 
-      .shw {
-        box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
-      }
+    .shw {
+      box-shadow: rgb(0 0 0 / 61%) 0px 7px 29px 0px;
+    }
 
-      /* Popup Styles */
-      .popup-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-      }
+    /* Popup Styles */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .popup-content {
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
-        position: relative;
-        max-width: 600px;
-        width: 90%;
-        max-height: 90vh;
-        overflow-y: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: scale(0.8);
+    .popup-content {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.8);
+      opacity: 0;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    /* Close-Button Styles */
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+    }
+
+    /* Animationen */
+    .popup-overlay.fade-in {
+      display: flex;
+      animation: fadeIn 0.371s forwards;
+    }
+
+    .popup-overlay.fade-out {
+      animation: fadeOut 0.371s forwards;
+    }
+
+    .popup-content.fade-in {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from {
         opacity: 0;
-        transition:
-          transform 0.3s ease,
-          opacity 0.3s ease;
+        margin-top: 40px;
       }
-
-      /* Close-Button Styles */
-      .close-button {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 24px;
-        background: rgba(0, 0, 0, 0.5);
-        border: none;
-        color: white;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 20;
-      }
-
-      /* Animationen */
-      .popup-overlay.fade-in {
-        display: flex;
-        animation: fadeIn 0.371s forwards;
-      }
-
-      .popup-overlay.fade-out {
-        animation: fadeOut 0.371s forwards;
-      }
-
-      .popup-content.fade-in {
-        transform: scale(1);
+      to {
         opacity: 1;
+        margin-top: 00px;
+      }
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        margin-top: 0px;
+      }
+      to {
+        opacity: 0;
+        margin-top: 40px;
+      }
+    }
+
+    @media (width <= 1800px) {
+      .bg[data-astro-cid-bbe6dxrz] {
+        background-position: 38% 49%;
+        background-size: 180%;
+      }
+    }
+    @media (width <= 1400px) {
+      .bg[data-astro-cid-bbe6dxrz] {
+        background-position: 38% 4%;
+        background-size: 200%;
+      }
+    }
+
+    @media (width <= 1200px) {
+      .bg[data-astro-cid-bbe6dxrz] {
+        background-position: 46% 0%;
+        background-size: 200%;
+      }
+    }
+
+    @media (width <= 900px) {
+      .md\:text-5xl {
+        font-size: 2.5rem;
       }
 
-      .mobile {
-        display: none;
+      .text-lg {
+        font-size: 0.925rem;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          margin-top: 40px;
-        }
-        to {
-          opacity: 1;
-          margin-top: 00px;
-        }
+      .cover-color {
+        padding: 108px 0;
+      }
+    }
+
+    .overlay {
+      padding: 0px 20px;
+    }
+
+    @media (width <= 800px) {
+      .cover-color {
+        padding: 64px 0;
       }
 
-      @keyframes fadeOut {
-        from {
-          opacity: 1;
-          margin-top: 0px;
-        }
-        to {
-          opacity: 0;
-          margin-top: 40px;
-        }
+      #openCalculator {
+        padding: 12px 22px;
+        font-size: 0.8rem;
       }
 
-      @media (width <= 1800px) {
-        .bg[data-astro-cid-bbe6dxrz] {
-          background-position: 38% 49%;
-          background-size: 180%;
-        }
-      }
-      @media (width <= 1400px) {
-        .bg[data-astro-cid-bbe6dxrz] {
-          background-position: 38% 4%;
-          background-size: 200%;
-        }
+      .bg[data-astro-cid-bbe6dxrz] {
+        background-position: 46% 0%;
+        background-size: 212%;
       }
 
-      @media (width <= 1200px) {
-        .bg[data-astro-cid-bbe6dxrz] {
-          background-position: 46% 0%;
-          background-size: 200%;
-        }
+      p {
+        font-size: 0.925rem;
       }
 
-      @media (width <= 900px) {
-        .md\:text-5xl {
-          font-size: 2.5rem;
-        }
+      .btn-box {
+        justify-content: center;
+        flex-direction: row;
+      }
 
-        .text-lg {
-          font-size: 0.925rem;
-        }
-
-        .cover-color {
-          padding: 108px 0;
-        }
+      h1 {
+        text-align: center;
       }
 
       .overlay {
-        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .md\:text-3xl {
+        font-size: 2.375rem;
+      }
+    }
+
+    @media (width <= 767px) {
+      p {
+        display: none;
       }
 
-      @media (width <= 800px) {
-        .cover-color {
-          padding: 64px 0;
-        }
-
-        #openCalculator {
-          padding: 12px 22px;
-          font-size: 0.8rem;
-        }
-
-        .bg[data-astro-cid-bbe6dxrz] {
-          background-position: 46% 0%;
-          background-size: 212%;
-        }
-
-        p {
-          font-size: 0.925rem;
-        }
-
-        .btn-box {
-          justify-content: center;
-          flex-direction: row;
-        }
-
-        h1 {
-          text-align: center;
-        }
-
-        .overlay {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .md\:text-3xl {
-          font-size: 2.375rem;
-        }
+      h1 {
+        font-size: 2.6rem;
       }
 
-      @media (width <= 767px) {
-        p {
-          display: none;
-        }
-
-        h1 {
-          font-size: 2.6rem;
-        }
-
-        .mobile {
-          display: block;
-        }
-
-        .desktop {
-          display: none;
-        }
-
-        .popup-content {
-          border-radius: 0px;
-          padding: 0;
-          max-width: initial;
-          width: 100%;
-          max-height: initial;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-        }
+      .mobile {
+        display: block;
       }
 
-      @media (width <= 700px) and (width >= 600px) {
-        h1 {
-          width: 78%;
-        }
+      .desktop {
+        display: none;
       }
 
-      @media (width <= 560px) {
+      .popup-content {
+        border-radius: 0px;
+        padding: 0;
+        max-width: initial;
+        width: 100%;
+        max-height: initial;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+    }
+
+    @media (width <= 700px) and (width >= 600px) {
+      h1 {
+        width: 78%;
+      }
+    }
+
+    @media (width <= 560px) {
+      .bg[data-astro-cid-bbe6dxrz] {
+        background-image: url("/mobile-hero.webp");
+        background-position: 44% 0%;
+        background-size: 100%;
+      }
+    }
+
+    @media (width <= 400px) {
+      .md\:text-5xl {
+        font-size: 2.4rem;
+      }
+
+      #openCalculator {
+        padding: 12px 22px;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      @media (width <= 310px) {
         .bg[data-astro-cid-bbe6dxrz] {
           background-image: url("/mobile-hero.webp");
           background-position: 44% 0%;
-          background-size: 100%;
+          background-size: 180%;
         }
       }
+    }
 
-      @media (width <= 400px) {
-        .md\:text-5xl {
-          font-size: 2.4rem;
-        }
+    .body {
+      overflow: hidden;
+    }
+  </style>
 
-        #openCalculator {
-          padding: 12px 22px;
-          font-size: 0.8rem;
-          margin: 0;
-          margin-top: 20px;
-        }
+  <script>
+    function setupPopup() {
+      const openButton = document.getElementById("openCalculator");
+      const closeButton = document.getElementById("closeCalculator");
+      const popup = document.getElementById("calculatorPopup");
+      const popupContent = document.querySelector(".popup-content");
+      const body = document.body;
 
-        @media (width <= 310px) {
-          .bg[data-astro-cid-bbe6dxrz] {
-            background-image: url("/mobile-hero.webp");
-            background-position: 44% 0%;
-            background-size: 180%;
+      if (openButton) {
+        openButton.addEventListener("click", () => {
+          popup!.style.display = "flex";
+          popup!.classList.remove("fade-out");
+          popup!.classList.add("fade-in");
+          popupContent!.classList.add("fade-in");
+          body.classList.add("body");
+        });
+      }
+
+      if (closeButton) {
+        closeButton.addEventListener("click", () => {
+          popup!.classList.remove("fade-in");
+          popup!.classList.add("fade-out");
+          popupContent!.classList.remove("fade-in");
+          setTimeout(() => {
+            popup!.style.display = "none";
+            body.classList.remove("body");
+          }, 500);
+        });
+      }
+
+      // Schließt das Popup, wenn außerhalb geklickt wird
+      if (popup) {
+        popup.addEventListener("click", (event) => {
+          if (event.target === popup) {
+            closeButton!.click();
           }
-        }
+        });
       }
+    }
 
-      .body {
-        overflow: hidden;
-      }
-    </style>
-
-    <script>
-      function setupPopup() {
-        const openButton = document.getElementById("openCalculator");
-        const closeButton = document.getElementById("closeCalculator");
-        const popup = document.getElementById("calculatorPopup");
-        const popupContent = document.querySelector(".popup-content");
-        const body = document.body;
-
-        if (openButton) {
-          openButton.addEventListener("click", () => {
-            popup!.style.display = "flex";
-            popup!.classList.remove("fade-out");
-            popup!.classList.add("fade-in");
-            popupContent!.classList.add("fade-in");
-            body.classList.add("body");
-          });
-        }
-
-        if (closeButton) {
-          closeButton.addEventListener("click", () => {
-            popup!.classList.remove("fade-in");
-            popup!.classList.add("fade-out");
-            popupContent!.classList.remove("fade-in");
-            setTimeout(() => {
-              popup!.style.display = "none";
-              body.classList.remove("body");
-            }, 500);
-          });
-        }
-
-        // Schließt das Popup, wenn außerhalb geklickt wird
-        if (popup) {
-          popup.addEventListener("click", (event) => {
-            if (event.target === popup) {
-              closeButton!.click();
-            }
-          });
-        }
-      }
-
-      document.addEventListener("astro:page-load", setupPopup);
-      document.addEventListener("DOMContentLoaded", setupPopup);
-      setupPopup();
-    </script>
-  </body>
+    document.addEventListener("astro:page-load", setupPopup);
+    document.addEventListener("DOMContentLoaded", setupPopup);
+    setupPopup();
+  </script>
 </html>

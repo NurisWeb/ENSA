@@ -214,9 +214,12 @@ import "@fontsource-variable/montserrat";
 </nav>
 <button
   id="scrollToTopBtn"
-  class="hidden fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full"
+  class="hidden fixed bottom-4 right-4 bg-teal-400 text-white p-3 rounded-full"
 >
-  ⬆
+  <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
+</svg>
+
 </button>
 
 <style>
@@ -241,13 +244,13 @@ import "@fontsource-variable/montserrat";
   .max-w-screen {
     max-width: 80%;
   }
-/* 
+  /* 
   li {
     padding: 2px 11px;
     transition: 0.371s ease-in-out;
   } */
 
-/*   li:hover {
+  /*   li:hover {
     background-color: aliceblue;
     border-radius: 8px;
   } */
@@ -293,13 +296,13 @@ import "@fontsource-variable/montserrat";
   #dropdownNavbarLeistungen {
     z-index: 200;
   }
-  
+
   @media (width <= 767px) {
     .p-2 {
       padding: 0.1rem;
     }
   }
-  
+
   #dropdownNavbar {
     width: 230px;
     z-index: 200 !important;
@@ -346,84 +349,6 @@ import "@fontsource-variable/montserrat";
       pointer-events: none;
     }
   }
-
-
-
-
-
-  .scale-out-ver-top {
-	-webkit-animation: scale-out-ver-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: scale-out-ver-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-----------------------------------
- */
-@-webkit-keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-@keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-
-  .scale-up-ver-top {
-    -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  }
-  
-@-webkit-keyframes scale-up-ver-top {
-  0% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-  }
-}
-@keyframes scale-up-ver-top {
-  0% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-            transform-origin: 100% 0%;
-  }
-}
 
   /* Auf mobilen Ansichten ist der Header immer fixiert */
 </style>
@@ -490,12 +415,7 @@ import "@fontsource-variable/montserrat";
   });
 
   /*  */
-  let lastScrollY = window.scrollY;
-  const nav = document.querySelector("nav");
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  
-
 
   if (window.scrollY > 200) {
     scrollToTopBtn!.classList.add("visible");

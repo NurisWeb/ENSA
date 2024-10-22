@@ -6,7 +6,7 @@
     "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --host",
     "astro": "astro"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "@fontsource-variable/montserrat": "^5.1.0",
     "@fontsource/twinkle-star": "^5.1.0",
     "astro": "^4.15.11",
+    "astro-imagetools": "^0.9.0",
     "flowbite": "^2.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
