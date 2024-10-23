@@ -3,6 +3,40 @@
      right: 25%;
  }
 
+ /* popup.css */
+.error-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-content p {
+  color: #b91c1c;
+  margin-bottom: 10px;
+}
+
+.error-content button {
+  background-color: #ef4444;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
  /* Keyframe-Animation für das Hochscrollen */
  @keyframes slideUp {
      from {

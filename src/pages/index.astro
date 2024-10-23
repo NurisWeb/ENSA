@@ -7,30 +7,49 @@ import Service from "../components/Service.astro";
 import FAQ from "../components/FAQ.astro";
 import Regionen from "../components/Regionen.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
+import { SEOMetadata } from "astro-seo-metadata";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <script
       src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
-    ></script>
+    ></script><script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script></head
+  >
 
-    <ViewTransitions />
+  <SEOMetadata
+    siteName={"ENSA Teppichreinigung"}
+    title={"ENSA Teppichreinigung"}
+    description={"ENSA Teppichreinigung bietet Einen Teppich rundum Service und Polsterreinigungen an. Neben der Reinigung von Teppich aller Art bieten wir auch Milben-, Geruchs- und Imprägnierung/Rückfettung bei Ihrer Teppichreinigung eine Neue Frische zu erhalten"}
+    image={"/logo.svg"}
+    favicon={"/favicon.svg"}
+    author="Julian Cataldo"
+    copyright="ISC"
+    astroSitemap={true}
+    canonicalUrl={Astro.url.toString()}
+    type={"website"}
+    astroGenerator={true}
+  />
 
-    <title>Astro</title>
+  <ViewTransitions />
 
-    <style>
-      /*       body {
+  <style>
+    /*       body {
         font-family: "Montserrat Variable", sans-serif;
       } */
-    </style>
-  </head>
+  </style>
+
   <body>
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={slide({ duration: "0.8s" })} />

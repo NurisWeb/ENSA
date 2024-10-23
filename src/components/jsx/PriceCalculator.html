@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Teppichreinigung Kostenrechner</title>
+  <!-- Laden von Tailwind CSS für das Kontaktformular -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Ihr CSS-Code bleibt unverändert */
+    /* Ihr CSS-Code bleibt weitgehend unverändert */
     .calculator {
-    background-color: white;
-    border-radius: 10px;
-    padding: 44px 60px;
-    width: 100%;
-    position: relative;
-    letter-spacing: 0.8px;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 80%;
-    max-width: 800px;
-    overflow-y: auto;
-    overflow-x: hidden;
+      background-color: white;
+      border-radius: 10px;
+      padding: 44px 60px;
+      width: 100%;
+      position: relative;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 100%;
+      max-width: 800px;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     .title {
@@ -65,7 +67,7 @@
       transition: all 0.3s ease;
       font-size: 16px;
       color: black;
-      width: 80%;
+      width: 98%;
     }
 
     .price-button.active {
@@ -89,15 +91,14 @@
     }
 
     .additional-options {
-          display: flex;
-    flex-direction: column;
-    gap: 10px;
-
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .additional-options .option {
       width: 100%;
-      display: flex; 
+      display: flex;
       flex-direction: column;
       gap: 8px;
     }
@@ -114,7 +115,7 @@
       justify-content: space-between;
       width: 100%;
       gap: 40px;
-      margin: 20px;
+      margin: 4px;
     }
 
     .tooltiptext {
@@ -166,12 +167,16 @@
     }
 
     .add-carpet-button {
-      background-color: #ff9800;
-      padding: 10px 20px;
-      border-radius: 5px;
+      background-color: #89ffc13b;
+      padding: 6px 11px;
+      border-radius: 50px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 15.5px;
       border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
     }
 
     .carpet-item {
@@ -186,34 +191,24 @@
     }
 
     .delete-button {
-         background-color: #da0e0e;
-    color: white;
-    padding: 5px 8px;
-    border: none;
-    border-radius: 45px;
-    cursor: pointer;
-    margin-left: 10px;
+      background-color: #da0e0e;
+      color: white;
+      padding: 5px 8px;
+      border: none;
+      border-radius: 45px;
+      cursor: pointer;
+      margin-left: 10px;
     }
 
-    .add-carpet-button {
-      background-color: #00ff9975;
-     padding: 6px 11px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 15.5px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
+    /* Kontaktformular zunächst ausblenden */
+    .contact-form {
+      display: none;
     }
 
-    .price-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
+    
+      .korrekt {
+    margin-right: 0.5rem;
+      }
 
     /* Responsive Design */
     @media (width <= 767px) {
@@ -242,14 +237,16 @@
         gap: 0;
       }
 
-      #total, #currentCarpetPrice {
+       #currentCarpetPrice {
         font-size: 20px;
       }
 
-      .tooltip {
-        font-size: 12px;
+      #total{
+        font-size: 24px;
+        font-weight: 800;
       }
 
+    
       .title {
         font-size: 24px;
         text-align: left;
@@ -268,6 +265,7 @@
         margin-bottom: 25px;
       }
 
+
       label {
         font-size: 16px;
       }
@@ -285,12 +283,10 @@
       }
 
       .additional-options .option {
-        
         width: 100%;
       }
 
       .add-carpet-button {
-        background-color: #00ff9975;
         padding: 4px 12px;
         border-radius: 50px;
         cursor: pointer;
@@ -324,7 +320,7 @@
         margin-bottom: 24px;
       }
 
-      #total, #currentCarpetPrice {
+      #total {
         text-decoration: underline;
         text-underline-offset: 3px;
       }
@@ -400,6 +396,14 @@
         </label>
       </div>
       <div class="option">
+        <label >
+          <input type="checkbox" id="pickupCheckbox" class="korrekt" />
+          <strong>Abhol- und Bringservice </strong>20€<span class="tooltiptext">
+            Ab einen Auftragswert von 99,-€ ist der Abhol- und Bringservice kostenlos.
+          </span>
+        </label>
+      </div>
+      <div class="option">
         <button class="add-carpet-button" id="addCarpet">
           <svg
             class="w-6 h-6"
@@ -420,37 +424,89 @@
           </svg>
           Teppich hinzufügen
         </button>
-
       </div>
       <div class="option">
         <div id="currentCarpetPrice"><strong>Preis des aktuellen Teppichs: 0.00 €</strong></div>
-        
       </div>
     </div>
 
-    <!-- Neuer Bereich für den Preis des aktuellen Teppichs -->
-    
-    <div id="total">Gesamtpreis aller Teppiche: 0.00 €</div>
+    <div id="total">Gesamtpreis: 0.00 €</div>
 
     <ul id="carpetList"></ul>
 
     <button class="button send-request" id="sendRequest">Anfrage senden</button>
+  </div>
 
-    <div id="contactForm" style="display: none">
-      <h3>Kontaktdaten</h3>
-      <input type="text" id="contactName" placeholder="Ihr Name" />
-      <input type="email" id="contactEmail" placeholder="Ihre E-Mail" />
-      <button class="button" id="submitContact">Daten absenden</button>
-    </div>
+
+  <div class="contact-form">
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Kontaktieren Sie uns</h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+          Haben Sie eine Frage? Möchten Sie Feedback geben? Lassen Sie es uns wissen.
+        </p>
+        <form id="contactForm" class="space-y-8">
+          <div>
+            <label for="contactEmail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ihre E-Mail</label>
+            <input type="email" id="contactEmail" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@beispiel.de" required>
+          </div>
+          <div>
+            <label for="contactName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ihr vollständiger Name</label>
+            <input type="text" id="contactName" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Max Mustermann" required>
+          </div>
+          <div>
+            <label for="contactPhone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ihre Telefonnummer</label>
+            <input type="tel" id="contactPhone" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="0123 4567890" required>
+          </div>
+          <div>
+            <label for="contactMessage" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ihre Nachricht</label>
+            <textarea id="contactMessage" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Ihre Nachricht..."></textarea>
+          </div>
+          <div>
+            <div>Gesamtpreis: <span id="totalPriceDisplay"></span> €</div>
+          </div>
+
+          <!-- Neue Checkbox für die Einwilligung -->
+          <div class="relative z-0 mb-4 flex items-start text-left">
+            <input
+              type="checkbox"
+              id="contactConsent"
+              name="contactConsent"
+              class="mt-1 mr-2"
+              required
+            />
+            <label
+              for="contactConsent"
+              class="text-sm text-gray-500 dark:text-gray-400"
+            >
+              Ich erlaube Ihnen, mich zu kontaktieren für eine Auftragsbestätigung, Angebote und Bewertungsanfragen.
+            </label>
+          </div>
+
+          <!-- Professionell formuliertes Hinweis-P-Element -->
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Sie erhalten eine E-Mail mit einem Bestätigungslink. Bitte klicken Sie auf den Link in der E-Mail, um Ihre E-Mail-Adresse zu bestätigen.
+          </p>
+
+          <button type="button" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none" id="submitContact">Absenden</button>
+        </form>
+      </div>
+    </section>
   </div>
 
   <!-- JavaScript-Code -->
+  <!-- Aktualisierte EmailJS SDK Version -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
   <script>
+    // Initialisierung mit dem Public Key
+    emailjs.init('sNn4zdWLbh96L9n8j'); // Ersetzen Sie dies durch Ihren tatsächlichen Public Key
+
     let width = 2;
     let length = 2;
     let selectedPrice = 9.9; // Standardmäßig Synthetische Teppiche
     let impraegnierung = false;
     let geruchsbehandlung = false;
+    let pickupDesired = false;
     let totalCarpets = [];
     let totalSum = 0;
 
@@ -467,11 +523,13 @@
     const impraegnierungCheckbox = document.getElementById(
       "impraegnierungCheckbox"
     );
+    const pickupCheckbox = document.getElementById("pickupCheckbox");
     const addCarpetBtn = document.getElementById("addCarpet");
     const carpetList = document.getElementById("carpetList");
     const sendRequestBtn = document.getElementById("sendRequest");
-    const contactForm = document.getElementById("contactForm");
-    const submitContactBtn = document.getElementById("submitContact");
+    const calculatorDiv = document.querySelector('.calculator');
+    const contactFormDiv = document.querySelector('.contact-form');
+    const totalPriceDisplay = document.getElementById('totalPriceDisplay');
 
     function calculateTotal() {
       const area = width * length;
@@ -485,8 +543,21 @@
         currentCarpetTotal += area * 5;
       }
 
-      currentCarpetPriceDisplay.textContent = `Aktueller Teppichpreis: ${currentCarpetTotal.toFixed(2)} €`;
+      currentCarpetPriceDisplay.textContent = `Preis des aktuellen Teppichs: ${currentCarpetTotal.toFixed(2)} €`;
+      updateTotalDisplay();
       return currentCarpetTotal;
+    }
+
+    function getFinalTotal() {
+      let finalTotal = totalSum;
+      if (pickupDesired && finalTotal <= 99) {
+        finalTotal += 20;
+      }
+      return finalTotal;
+    }
+
+    function updateTotalDisplay() {
+      totalDisplay.textContent = `Gesamtpreis: ${getFinalTotal().toFixed(2)} €`;
     }
 
     function resetFields() {
@@ -541,6 +612,11 @@
       calculateTotal();
     });
 
+    pickupCheckbox.addEventListener("change", (e) => {
+      pickupDesired = e.target.checked;
+      updateTotalDisplay();
+    });
+
     addCarpetBtn.addEventListener("click", () => {
       const total = calculateTotal();
 
@@ -563,9 +639,9 @@
       )}m, Preis: ${total.toFixed(
         2
       )}€ <button class="delete-button"><svg class="w-[24px] h-[24px]  dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
-</svg>
-</button>`;
+      <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+    </svg>
+    </button>`;
       carpetList.appendChild(listItem);
 
       // Löschen-Funktion
@@ -573,34 +649,101 @@
         carpetList.removeChild(listItem);
         totalCarpets = totalCarpets.filter((item) => item !== carpetData);
         totalSum -= total;
-        totalDisplay.textContent = `Gesamtpreis: ${totalSum.toFixed(2)} €`;
+        updateTotalDisplay();
       });
 
-      totalDisplay.textContent = `Gesamtpreis: ${totalSum.toFixed(2)} €`;
+      updateTotalDisplay();
       resetFields();
     });
 
     sendRequestBtn.addEventListener("click", () => {
-      contactForm.style.display = "block";
-    });
-
-    submitContactBtn.addEventListener("click", () => {
-      const name = document.getElementById("contactName").value;
-      const email = document.getElementById("contactEmail").value;
-
-      if (name && email) {
-        // Hier kann später EmailJS integriert werden
-        console.log("Kontaktdaten:", { name, email });
-        console.log("Teppichdaten:", totalCarpets);
-        alert("Ihre Anfrage wurde erfolgreich gesendet!");
-      } else {
-        alert("Bitte füllen Sie alle Kontaktdaten aus.");
+      if (totalCarpets.length === 0) {
+        alert("Bitte fügen Sie mindestens einen Teppich hinzu, bevor Sie fortfahren.");
+        return;
       }
+      showContactForm();
     });
+
+    function showContactForm() {
+      calculatorDiv.style.display = 'none';
+      contactFormDiv.style.display = 'block';
+      totalPriceDisplay.textContent = getFinalTotal().toFixed(2);
+    }
+
+    document.getElementById('submitContact').addEventListener('click', submitContactForm);
+
+    function submitContactForm() {
+      const name = document.getElementById('contactName').value;
+      const email = document.getElementById('contactEmail').value;
+      const phone = document.getElementById('contactPhone').value;
+      const message = document.getElementById('contactMessage').value;
+        const consent = document.getElementById('contactConsent').checked;
+      const totalPrice = getFinalTotal().toFixed(2);
+
+      if (name && email && phone && consent) {
+        // Bereite die E-Mail-Inhalte vor
+        let emailContent = `
+Name: ${name}
+E-Mail: ${email}
+Telefonnummer: ${phone}
+Nachricht: ${message}
+Anzahl Teppiche: ${totalCarpets.length}
+Zusatzoptionen:
+`;
+
+        totalCarpets.forEach((carpet, index) => {
+          emailContent += `
+Teppich ${index + 1}:
+  Größe: ${carpet.width}m x ${carpet.length}m
+  Preis pro m²: ${carpet.selectedPrice}€
+  Imprägnierung: ${carpet.impraegnierung ? 'Ja' : 'Nein'}
+  Hygienebehandlung: ${carpet.geruchsbehandlung ? 'Ja' : 'Nein'}
+  Teppichpreis: ${carpet.total.toFixed(2)}€
+`;
+        });
+
+        emailContent += `
+Gesamtsumme: ${totalPrice}€
+Abholung gewünscht: ${pickupDesired ? 'Ja' : 'Nein'}
+`;
+
+        const params = {
+          from_name: name,
+          email: email,
+          contact_number: phone,
+          message: emailContent,
+        };
+
+        emailjs.send('service_xfgt61q', 'template_8ygoui3', params)
+          .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            showThankYouMessage();
+          }, (error) => {
+            console.log('FAILED...', error);
+            alert('Fehler beim Senden der E-Mail');
+          });
+      } else {
+        alert('Bitte füllen Sie alle Felder aus.');
+      }
+    }
+
+    function showThankYouMessage() {
+      let thankYouMessage = 'Vielen Dank! ';
+
+      if (pickupDesired) {
+        thankYouMessage += 'Ihre Teppiche werden samstags abgeholt. Die Uhrzeit wird Ihnen freitags bekannt gegeben. Sie erhalten eine Auftragsbestätigung per Telefon oder E-Mail.';
+      } else {
+        thankYouMessage += 'Sie erhalten eine Auftragsbestätigung per Telefon oder E-Mail.';
+      }
+
+      contactFormDiv.innerHTML = `<h2
+        class="text-left max-w-2xl mb-4 text-xl font-extrabold tracking-tight leading-none md:text-3xl xl:text-4xl"
+      >${thankYouMessage}</h2>`;
+    }
 
     // Initialisierung
     calculateTotal();
-    totalDisplay.textContent = `Gesamtpreis: ${totalSum.toFixed(2)} €`;
+    updateTotalDisplay();
   </script>
 </body>
 </html>
