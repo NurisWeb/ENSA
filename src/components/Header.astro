@@ -1,8 +1,11 @@
 ---
 import "@fontsource-variable/montserrat";
+import Mail from "./Mail.astro"
 ---
 
+
 <nav class="bg-white border-gray-200">
+  <Mail />
   <div
     class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-2"
   >
@@ -317,7 +320,7 @@ import "@fontsource-variable/montserrat";
         opacity 0.3s ease-in-out;
       transform: translateY(0); /* Header initial sichtbar */
       opacity: 1; /* Header vollständig sichtbar */
-      position: fixed;
+      position: sticky;
       top: 0;
       width: 100%;
       z-index: 999;

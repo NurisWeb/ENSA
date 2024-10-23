@@ -67,7 +67,6 @@ const { backgroundImage } = Astro.props;
   <!-- Popup Overlay -->
   <div id="calculatorPopup" class="popup-overlay">
     <div class="popup-content">
-      <button id="closeCalculator" class="close-button">&times;</button>
       <PriceCalculator />
     </div>
   </div>
@@ -171,6 +170,9 @@ background:
       transition:
         transform 0.3s ease,
         opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     /* Close-Button Styles */
