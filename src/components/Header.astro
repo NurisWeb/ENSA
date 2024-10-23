@@ -414,19 +414,24 @@ import "@fontsource-variable/montserrat";
     initFlowbite();
   });
 
-  /*  */
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+// Funktion, die bei jedem Scroll aufgerufen wird
+function toggleScrollToTopBtn() {
   if (window.scrollY > 200) {
-    scrollToTopBtn!.classList.add("visible");
     scrollToTopBtn!.classList.remove("hidden");
+    scrollToTopBtn!.classList.add("visible");
   } else {
-    scrollToTopBtn!.classList.remove("visible");
     scrollToTopBtn!.classList.add("hidden");
+    scrollToTopBtn!.classList.remove("visible");
   }
+}
 
-  // Event Listener für den Scroll-to-Top Button
-  scrollToTopBtn!.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+// Scroll-Event-Listener hinzufügen
+window.addEventListener("scroll", toggleScrollToTopBtn);
+
+// Event-Listener für den Scroll-to-Top Button
+scrollToTopBtn!.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 </script>

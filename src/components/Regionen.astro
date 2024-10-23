@@ -16,140 +16,161 @@ import PopupWrapper from "./city/PopupWrapper";
     </h2>
     <div class="image-gallery">
       <!-- Fügen Sie hier Ihre 14 Bilder ein -->
-      <img
-        src="/ortsschilder/ortsschild-heilbronn.png"
-        alt="ortsschild-heilbronn"
-      />
-      <img
-        src="/ortsschilder/ortsschild-stuttgart.png"
-        alt="ortsschild-stuttgart"
-      />
-      <img
-        src="/ortsschilder/ortsschild-karlsruhe.png"
-        alt="ortsschild-karlsruhe"
-      />
-      <img
-        src="/ortsschilder/ortsschild-ludwigsburg.png"
-        alt="ortsschild-ludwigsburg"
-      />
-      <img
-        src="/ortsschilder/ortsschild-mannheim.png"
-        alt="ortsschild-mannheim"
-      />
-      <img
-        src="/ortsschilder/ortsschild-mosbach.png"
-        alt="ortsschild-mosbach"
-      />
-      <img
-        src="/ortsschilder/ortsschild-neckarsulm.png"
-        alt="ortsschild-neckarsulm"
-      />
-      <img
-        src="/ortsschilder/ortsschild-pforzheim.png"
-        alt="ortsschild-pforzheim"
-      />
-      <img
-        src="/ortsschilder/ortsschild-reutlingen.png"
-        alt="ortsschild-reutlingen"
-      />
-      <img
-        src="/ortsschilder/ortsschild-sinsheim.png"
-        alt="ortsschild-sinsheim"
-      />
-
-      <img
-        src="/ortsschilder/ortsschild-waiblingen.png"
-        alt="ortsschild-waiblingen"
-      />
+      <a href="/teppichreinigung-heilbronn">
+        <img
+          src="/ortsschilder/ortsschild-heilbronn.png"
+          alt="ortsschild-heilbronn"
+        />
+      </a>
+      <a href="/teppichreinigung-stuttgart">
+        <img
+          src="/ortsschilder/ortsschild-stuttgart.png"
+          alt="ortsschild-stuttgart"
+        />
+      </a>
+      <a href="/teppichreinigung-karlsruhe">
+        <img
+          src="/ortsschilder/ortsschild-karlsruhe.png"
+          alt="ortsschild-karlsruhe"
+        />
+      </a>
+      <a href="/teppichreinigung-ludwigsburg">
+        <img
+          src="/ortsschilder/ortsschild-ludwigsburg.png"
+          alt="ortsschild-ludwigsburg"
+        />
+      </a>
+      <a href="/teppichreinigung-mannheim">
+        <img
+          src="/ortsschilder/ortsschild-mannheim.png"
+          alt="ortsschild-mannheim"
+        />
+      </a>
+      <a href="/teppichreinigung-mosbach">
+        <img
+          src="/ortsschilder/ortsschild-mosbach.png"
+          alt="ortsschild-mosbach"
+        />
+      </a>
+      <a href="/teppichreinigung-neckarsulm">
+        <img
+          src="/ortsschilder/ortsschild-neckarsulm.png"
+          alt="ortsschild-neckarsulm"
+        />
+      </a>
+      <a href="/teppichreinigung-pforzheim">
+        <img
+          src="/ortsschilder/ortsschild-pforzheim.png"
+          alt="ortsschild-pforzheim"
+        />
+      </a>
+      <a href="/teppichreinigung-reutlingen">
+        <img
+          src="/ortsschilder/ortsschild-reutlingen.png"
+          alt="ortsschild-reutlingen"
+        />
+      </a>
+      <a href="/teppichreinigung-sinsheim">
+        <img
+          src="/ortsschilder/ortsschild-sinsheim.png"
+          alt="ortsschild-sinsheim"
+        />
+      </a>
+      <a href="/teppichreinigung-waiblingen">
+        <img
+          src="/ortsschilder/ortsschild-waiblingen.png"
+          alt="ortsschild-waiblingen"
+        />
+      </a>
     </div>
     <PopupWrapper client:load />
   </div>
+
+  <style>
+    section {
+      display: flex;
+      justify-content: center;
+      background-color: #f7f7f7;
+    }
+
+    button {
+      background-color: #2d6aff;
+      font-weight: 600;
+      border-radius: 50px;
+      border: 2px solid white;
+      box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
+      transition: 1s ease-in-out;
+      letter-spacing: 1.2px;
+    }
+
+    button:hover {
+      border: 2px solid turquoise;
+      transform: scale(1.008);
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    img {
+      width: 79%;
+      min-width: 91px;
+      height: auto;
+      flex: 1 1 147px;
+      max-width: 140px;
+    }
+
+    .overlay {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .my-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    .my-section h2 {
+      font-weight: normal;
+      text-align: center;
+    }
+
+    .my-section h2 .bold {
+      font-weight: 800;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    .my-button {
+      margin-top: 2rem;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+    }
+  </style>
 </section>
-
-<style>
-  section {
-    display: flex;
-    justify-content: center;
-    background-color: #f7f7f7;
-  }
-
-  button {
-    background-color: #2d6aff;
-    font-weight: 600;
-    border-radius: 50px;
-    border: 2px solid white;
-    box-shadow: rgb(0 0 0 / 40%) 0px 7px 29px 0px;
-    transition: 1s ease-in-out;
-    letter-spacing: 1.2px;
-  }
-
-  button:hover {
-    border: 2px solid turquoise;
-    transform: scale(1.008);
-  }
-
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  img {
-    width: 79%;
-    min-width: 91px;
-    height: auto;
-    flex: 1 1 147px;
-    max-width: 140px;
-  }
-
-  .overlay {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .my-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    text-align: center;
-  }
-
-  .my-section h2 {
-    font-weight: normal;
-    text-align: center;
-  }
-
-  .my-section h2 .bold {
-    font-weight: 800;
-  }
-
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .image-gallery img {
-    width: 100%;
-    height: auto;
-  }
-
-  .my-button {
-    margin-top: 2rem;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-  }
-</style>

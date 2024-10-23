@@ -2,12 +2,6 @@
 import "@fontsource-variable/montserrat";
 import PriceCalculator from "./jsx/PriceCalculator.html";
 import { fade, ViewTransitions } from "astro:transitions";
-import { Image } from "astro:assets";
-import image from "../assets/ersatz.webp";
-import {
-  BackgroundImage,
-  ImageSupportDetection,
-} from "astro-imagetools/components";
 
 const alt = "teppichreinigung";
 
@@ -17,21 +11,15 @@ const { backgroundImage } = Astro.props;
 
 <html lang="de">
   <head>
-    <ImageSupportDetection />
-
     <meta charset="utf-8" />
     <title>Deine Seite</title>
     <ViewTransitions />
   </head>
-  <div class="text-center">
+  <div class="text-center bg">
     <!--     <BackgroundImage src={image.src} /> -->
 
     <div class="cover-color">
       <div class="overlay">
-        <section>
-          <!-- Inhalt der Hero-Sektion -->
-        </section>
-
         <h1
           transition:animate={fade({ duration: "2s" })}
           class="desktop mb-4 text-4xl font-extrabold tracking-tight leading-none text-white sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl"
@@ -94,7 +82,7 @@ const { backgroundImage } = Astro.props;
     }
 
     .bg[data-astro-cid-bbe6dxrz] {
-      background-image: url(/ersatz.webp),
+      background-image: url("/Teppichbodenreingung-Professionell.webp"),
         linear-gradient(
           30deg,
           rgba(73, 127, 237, 1) 0%,
@@ -107,7 +95,7 @@ const { backgroundImage } = Astro.props;
           rgba(37, 41, 85, 1) 49%,
           rgba(62, 115, 222, 1) 100%
         );
-      background-position: 43% 0%;
+      background-position: 43% 47%;
       background-repeat: no-repeat;
       background-size: 104%;
       background-attachment: fixed;
@@ -115,7 +103,7 @@ const { backgroundImage } = Astro.props;
 
     .cover-color {
       padding: 148px 0;
-      background-color: #00000069;
+      background-color: #0000005c;
       display: flex;
       justify-content: center;
     }
@@ -247,14 +235,14 @@ background:
 
     @media (width <= 1800px) {
       .bg[data-astro-cid-bbe6dxrz] {
-        background-position: 38% 49%;
-        background-size: 180%;
+        background-position: 38% 19%;
+        background-size: 113%;
       }
     }
     @media (width <= 1400px) {
       .bg[data-astro-cid-bbe6dxrz] {
-        background-position: 38% 4%;
-        background-size: 200%;
+        background-position: 2% 18%;
+        background-size: 118%;
       }
     }
 

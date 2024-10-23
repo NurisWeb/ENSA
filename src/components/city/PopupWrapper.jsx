@@ -18,7 +18,7 @@ const PopupWrapper = () => {
           dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 buttons"
           onClick={openPopup}
         >
-          Teppich Abholung vereinbaren
+          JETZT REINIGEN
         </button>
       </div>
       {isOpen && <Popup onClose={closePopup} />}
