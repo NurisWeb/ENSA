@@ -3,33 +3,89 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/leistungen/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen/CtaSection.astro";
-
 import FooterBanner from "../components/FooterBanner.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
 
     <ViewTransitions />
 
-    <title>Leistungen</title>
+    <!-- SEO Component -->
+    <SEO
+      title="Unsere Leistungen – ENSA Teppichreinigung"
+      description="Entdecken Sie unser breites Spektrum an Dienstleistungen, von der Teppichreinigung bis hin zu Polster- und Matratzenreinigung. Wir bieten auch Teppichreparaturen und Kettlung an."
+      openGraph={{
+        basic: {
+          title: "Unsere Leistungen – ENSA Teppichreinigung",
+          type: "website",
+          image:
+            "https://ensa-teppichreinigung.de/leistungen-background.jpg",
+          url: "https://ensa-teppichreinigung.de/leistungen",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://ensa-teppichreinigung.de/leistungen-background.jpg",
+          },
+          {
+            name: "twitter:title",
+            content: "Unsere Leistungen – ENSA Teppichreinigung",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Erfahren Sie mehr über unsere Dienstleistungen. Von der Teppichreinigung bis hin zu Polster- und Matratzenreinigung – wir kümmern uns professionell um Ihre Textilien.",
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Teppichreinigung und Teppichpflege",
+        description:
+          "ENSA Teppichreinigung bietet eine Vielzahl von Dienstleistungen an, darunter Teppichreinigung, Teppichreparatur, Polsterreinigung und Matratzenreinigung.",
+        provider: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn",
+        },
+        serviceType:
+          "Teppichreinigung, Teppichreparatur, Polsterreinigung, Matratzenreinigung",
+        url: "https://ensa-teppichreinigung.de/leistungen",
+        telephone: "+4971312795256",
+        image:
+          "https://ensa-teppichreinigung.de/leistungen-background.jpg",
+      }}
+    />
   </head>
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />
-    <!-- 
-    <CtaSection2 />
-    <Banner />
-    -->
     <FooterBanner />
     <RugBanner />
     <Footer />

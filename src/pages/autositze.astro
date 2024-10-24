@@ -3,28 +3,81 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/leistungen-detail/Autositze/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen-detail/Autositze/CtaSection.astro";
 import CtaSection2 from "../components/leistungen-detail/Autositze/CtaSection2.astro";
 import Banner from "../components/leistungen-detail/Autositze/Banner.astro";
 import FooterBanner from "../components/FooterBanner.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
-  -detail
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
 
     <ViewTransitions />
 
-    <title>Autositze reinigen lassen</title>
+    <!-- SEO Component -->
+    <SEO
+      title="Autositze reinigen lassen - ENSA Teppichreinigung"
+      description="Professionelle Autositze-Reinigung von ENSA Teppichreinigung. Lassen Sie Ihre Autositze fachgerecht reinigen und Flecken entfernen."
+      openGraph={{
+        basic: {
+          title: "Autositze reinigen lassen - ENSA Teppichreinigung",
+          type: "website",
+          image: "https://ensa-teppichreinigung.de/autositze-hero.jpg",
+          url: "https://ensa-teppichreinigung.de/autositze-reinigen",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://ensa-teppichreinigung.de/autositze-hero.jpg",
+          },
+          { name: "twitter:title", content: "Autositze reinigen lassen" },
+          {
+            name: "twitter:description",
+            content:
+              "Professionelle Autositze-Reinigung von ENSA Teppichreinigung. Lassen Sie Ihre Autositze fachgerecht reinigen und Flecken entfernen.",
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Autositze reinigen lassen",
+        description:
+          "Professionelle Autositze-Reinigung von ENSA Teppichreinigung. Fleckenentfernung und tiefgehende Reinigung.",
+        provider: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn",
+        },
+        serviceType: "Autositze-Reinigung",
+        url: "https://ensa-teppichreinigung.de/autositze-reinigen",
+        telephone: "+4971312795256",
+        image: "https://ensa-teppichreinigung.de/autositze-hero.jpg",
+      }}
+    />
   </head>
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />

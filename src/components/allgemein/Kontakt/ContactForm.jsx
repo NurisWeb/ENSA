@@ -171,8 +171,10 @@ const handleSubmit = (e) => {
         </form>
       </div>
     </section>
-  );
+
+);
 };
+
 
 
 export default ContactForm;

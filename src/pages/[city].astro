@@ -9,6 +9,8 @@ import Vorteile from "../components/city/Vorteile.astro";
 import RugBanner from "../components/RugBanner.astro";
 import { cityList } from "../data/cities.js";
 import { ViewTransitions } from "astro:transitions";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 
 // Exportiere die Funktion getStaticPaths
 export async function getStaticPaths() {
@@ -27,7 +29,79 @@ const { city } = Astro.params;
     <ViewTransitions />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{city}</title>
+    <title>Teppichreinigung in {city} - ENSA Teppichreinigung</title>
+
+    <!-- SEO Component -->
+    <SEO
+      title={`Teppichreinigung in ${city} - ENSA Teppichreinigung`}
+      description={`Professionelle Teppich- und Polsterreinigung in ${city}. Nutzen Sie unseren kostenfreien Abhol- und Bringservice ab 99 Euro und schonende Reinigungsverfahren.`}
+      openGraph={{
+        basic: {
+          title: `Teppichreinigung in ${city} - Ihr Partner für saubere Teppiche`,
+          type: "website",
+          image: "https://ensa-teppichreinigung.de/image.jpg",
+          url: `https://ensa-teppichreinigung.de/${city}`,
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://ensa-teppichreinigung.de/image.jpg",
+          },
+          { name: "twitter:title", content: `Teppichreinigung in ${city}` },
+          {
+            name: "twitter:description",
+            content: `Umweltfreundliche Teppich- und Polsterreinigung in ${city} mit kostenfreiem Abhol- und Bringservice.`,
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: `Teppichreinigung in ${city} - ENSA Teppichreinigung`,
+        description: `Professionelle Teppich- und Polsterreinigung in ${city}. Nutzen Sie unseren kostenfreien Abhol- und Bringservice ab 99 Euro.`,
+        telephone: "+4971312795256",
+        email: "info@ensa-teppichreinigung.de",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Dammstraße 29/a",
+          addressLocality: "Heilbronn",
+          postalCode: "74072",
+          addressCountry: "DE",
+        },
+        url: `https://ensa-teppichreinigung.de/${city}`,
+        image:
+          "https://ensa-teppichreinigung.de/Teppichbodenreingung-Professionell.webp",
+        sameAs: [
+          "https://www.instagram.com/ensa_teppichreinigung",
+          "https://www.facebook.com/ensateppichreinigung",
+        ],
+        openingHours: "Mo-Fr 08:00-18:00",
+        areaServed: {
+          "@type": "Place",
+          name: `${city}, Stuttgart, Ludwigsburg, Mannheim, Karlsruhe, Pforzheim`,
+        },
+        priceRange: "$$",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+4971312795256",
+          contactType: "Customer Service",
+          areaServed: "DE",
+          availableLanguage: ["Deutsch"],
+        },
+      }}
+    />
+    <meta name="robots" content="index, follow" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"

@@ -3,28 +3,101 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/leistungen-detail/Teppichboden-reinigung/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen-detail/Teppichboden-reinigung/CtaSection.astro";
-
 import FooterBanner from "../components/leistungen-detail/Teppichboden-reinigung/FooterBanner.astro";
 import CtaSection2 from "../components/leistungen-detail/Teppichboden-reinigung/CtaSection2.astro";
 import Banner from "../components/leistungen-detail/Teppichboden-reinigung/Banner.astro";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
-    <ViewTransitions />
+    <!-- SEO Meta-Tags -->
+    <title>Teppichbodenreinigung | ENSA Teppichreinigung Heilbronn</title>
+    <meta
+      name="description"
+      content="Professionelle Teppichbodenreinigung für Privat- und Gewerbekunden in Heilbronn. Umweltfreundliche Reinigungsverfahren und kompetentes Team."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Teppichbodenreinigung - ENSA Teppichreinigung"
+    />
+    <meta
+      property="og:description"
+      content="Teppichbodenreinigung für private und gewerbliche Kunden. Umweltfreundlich, gründlich und schonend."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ensa-teppichreinigung.de/teppichbodenreinigung"
+    />
+    <meta
+      property="og:image"
+      content="https://ensa-teppichreinigung.de/teppichbodenreinigung-hero.webp"
+    />
+    <meta property="og:locale" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Teppichbodenreinigung - ENSA Teppichreinigung"
+    />
+    <meta
+      name="twitter:description"
+      content="Umweltfreundliche Teppichbodenreinigung für Heilbronn und Umgebung."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ensa-teppichreinigung.de/teppichbodenreinigung-hero.webp"
+    />
 
-    <title>Teppichbodenreinigung</title>
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ENSA Teppichreinigung",
+        "description": "Professionelle Teppichbodenreinigung für Privat- und Gewerbekunden in Heilbronn. Umweltfreundliche Reinigungsverfahren und kompetentes Team.",
+        "telephone": "+4971312795256",
+        "email": "info@ensa-teppichreinigung.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dammstraße 29/a",
+          "addressLocality": "Heilbronn",
+          "postalCode": "74072",
+          "addressCountry": "DE"
+        },
+        "url": "https://ensa-teppichreinigung.de/teppichbodenreinigung",
+        "image": "https://ensa-teppichreinigung.de/teppichbodenreinigung-hero.webp",
+        "sameAs": [
+          "https://www.instagram.com/ensa_teppichreinigung",
+          "https://www.facebook.com/ensateppichreinigung"
+        ],
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Heilbronn, Stuttgart, Ludwigsburg, Mannheim, Karlsruhe, Pforzheim"
+        },
+        "priceRange": "$$",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+4971312795256",
+          "contactType": "Customer Service",
+          "areaServed": "DE",
+          "availableLanguage": ["Deutsch"]
+        }
+      }
+    </script>
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
+
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />

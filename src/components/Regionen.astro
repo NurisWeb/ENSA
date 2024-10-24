@@ -2,7 +2,7 @@
 import PopupWrapper from "./city/PopupWrapper";
 import { Image } from "astro:assets";
 
-// Importiere die Bilder, um sie als `Image`-Komponente zu nutzen
+// Importiere die Bilder, um sie als Image-Komponente zu nutzen
 import HeilbronnImage from "../assets/ortsschilder/ortsschild-heilbronn.png";
 import StuttgartImage from "../assets/ortsschilder/ortsschild-stuttgart.png";
 import KarlsruheImage from "../assets/ortsschilder/ortsschild-karlsruhe.png";
@@ -30,38 +30,71 @@ import WaiblingenImage from "../assets/ortsschilder/ortsschild-waiblingen.png";
     </h2>
     <div class="image-gallery">
       <!-- Verwende die importierten Image-Komponenten -->
-      <a href="/teppichreinigung-heilbronn">
-        <Image src={HeilbronnImage} alt="ortsschild-heilbronn" />
+      <a
+        href="/teppichreinigung-heilbronn"
+        aria-label="Teppichreinigung in Heilbronn"
+      >
+        <Image src={HeilbronnImage} alt="Ortsschild Heilbronn" />
       </a>
-      <a href="/teppichreinigung-stuttgart">
-        <Image src={StuttgartImage} alt="ortsschild-stuttgart" />
+      <a
+        href="/teppichreinigung-stuttgart"
+        aria-label="Teppichreinigung in Stuttgart"
+      >
+        <Image src={StuttgartImage} alt="Ortsschild Stuttgart" />
       </a>
-      <a href="/teppichreinigung-karlsruhe">
-        <Image src={KarlsruheImage} alt="ortsschild-karlsruhe" />
+      <a
+        href="/teppichreinigung-karlsruhe"
+        aria-label="Teppichreinigung in Karlsruhe"
+      >
+        <Image src={KarlsruheImage} alt="Ortsschild Karlsruhe" />
       </a>
-      <a href="/teppichreinigung-ludwigsburg">
-        <Image src={LudwigsburgImage} alt="ortsschild-ludwigsburg" />
+      <a
+        href="/teppichreinigung-ludwigsburg"
+        aria-label="Teppichreinigung in Ludwigsburg"
+      >
+        <Image src={LudwigsburgImage} alt="Ortsschild Ludwigsburg" />
       </a>
-      <a href="/teppichreinigung-mannheim">
-        <Image src={MannheimImage} alt="ortsschild-mannheim" />
+      <a
+        href="/teppichreinigung-mannheim"
+        aria-label="Teppichreinigung in Mannheim"
+      >
+        <Image src={MannheimImage} alt="Ortsschild Mannheim" />
       </a>
-      <a href="/teppichreinigung-mosbach">
-        <Image src={MosbachImage} alt="ortsschild-mosbach" />
+      <a
+        href="/teppichreinigung-mosbach"
+        aria-label="Teppichreinigung in Mosbach"
+      >
+        <Image src={MosbachImage} alt="Ortsschild Mosbach" />
       </a>
-      <a href="/teppichreinigung-neckarsulm">
-        <Image src={NeckarsulmImage} alt="ortsschild-neckarsulm" />
+      <a
+        href="/teppichreinigung-neckarsulm"
+        aria-label="Teppichreinigung in Neckarsulm"
+      >
+        <Image src={NeckarsulmImage} alt="Ortsschild Neckarsulm" />
       </a>
-      <a href="/teppichreinigung-pforzheim">
-        <Image src={PforzheimImage} alt="ortsschild-pforzheim" />
+      <a
+        href="/teppichreinigung-pforzheim"
+        aria-label="Teppichreinigung in Pforzheim"
+      >
+        <Image src={PforzheimImage} alt="Ortsschild Pforzheim" />
       </a>
-      <a href="/teppichreinigung-reutlingen">
-        <Image src={ReutlingenImage} alt="ortsschild-reutlingen" />
+      <a
+        href="/teppichreinigung-reutlingen"
+        aria-label="Teppichreinigung in Reutlingen"
+      >
+        <Image src={ReutlingenImage} alt="Ortsschild Reutlingen" />
       </a>
-      <a href="/teppichreinigung-sinsheim">
-        <Image src={SinsheimImage} alt="ortsschild-sinsheim" />
+      <a
+        href="/teppichreinigung-sinsheim"
+        aria-label="Teppichreinigung in Sinsheim"
+      >
+        <Image src={SinsheimImage} alt="Ortsschild Sinsheim" />
       </a>
-      <a href="/teppichreinigung-waiblingen">
-        <Image src={WaiblingenImage} alt="ortsschild-waiblingen" />
+      <a
+        href="/teppichreinigung-waiblingen"
+        aria-label="Teppichreinigung in Waiblingen"
+      >
+        <Image src={WaiblingenImage} alt="Ortsschild Waiblingen" />
       </a>
     </div>
     <PopupWrapper client:load />

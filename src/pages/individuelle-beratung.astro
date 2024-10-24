@@ -3,26 +3,80 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/leistungen-detail/Beratung/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen-detail/Beratung/CtaSection.astro";
 import CtaSection2 from "../components/allgemein/Kontakt/CtaSection.astro";
 import FooterBanner from "../components/FooterBanner.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
 
     <ViewTransitions />
 
-    <title>Individuelle Beratung</title>
+    <!-- SEO Component -->
+    <SEO
+      title="Individuelle Beratung – ENSA Teppichreinigung"
+      description="Lassen Sie sich unverbindlich beraten. Wir bieten individuelle Lösungen für Ihre Teppichreinigung und -pflege."
+      openGraph={{
+        basic: {
+          title: "Individuelle Beratung – ENSA Teppichreinigung",
+          type: "website",
+          image: "https://ensa-teppichreinigung.de/kontakt.webp",
+          url: "https://ensa-teppichreinigung.de/beratung",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://ensa-teppichreinigung.de/kontakt.webp",
+          },
+          { name: "twitter:title", content: "Individuelle Beratung" },
+          {
+            name: "twitter:description",
+            content:
+              "Erhalten Sie individuelle Beratung für Ihre Teppichreinigung – unverbindlich und kostenfrei.",
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Individuelle Beratung",
+        description:
+          "Unverbindliche und kostenfreie Beratung für Teppichreinigung und -pflege.",
+        provider: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn",
+        },
+        serviceType: "Beratung",
+        url: "https://ensa-teppichreinigung.de/beratung",
+        telephone: "+4971312795256",
+        image: "https://ensa-teppichreinigung.de/kontakt.webp",
+      }}
+    />
   </head>
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection2 />

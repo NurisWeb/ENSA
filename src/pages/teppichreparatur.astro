@@ -3,28 +3,103 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/leistungen-detail/Teppichreparatur/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen-detail/Teppichreparatur/CtaSection.astro";
 
 import FooterBanner from "../components/leistungen-detail/Teppichreparatur/FooterBanner.astro";
 import CtaSection2 from "../components/leistungen-detail/Teppichreparatur/CtaSection2.astro";
 import Banner from "../components/leistungen-detail/Teppichreparatur/Banner.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
-    <ViewTransitions />
+    <!-- SEO Tags -->
+    <SEO
+      title="Teppichreparatur - ENSA Teppichreinigung"
+      description="Erhalten Sie den Wert Ihres Teppichs durch eine professionelle Teppichreparatur. ENSA repariert beschädigte Ränder und Fransen und sorgt für die Langlebigkeit Ihres Teppichs."
+      openGraph={{
+        basic: {
+          title: "Teppichreparatur - ENSA Teppichreinigung",
+          type: "website",
+          image:
+            "https://ensa-teppichreinigung.de/teppich-reparieren-lassen.webp",
+          url: "https://ensa-teppichreinigung.de/leistungen/teppichreparatur",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://ensa-teppichreinigung.de/teppich-reparieren-lassen.webp",
+          },
+          { name: "twitter:title", content: "Teppichreparatur" },
+          {
+            name: "twitter:description",
+            content:
+              "Professionelle Teppichreparatur für beschädigte Ränder und Fransen. Erhalten Sie den Wert Ihres Teppichs.",
+          },
+        ],
+      }}
+    />
 
-    <title>Teppichreparatur</title>
+    <!-- Schema.org structured data -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Teppichreparatur",
+        description:
+          "Professionelle Reparatur von Teppichen, um den Wert zu erhalten und beschädigte Teppiche wie Ränder und Fransen zu reparieren.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "ENSA Teppichreinigung",
+          telephone: "+4971312795256",
+          email: "info@ensa-teppichreinigung.de",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Dammstraße 29/a",
+            addressLocality: "Heilbronn",
+            postalCode: "74072",
+            addressCountry: "DE",
+          },
+          url: "https://ensa-teppichreinigung.de",
+          image:
+            "https://ensa-teppichreinigung.de/teppich-reparieren-lassen.webp",
+          sameAs: [
+            "https://www.instagram.com/ensa_teppichreinigung",
+            "https://www.facebook.com/ensateppichreinigung",
+          ],
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn, Stuttgart, Ludwigsburg, Mannheim, Karlsruhe, Pforzheim",
+        },
+        priceRange: "$$",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+4971312795256",
+          contactType: "Customer Service",
+          areaServed: "DE",
+          availableLanguage: ["Deutsch"],
+        },
+      }}
+    />
+    <meta name="robots" content="index, follow" />
   </head>
+
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />

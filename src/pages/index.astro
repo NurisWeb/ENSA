@@ -16,6 +16,7 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+
     <SEO
       title="ENSA Teppichreinigung"
       description="Professionelle Teppich- und Polsterreinigung in Heilbronn und Umgebung. Umweltfreundliche Reinigungsverfahren und kostenfreier Abhol- und Bringservice ab 99 Euro."
@@ -23,7 +24,8 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
         basic: {
           title: "ENSA Teppichreinigung - Ihr Partner für saubere Teppiche",
           type: "website",
-          image: "https://example.com/path/to/image.jpg",
+          image:
+            "https://ensa-teppichreinigung/Teppichbodenreingung-Professionell.webp",
           url: "https://ensa-teppichreinigung.de",
         },
       }}
@@ -35,7 +37,8 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
         meta: [
           {
             name: "twitter:image",
-            content: "https://example.com/path/to/image.jpg",
+            content:
+              "https://ensa-teppichreinigung/Teppichbodenreingung-Professionell.webp",
           },
           { name: "twitter:title", content: "ENSA Teppichreinigung" },
           {
@@ -64,7 +67,7 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
         },
         url: "https://ensa-teppichreinigung.de",
         image:
-          "https://ensa-teppichreinigung.de/Teppichbodenreingung-Professionell.webp",
+          "https://ensa-teppichreinigung/Teppichbodenreingung-Professionell.webp",
         sameAs: [
           "https://www.instagram.com/ensa_teppichreinigung",
           "https://www.facebook.com/ensateppichreinigung",
@@ -84,7 +87,8 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
         },
       }}
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="index, follow" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -92,11 +96,7 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
 
   <ViewTransitions />
 
-  <style>
-    /* body {
-        font-family: "Montserrat Variable", sans-serif;
-      } */
-  </style>
+
 
   <body>
     <Header transition:animate={fade({ duration: "0.4s" })} />
@@ -108,11 +108,6 @@ import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
     <Regionen />
     <RugBanner />
     <Footer />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
   </body>
-  <!--   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
-  ></script> -->
+
 </html>

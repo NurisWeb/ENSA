@@ -6,8 +6,9 @@ import Header from "../components/Header.astro";
 import Cta from "../components/information/Cta.astro";
 import Cta2 from "../components/information/Cta2.astro";
 import Hero from "../components/information/hero.astro"; // Hero-Sektion
-//import CTA from "../components/information/cta.astro"; // CTA-Sektion
 import { infoList, infoDataMap } from "../data/information.js";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 
 // Generiere dynamische Routen basierend auf der infoList
 export async function getStaticPaths() {
@@ -33,9 +34,59 @@ if (!infoData) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <title>{infoData.title[0]}</title>
     <ViewTransitions />
-    <!-- Verwende den ersten Titel als Seitentitel -->
+
+    <!-- SEO Component -->
+    <SEO
+      title={infoData.title[0]}
+      description={infoData.description[0]}
+      openGraph={{
+        basic: {
+          title: infoData.title[0],
+          type: "article",
+          image: `https://ensa-teppichreinigung.de${infoData.images[0]}`,
+          url: `https://ensa-teppichreinigung.de/information/${informationen}`,
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: `https://ensa-teppichreinigung.de${infoData.images[0]}`,
+          },
+          { name: "twitter:title", content: infoData.title[0] },
+          {
+            name: "twitter:description",
+            content: infoData.description[0],
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: infoData.title[0],
+        description: infoData.description[0],
+        image: `https://ensa-teppichreinigung.de${infoData.images[0]}`,
+        author: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+        },
+        mainEntityOfPage: `https://ensa-teppichreinigung.de/information/${informationen}`,
+        datePublished: "2024-01-01",
+        dateModified: "2024-01-01",
+      }}
+    />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
@@ -43,15 +94,10 @@ if (!infoData) {
   </head>
   <body>
     <Header />
-
     <!-- Hero-Sektion: Übergebe die richtigen Props an die Hero-Komponente -->
     <Hero title={infoData.title[0]} image={infoData.images[0]} />
     <Cta information={informationen} />
     <Cta2 information={informationen} />
-
-    <!-- CTA-Sektion: Zeigt die dynamischen Daten für die jeweilige Seite an -->
-    <!-- <CTA titles={infoData.title} descriptions={infoData.description} images={infoData.images} subtext={infoData.subtext} /> -->
-
     <FooterBanner />
     <Footer />
   </body>

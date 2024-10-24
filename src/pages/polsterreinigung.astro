@@ -3,28 +3,87 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/leistungen-detail/Polsterreinigung/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen-detail/Polsterreinigung/CtaSection.astro";
-
 import FooterBanner from "../components/FooterBanner.astro";
 import CtaSection2 from "../components/leistungen-detail/Polsterreinigung/CtaSection2.astro";
 import Benefits from "../components/leistungen-detail/Polsterreinigung/benefits.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
 
     <ViewTransitions />
 
-    <title>Polsterreinigen</title>
+    <!-- SEO Component -->
+    <SEO
+      title="Professionelle Polsterreinigung – ENSA Teppichreinigung"
+      description="Professionelle Polsterreinigung mit modernen Maschinen und langjähriger Erfahrung. Lassen Sie Ihre Polstermöbel vom Fachmann reinigen und genießen Sie saubere und frische Möbel."
+      openGraph={{
+        basic: {
+          title: "Professionelle Polsterreinigung – ENSA Teppichreinigung",
+          type: "website",
+          image:
+            "https://ensa-teppichreinigung.de/reinigung-von-polster.webp",
+          url: "https://ensa-teppichreinigung.de/polsterreinigung",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://ensa-teppichreinigung.de/reinigung-von-polster.webp",
+          },
+          {
+            name: "twitter:title",
+            content: "Professionelle Polsterreinigung – ENSA Teppichreinigung",
+          },
+          {
+            name: "twitter:description",
+            content:
+              "Unsere Experten reinigen Ihre Polstermöbel professionell, entfernt Flecken und Milben, für ein hygienisches Zuhause.",
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Polsterreinigung",
+        description:
+          "Professionelle Polsterreinigung zur Beseitigung von Flecken, Milben und Allergenen. Setzen Sie auf ENSA Teppichreinigung für saubere Polstermöbel.",
+        provider: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn",
+        },
+        serviceType: "Polsterreinigung",
+        url: "https://ensa-teppichreinigung.de/polsterreinigung",
+        telephone: "+4971312795256",
+        image:
+          "https://ensa-teppichreinigung.de/reinigung-von-polster.webp",
+      }}
+    />
   </head>
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />

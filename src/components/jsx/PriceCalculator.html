@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="de">
+
 <head>
-  <meta charset="UTF-8">
+  
   <title>Teppichreinigung Kostenrechner</title>
   <!-- Laden von Tailwind CSS für das Kontaktformular -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    
   <style>
+    
     /* Ihr CSS-Code bleibt weitgehend unverändert */
     .calculator {
       background-color: white;
@@ -326,6 +328,7 @@
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -496,10 +499,12 @@
 
   <!-- JavaScript-Code -->
   <!-- Aktualisierte EmailJS SDK Version -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+
+
+</body>
   <script>
     // Initialisierung mit dem Public Key
-    emailjs.init('sNn4zdWLbh96L9n8j'); // Ersetzen Sie dies durch Ihren tatsächlichen Public Key
+    
 
     let width = 2;
     let length = 2;
@@ -744,6 +749,14 @@ Abholung gewünscht: ${pickupDesired ? 'Ja' : 'Nein'}
     // Initialisierung
     calculateTotal();
     updateTotalDisplay();
+    
+
+    
+    
+ // Ersetzen Sie dies durch Ihren tatsächlichen Public Key
+
   </script>
-</body>
-</html>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script >
+  emailjs.init('sNn4zdWLbh96L9n8j');</script>  
+    

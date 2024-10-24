@@ -8,26 +8,80 @@ import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/leistungen-detail/Abholservice/CtaSection.astro";
 import CtaSection2 from "../components/leistungen-detail/Abholservice/CtaSection2.astro";
 import FooterBanner from "../components/FooterBanner.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
 
     <ViewTransitions />
 
-    <title>Abhol- und Bringservice</title>
+    <!-- SEO Component -->
+    <SEO
+      title="Abhol- und Bringservice - ENSA Teppichreinigung"
+      description="Professionelle Teppichreinigung mit kostenfreiem Abhol- und Bringservice ab 100 Euro. Lassen Sie Ihren Teppich von ENSA reinigen und genießen Sie unseren bequemen Service."
+      openGraph={{
+        basic: {
+          title: "Abhol- und Bringservice - ENSA Teppichreinigung",
+          type: "website",
+          image: "https://ensa-teppichreinigung.de/Hol und Lieferservice.webp",
+          url: "https://ensa-teppichreinigung.de/abholservice",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://ensa-teppichreinigung.de/Hol und Lieferservice.webp",
+          },
+          { name: "twitter:title", content: "Abhol- und Bringservice" },
+          {
+            name: "twitter:description",
+            content:
+              "Professionelle Teppichreinigung mit kostenfreiem Abhol- und Bringservice ab 100 Euro. Lassen Sie Ihren Teppich von ENSA reinigen.",
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Abhol- und Bringservice",
+        description:
+          "Professionelle Teppichreinigung mit kostenfreiem Abhol- und Bringservice ab 100 Euro.",
+        provider: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn",
+        },
+        serviceType: "Teppichreinigung",
+        url: "https://ensa-teppichreinigung.de/abholservice",
+        telephone: "+4971312795256",
+        image: "https://ensa-teppichreinigung.de/Hol und Lieferservice.webp",
+      }}
+    />
   </head>
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />
     <CtaSection2 />
-
     <FooterBanner />
     <RugBanner />
     <Footer />

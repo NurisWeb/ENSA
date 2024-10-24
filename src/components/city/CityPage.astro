@@ -20,7 +20,11 @@ const cityData = cityDataMap[city.toLowerCase()];
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
       <div class="text-center">
         <p class="text-lg text-red-500">Stadt nicht gefunden.</p>
-        <a href="/cities" class="mt-4 text-blue-500 underline">
+        <a
+          href="/cities"
+          class="mt-4 text-blue-500 underline"
+          aria-label="Zur Städteübersicht"
+        >
           Zurück zur Städteübersicht
         </a>
       </div>

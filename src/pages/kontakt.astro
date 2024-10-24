@@ -3,26 +3,90 @@ import { fade, slide, ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Hero from "../components/allgemein/Kontakt/Hero.astro";
 import Footer from "../components/Footer.astro";
-import Mail from "../components/Mail.astro";
 import RugBanner from "../components/RugBanner.astro";
 import CtaSection from "../components/allgemein/Kontakt/CtaSection.astro";
 import Banner from "../components/Banner.astro";
 import FooterBanner from "../components/FooterBanner.astro";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
 
     <ViewTransitions />
 
-    <title>Kontakt</title>
+    <!-- SEO Component -->
+    <SEO
+      title="Kontakt – ENSA Teppichreinigung"
+      description="Kontaktieren Sie ENSA Teppichreinigung für individuelle Beratung, Reinigungen, Reparaturen und mehr. Wir freuen uns auf Ihre Anfrage!"
+      openGraph={{
+        basic: {
+          title: "Kontakt – ENSA Teppichreinigung",
+          type: "website",
+          image:
+            "https://ensa-teppichreinigung.de/roter-teppich-kontakt.jpg",
+          url: "https://ensa-teppichreinigung.de/kontakt",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://ensa-teppichreinigung.de/roter-teppich-kontakt.jpg",
+          },
+          { name: "twitter:title", content: "Kontakt – ENSA Teppichreinigung" },
+          {
+            name: "twitter:description",
+            content:
+              "Erreichen Sie uns für eine individuelle Beratung. Wir kümmern uns um Ihre Teppichreinigung, Teppichpflege und -reparatur.",
+          },
+        ],
+      }}
+    />
+
+    <!-- Schema.org Component -->
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Kontakt",
+        description:
+          "Kontaktieren Sie ENSA Teppichreinigung für individuelle Beratung und Serviceangebote.",
+        provider: {
+          "@type": "Organization",
+          name: "ENSA Teppichreinigung",
+          telephone: "+4971312795256",
+          email: "info@ensa-teppichreinigung.de",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Dammstraße 29/a",
+            addressLocality: "Heilbronn",
+            postalCode: "74072",
+            addressCountry: "DE",
+          },
+        },
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn",
+        },
+        contactType: "Customer Service",
+        availableLanguage: ["Deutsch"],
+        url: "https://ensa-teppichreinigung.de/kontakt",
+      }}
+    />
   </head>
   <body>
-    <Mail />
     <Header transition:animate={fade({ duration: "0.4s" })} />
     <Hero transition:animate={fade({ duration: "0.4s" })} />
     <CtaSection transition:animate={slide({ duration: "0.8s" })} />

@@ -21,11 +21,7 @@ const image = "/Lieferwagen-Seite.webp";
         >
           Teppichreinigung mit Abhol- und Bringservice
         </h2>
-        <img
-          class="my-6 shw w-full dark:hidden"
-          src={image}
-          alt="dashboard image"
-        />
+
         <p
           class="mb-6 font-light text-gray-500 md:text-base dark:text-gray-400"
         >
@@ -42,9 +38,14 @@ const image = "/Lieferwagen-Seite.webp";
           Möglichkeiten einer Reparatur erhalten Sie zuvor eine ausführliche
           Beratung. Der Abholservice ist für Sie völlig kostenlos.
         </p>
-        <div class="wrap">
-          <PopupWrapper client:load />
-        </div>
+      </div>
+      <div>
+        <img
+          class="my-6 shw w-full dark:hidden"
+          src={image}
+          alt="dashboard image"
+        />
+        <PopupWrapper client:load />
       </div>
     </div>
   </div>
