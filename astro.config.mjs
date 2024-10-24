@@ -5,8 +5,13 @@ import robotsTxt from 'astro-robots-txt';
 import sitemap from '@astrojs/sitemap';
 
 
+import purgecss from 'astro-purgecss';
+
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ensa-teppichreinigung.de',
-  integrations: [tailwind(), react(), sitemap(), robotsTxt()]
+  integrations: [tailwind(), react(), sitemap(), robotsTxt(), purgecss({
+    content:['src/**']
+  })]
 });

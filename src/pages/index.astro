@@ -8,44 +8,99 @@ import FAQ from "../components/FAQ.astro";
 import Regionen from "../components/Regionen.astro";
 import Footer from "../components/Footer.astro";
 import RugBanner from "../components/RugBanner.astro";
-import { SEOMetadata } from "astro-seo-metadata";
+import { SEO } from "astro-seo";
+import { Schema } from "astro-seo-schema";
 ---
 
-<html lang="en">
+<html lang="de">
   <head>
+    <SEO
+      title="ENSA Teppichreinigung"
+      description="Professionelle Teppich- und Polsterreinigung in Heilbronn und Umgebung. Umweltfreundliche Reinigungsverfahren und kostenfreier Abhol- und Bringservice ab 99 Euro."
+      openGraph={{
+        basic: {
+          title: "ENSA Teppichreinigung - Ihr Partner für saubere Teppiche",
+          type: "website",
+          image: "https://example.com/path/to/image.jpg",
+          url: "https://ensa-teppichreinigung.de",
+        },
+      }}
+      twitter={{
+        creator: "@ensateppichreinigung",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content: "https://example.com/path/to/image.jpg",
+          },
+          { name: "twitter:title", content: "ENSA Teppichreinigung" },
+          {
+            name: "twitter:description",
+            content:
+              "Umweltfreundliche Teppich- und Polsterreinigung in Heilbronn mit kostenfreiem Abhol- und Bringservice.",
+          },
+        ],
+      }}
+    />
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "ENSA Teppichreinigung",
+        description:
+          "Professionelle Teppich- und Polsterreinigung in Heilbronn und Umgebung. Umweltfreundliche Reinigungsmittel und kostenfreier Abhol- und Bringservice.",
+        telephone: "+4971312795256",
+        email: "info@ensa-teppichreinigung.de",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Dammstraße 29/a",
+          addressLocality: "Heilbronn",
+          postalCode: "74072",
+          addressCountry: "DE",
+        },
+        url: "https://ensa-teppichreinigung.de",
+        image:
+          "https://ensa-teppichreinigung.de/Teppichbodenreingung-Professionell.webp",
+        sameAs: [
+          "https://www.instagram.com/ensa_teppichreinigung",
+          "https://www.facebook.com/ensateppichreinigung",
+        ],
+        openingHours: "Mo-Fr 08:00-18:00",
+        areaServed: {
+          "@type": "Place",
+          name: "Heilbronn, Stuttgart, Ludwigsburg, Mannheim, Karlsruhe, Pforzheim",
+        },
+        priceRange: "$$",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+4971312795256",
+          contactType: "Customer Service",
+          areaServed: "DE",
+          availableLanguage: ["Deutsch"],
+        },
+      }}
+    />
+    <meta name="robots" content="index, follow" />
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script
       src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
-    ></script><script
+    ></script>
+    <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script></head
-  >
-
-  <SEOMetadata
-    siteName={"ENSA Teppichreinigung"}
-    title={"ENSA Teppichreinigung"}
-    description={"ENSA Teppichreinigung bietet Einen Teppich rundum Service und Polsterreinigungen an. Neben der Reinigung von Teppich aller Art bieten wir auch Milben-, Geruchs- und Imprägnierung/Rückfettung bei Ihrer Teppichreinigung eine Neue Frische zu erhalten"}
-    image={"/logo.svg"}
-    favicon={"/favicon.svg"}
-    author="Julian Cataldo"
-    copyright="ISC"
-    astroSitemap={true}
-    canonicalUrl={Astro.url.toString()}
-    type={"website"}
-    astroGenerator={true}
-  />
+    ></script>
+  </head>
 
   <ViewTransitions />
 
   <style>
-    /*       body {
+    /* body {
         font-family: "Montserrat Variable", sans-serif;
       } */
   </style>
