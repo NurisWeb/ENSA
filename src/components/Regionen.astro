@@ -1,5 +1,19 @@
 ---
 import PopupWrapper from "./city/PopupWrapper";
+import { Image } from "astro:assets";
+
+// Importiere die Bilder, um sie als `Image`-Komponente zu nutzen
+import HeilbronnImage from "../assets/ortsschilder/ortsschild-heilbronn.png";
+import StuttgartImage from "../assets/ortsschilder/ortsschild-stuttgart.png";
+import KarlsruheImage from "../assets/ortsschilder/ortsschild-karlsruhe.png";
+import LudwigsburgImage from "../assets/ortsschilder/ortsschild-ludwigsburg.png";
+import MannheimImage from "../assets/ortsschilder/ortsschild-mannheim.png";
+import MosbachImage from "../assets/ortsschilder/ortsschild-mosbach.png";
+import NeckarsulmImage from "../assets/ortsschilder/ortsschild-neckarsulm.png";
+import PforzheimImage from "../assets/ortsschilder/ortsschild-pforzheim.png";
+import ReutlingenImage from "../assets/ortsschilder/ortsschild-reutlingen.png";
+import SinsheimImage from "../assets/ortsschilder/ortsschild-sinsheim.png";
+import WaiblingenImage from "../assets/ortsschilder/ortsschild-waiblingen.png";
 ---
 
 <section class="my-section">
@@ -15,72 +29,39 @@ import PopupWrapper from "./city/PopupWrapper";
       >
     </h2>
     <div class="image-gallery">
-      <!-- Fügen Sie hier Ihre 14 Bilder ein -->
+      <!-- Verwende die importierten Image-Komponenten -->
       <a href="/teppichreinigung-heilbronn">
-        <img
-          src="/ortsschilder/ortsschild-heilbronn.png"
-          alt="ortsschild-heilbronn"
-        />
+        <Image src={HeilbronnImage} alt="ortsschild-heilbronn" />
       </a>
       <a href="/teppichreinigung-stuttgart">
-        <img
-          src="/ortsschilder/ortsschild-stuttgart.png"
-          alt="ortsschild-stuttgart"
-        />
+        <Image src={StuttgartImage} alt="ortsschild-stuttgart" />
       </a>
       <a href="/teppichreinigung-karlsruhe">
-        <img
-          src="/ortsschilder/ortsschild-karlsruhe.png"
-          alt="ortsschild-karlsruhe"
-        />
+        <Image src={KarlsruheImage} alt="ortsschild-karlsruhe" />
       </a>
       <a href="/teppichreinigung-ludwigsburg">
-        <img
-          src="/ortsschilder/ortsschild-ludwigsburg.png"
-          alt="ortsschild-ludwigsburg"
-        />
+        <Image src={LudwigsburgImage} alt="ortsschild-ludwigsburg" />
       </a>
       <a href="/teppichreinigung-mannheim">
-        <img
-          src="/ortsschilder/ortsschild-mannheim.png"
-          alt="ortsschild-mannheim"
-        />
+        <Image src={MannheimImage} alt="ortsschild-mannheim" />
       </a>
       <a href="/teppichreinigung-mosbach">
-        <img
-          src="/ortsschilder/ortsschild-mosbach.png"
-          alt="ortsschild-mosbach"
-        />
+        <Image src={MosbachImage} alt="ortsschild-mosbach" />
       </a>
       <a href="/teppichreinigung-neckarsulm">
-        <img
-          src="/ortsschilder/ortsschild-neckarsulm.png"
-          alt="ortsschild-neckarsulm"
-        />
+        <Image src={NeckarsulmImage} alt="ortsschild-neckarsulm" />
       </a>
       <a href="/teppichreinigung-pforzheim">
-        <img
-          src="/ortsschilder/ortsschild-pforzheim.png"
-          alt="ortsschild-pforzheim"
-        />
+        <Image src={PforzheimImage} alt="ortsschild-pforzheim" />
       </a>
       <a href="/teppichreinigung-reutlingen">
-        <img
-          src="/ortsschilder/ortsschild-reutlingen.png"
-          alt="ortsschild-reutlingen"
-        />
+        <Image src={ReutlingenImage} alt="ortsschild-reutlingen" />
       </a>
       <a href="/teppichreinigung-sinsheim">
-        <img
-          src="/ortsschilder/ortsschild-sinsheim.png"
-          alt="ortsschild-sinsheim"
-        />
+        <Image src={SinsheimImage} alt="ortsschild-sinsheim" />
       </a>
       <a href="/teppichreinigung-waiblingen">
-        <img
-          src="/ortsschilder/ortsschild-waiblingen.png"
-          alt="ortsschild-waiblingen"
-        />
+        <Image src={WaiblingenImage} alt="ortsschild-waiblingen" />
       </a>
     </div>
     <PopupWrapper client:load />

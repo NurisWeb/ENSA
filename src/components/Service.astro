@@ -1,5 +1,16 @@
 ---
 import Banner from "./Banner.astro";
+import { Image } from "astro:assets";
+import autositze from "../assets/autositze-hero.webp";
+import teppichreinigung from "../assets/Teppichreinigung.webp";
+
+import vorort from "../assets/polsterreinigung-vor-ort.webp";
+import boden from "../assets/teppichboden-reinigung.webp";
+import matratzen from "../assets/Matratzenreinigung.webp";
+import kontakt from "../assets/kontakt.webp";
+import reparatur from "../assets/die-rerparatur-der-teppiche.webp";
+import kettung from "../assets/kettung-von-den-teppichen.webp";
+import abholung from "../assets/Lieferwagen-Seite.webp";
 ---
 
 <section class="bg-white">
@@ -7,7 +18,7 @@ import Banner from "./Banner.astro";
     <div
       class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 lg:py-24 flexus"
     >
-      <div class="mb-8 flex-col align-middle">
+      <div class="mb-16 flex-col align-middle">
         <h2
           class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white flexus"
         >
@@ -34,20 +45,18 @@ import Banner from "./Banner.astro";
       >
         <div class="flexus pb-g">
           <div class="flex justify-center items-center mb-4 rounded-full">
-            <img
+            <Image
+              src={teppichreinigung}
               class="service-img"
-              src="/teppichreinigung-service.webp"
               alt="teppichreinigung-service"
               loading="lazy"
             />
           </div>
           <h3 class="mb-2 text-xl font-bold dark:text-white">
-            Teppichreinigung / Teppichwäsche
+            Teppichreinigung
           </h3>
           <p class="text-white text_center">
-            Der Waschvorgang ist umweltschonend und die Feinwaschmittel
-            biologisch voll abbaubar. Wir verwenden keine phosphathaltigen
-            Mittel!
+            Umweltschohnende tiefe Teppichreinigung
           </p>
           <div class="bottom">
             <div class="btnbox">
@@ -62,9 +71,9 @@ import Banner from "./Banner.astro";
         </div>
         <div class="flexus pb-g">
           <div class="flex justify-center items-center mb-4 rounded-full">
-            <img
+            <Image
               class="service-img"
-              src="/polsterreinigung-vor-ort.webp"
+              src={vorort}
               alt="polsterreinigung-vor-ort"
               loading="lazy"
             />
@@ -72,11 +81,7 @@ import Banner from "./Banner.astro";
           <h3 class="mb-2 text-xl font-bold dark:text-white">
             Polsterreinigung
           </h3>
-          <p class="text-white text_center">
-            Wir bieten Ihnen eine qualitativ hochwwertige Polsterbehandlung.
-            Polster reinigen wir mit den neusten, auf Polster spezialisierten
-            Reinigungs-maschinen von Kärcher.
-          </p>
+          <p class="text-white text_center">Spezialiesiert auf dem Gebiet</p>
           <div class="bottom">
             <div class="btnbox">
               <a href="/polsterreinigung">
@@ -90,19 +95,18 @@ import Banner from "./Banner.astro";
         </div>
         <div class="flexus pb-g">
           <div class="flex justify-center items-center mb-4 rounded-full">
-            <img
+            <Image
               class="service-img"
-              src="/teppichboden-reinigung.jpg"
+              src={boden}
               alt="teppichboden-reinigung"
               loading="lazy"
             />
           </div>
           <h3 class="mb-2 text-xl font-bold dark:text-white">
-            Professionelle Teppichbodenreinigung
+            Teppichbodenreinigung
           </h3>
           <p class="text-white korrektur text_center">
-            Genauso wie jeder Teppich bedarf auch ein Teppichboden regelmäßiger
-            Pflege und Reinigung.
+            Ein Teppichboden benötigt regelmässige eine Reinigung.
           </p>
           <div class="bottom">
             <div class="btnbox">
@@ -117,9 +121,9 @@ import Banner from "./Banner.astro";
         </div>
         <div class="flexus pb-g">
           <div class="flex justify-center items-center mb-4 rounded-full">
-            <img
+            <Image
               class="service-img"
-              src="/Matratzenreinigung.webp"
+              src={matratzen}
               alt="Matratzenreinigung"
               loading="lazy"
             />
@@ -127,10 +131,7 @@ import Banner from "./Banner.astro";
           <h3 class="mb-2 text-xl font-bold dark:text-white">
             Matratzenreinigung
           </h3>
-          <p class="text-white text_center">
-            Wenigsten einmal im Jahr sollte man die Matratze reinigen lassen. So
-            können Milben und Milbenkot beseitigt werden.
-          </p>
+          <p class="text-white text_center">Für erholsames Schlafen</p>
           <div class="bottom">
             <div class="btnbox">
               <a href="/matratzen">
@@ -144,9 +145,9 @@ import Banner from "./Banner.astro";
         </div>
         <div class="flexus pb-g">
           <div class="flex justify-center items-center mb-4 rounded-full">
-            <img
+            <Image
               class="service-img"
-              src="/autositze-hero.jpg"
+              src={autositze}
               alt="kettung-von-den-teppichen"
               loading="lazy"
             />
@@ -155,9 +156,7 @@ import Banner from "./Banner.astro";
             Reinigung der Autopolster
           </h3>
           <p class="text-white text_center">
-            ie Polstersitze in Ihrem Auto können im Laufe der Zeit verschmutzt
-            werden ("Auffrischen") Die Polstersitze wurden oder sind bereits
-            verschmutzt (Flecken, Geruch, etc. vorhanden).
+            Hygiene im Auto macht gute Laune.
           </p>
           <div class="bottom">
             <div class="btnbox">
@@ -172,9 +171,9 @@ import Banner from "./Banner.astro";
         </div>
         <div class="flexus pb-g">
           <div class="flex justify-center items-center mb-4 rounded-full">
-            <img
+            <Image
               class="service-img"
-              src="/kontakt.webp"
+              src={kontakt}
               alt="information"
               loading="lazy"
             />
@@ -182,11 +181,7 @@ import Banner from "./Banner.astro";
           <h3 class="mb-2 text-xl font-bold dark:text-white">
             Individuelle Kundenberatung
           </h3>
-          <p class="text-white text_center">
-            Ihr Teppich ist ein Unikat und wir behandeln jeden Teppich
-            individuell. Denn jedes Material, jede Farbe und jede Struktur ist
-            verschieden.
-          </p>
+          <p class="text-white text_center">Wir haben ein Ohr für Sie.</p>
           <div class="bottom">
             <div class="btnbox">
               <a href="/individuelle-beratung">
@@ -212,9 +207,9 @@ import Banner from "./Banner.astro";
     >
       <div class="flexus pb-g">
         <div class="flex justify-center items-center mb-4 rounded-full">
-          <img
+          <Image
             class="service-img"
-            src="/kettung-von-den-teppichen.webp"
+            src={kettung}
             alt="kettung-von-den-teppichen"
             loading="lazy"
           />
@@ -223,8 +218,7 @@ import Banner from "./Banner.astro";
           Kettlung von Teppichen
         </h3>
         <p class="text-white text_center">
-          Ketteln ist eine seltene Handwerkskunst und kommt ursprünglich aus dem
-          fernen Orient.
+          Struktur und Stabilität sicherstellen.
         </p>
         <div class="bottom">
           <a href="/ketteln">
@@ -239,17 +233,16 @@ import Banner from "./Banner.astro";
       </div>
       <div class="flexus pb-g">
         <div class="flex justify-center items-center mb-4 rounded-full">
-          <img
+          <Image
             class="service-img"
-            src="/die-rerparatur-der-teppiche.webp"
+            src={reparatur}
             alt="die-rerparatur-der-teppiche"
             loading="lazy"
           />
         </div>
         <h3 class="mb-2 text-xl font-bold dark:text-white">Teppichreparatur</h3>
         <p class="text-white text_center">
-          Ein Teppich verliert durch jeden Schaden massiv an Wert. Schäden
-          können beseitigt werden. Gerne reparieren wir Ihre Teppiche.
+          Restaurieren und alte Frische verleihen.
         </p>
         <div class="bottom">
           <div class="btnbox">
@@ -264,9 +257,9 @@ import Banner from "./Banner.astro";
       </div>
       <div class="flexus pb-g">
         <div class="flex justify-center items-center mb-4 rounded-full">
-          <img
+          <Image
             class="service-img"
-            src="/Lieferwagen-Seite.webp"
+            src={abholung}
             alt="Lieferwagen-Seite"
             loading="lazy"
           />
@@ -275,8 +268,7 @@ import Banner from "./Banner.astro";
           Abhol- und Bringservice
         </h3>
         <p class="text-white text_center">
-          Ab einen Auftragswert von 99 Euro ist der Abhol- und Bringservice für
-          Sie <span>kostenfrei</span>
+          Ab 99 Euro <span>KOSTENLOS</span>
         </p>
         <div class="bottom">
           <div class="btnbox">
@@ -294,7 +286,7 @@ import Banner from "./Banner.astro";
 </section>
 <style>
   .section1 {
-    background-image: url("/Baby-auf-blauen-Teppich-3.jpg");
+    background-image: url("/Baby-auf-blauen-Teppich-3.webp");
     /* background-size: cover;
       background-repeat: no-repeat;
       background-position: 100% 50%; */
@@ -323,7 +315,7 @@ import Banner from "./Banner.astro";
   }
 
   .section2 {
-    background-image: url("/Baby-auf-blauen-Teppich-4.jpg");
+    background-image: url("/Baby-auf-blauen-Teppich-4.webp");
     display: flex;
     padding: 0;
     min-height: 40vh;
@@ -362,7 +354,6 @@ import Banner from "./Banner.astro";
   }
 
   p {
-    text-align: left;
     margin-bottom: 1.5rem;
   }
 
@@ -373,7 +364,7 @@ import Banner from "./Banner.astro";
   .flexus {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 96%;
   }
@@ -396,6 +387,11 @@ import Banner from "./Banner.astro";
   }
   .korrektur {
     margin-bottom: 0.5rem;
+  }
+
+  .btnbox {
+    padding-top: 20px;
+    padding-bottom: 28px;
   }
 
   @media (width <= 800px) {

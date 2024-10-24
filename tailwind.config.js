@@ -1,11 +1,14 @@
 module.exports = {
-
+ mode: 'jit',
     plugins: [
         require('flowbite/plugin')
     ],
      content: [
         "./node_modules/flowbite/**/*.js",
-        './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
+       './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
+        './src/**/.astro',
+        './src/**/.jsx',
+        './src/**/.html',
     ],
      darkMode: 'class',
   theme: {

@@ -10,10 +10,12 @@ import Footer from "../components/Footer.astro";
 import RugBanner from "../components/RugBanner.astro";
 import { SEO } from "astro-seo";
 import { Schema } from "astro-seo-schema";
+import Cookie from "../components/allgemein/Cookiebanner/Cookie.astro";
 ---
 
 <html lang="de">
   <head>
+    <meta charset="UTF-8" />
     <SEO
       title="ENSA Teppichreinigung"
       description="Professionelle Teppich- und Polsterreinigung in Heilbronn und Umgebung. Umweltfreundliche Reinigungsverfahren und kostenfreier Abhol- und Bringservice ab 99 Euro."
@@ -82,19 +84,10 @@ import { Schema } from "astro-seo-schema";
         },
       }}
     />
-    <meta name="robots" content="index, follow" />
-    <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
   </head>
 
   <ViewTransitions />
@@ -107,6 +100,7 @@ import { Schema } from "astro-seo-schema";
 
   <body>
     <Header transition:animate={fade({ duration: "0.4s" })} />
+    <Cookie />
     <Hero transition:animate={slide({ duration: "0.8s" })} />
     <About transition:animate={slide({ duration: "0.8s" })} />
     <Service />
@@ -114,5 +108,11 @@ import { Schema } from "astro-seo-schema";
     <Regionen />
     <RugBanner />
     <Footer />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </body>
+  <!--   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"
+  ></script> -->
 </html>

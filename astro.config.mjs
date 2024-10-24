@@ -13,5 +13,5 @@ export default defineConfig({
   site: 'https://ensa-teppichreinigung.de',
   integrations: [tailwind(), react(), sitemap(), robotsTxt(), purgecss({
     content:['src/**']
-  })]
+  })],
 });
